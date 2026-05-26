@@ -1,0 +1,13 @@
+title: Wolfgang Rush
+description: Open-source legal-drafting software for Indian advocates. Published by Rushikesh R. Mahajan.
+url: https://wolfgangrush.github.io
+permalink: pretty
+theme: jekyll-theme-minimal
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - .gitignore
+  - "*.py"
