@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Wolfgang Rush
+title: wolfgang_rush
 ---
 
-# Wolfgang Rush
+# wolfgang_rush
 
 Open-source legal-drafting software for Indian advocates.
 
-Published by **Rushikesh R. Mahajan**, Advocate, Bombay High Court (Nagpur Bench).
+Published by **Rushikesh R. Mahajan**, Advocate, High Courts of India.
 
 ---
 
@@ -21,7 +21,7 @@ Published by **Rushikesh R. Mahajan**, Advocate, Bombay High Court (Nagpur Bench
 
 ## What this site is
 
-The canonical home for the **Wolfgang Rush** software family — 14 jurisdiction-native litigation drafting connectors covering Indian Supreme Court, High Courts, District Courts, Family Courts, Consumer Forums, MACT, NCLT/NCLAT, Rent Control, Tax, IP, Banking, Labour, Property, and Contracts work.
+The canonical home for the **wolfgang_rush** software family — 14 jurisdiction-native litigation drafting connectors covering Indian Supreme Court, High Courts, District Courts, Family Courts, Consumer Forums, MACT, NCLT/NCLAT, Rent Control, Tax, IP, Banking, Labour, Property, and Contracts work.
 
 ## Distribution
 
