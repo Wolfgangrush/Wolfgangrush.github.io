@@ -1,19 +1,19 @@
 ---
 layout: default
-title: Privacy Policy — Wolfgang Rush
+title: Privacy Policy — wolfgang_rush
 permalink: /privacy/
 ---
 
 # Privacy Policy
 
 **Effective date:** 2026-05-27
-**Publisher:** Rushikesh R. Mahajan, publishing as **Wolfgang Rush**
+**Publisher:** Rushikesh R. Mahajan, publishing as **wolfgang_rush**
 **Contact:** advrushikeshravindramahajan@gmail.com
 
-This single canonical privacy policy covers **both** distribution tracks of the Wolfgang Rush legal-drafting software family:
+This single canonical privacy policy covers **both** distribution tracks of the wolfgang_rush legal-drafting software family:
 
-1. **Wolfgang Rush Plugin Family** — Claude Code plugins, published since 2026-05-17 at the Claude Code plugin marketplace
-2. **Wolfgang Rush MCPB Family** — MCPB Desktop Extensions for Claude Desktop App, published on the Anthropic MCP Connector Directory
+1. **wolfgang_rush Plugin Family** — Claude Code plugins, published since 2026-05-17 at the Claude Code plugin marketplace
+2. **wolfgang_rush MCPB Family** — MCPB Desktop Extensions for Claude Desktop App, published on the Anthropic MCP Connector Directory
 
 Both tracks share the same privacy posture. The 14 connectors named in Section 2 are covered by this single policy.
 
@@ -23,7 +23,7 @@ Both tracks share the same privacy posture. The 14 connectors named in Section 2
 
 **Nothing.**
 
-The Wolfgang Rush software family does not collect, store, transmit, log, telemetry-report, error-report, or relay any user data to the Publisher or to any third party operated by the Publisher.
+The wolfgang_rush software family does not collect, store, transmit, log, telemetry-report, error-report, or relay any user data to the Publisher or to any third party operated by the Publisher.
 
 There is no server. There is no analytics service. There is no licence-verification endpoint. There is no usage-tracking infrastructure. There is no telephone-home behaviour of any kind.
 
@@ -31,7 +31,7 @@ There is no server. There is no analytics service. There is no licence-verificat
 
 ## 2. Connectors and plugins covered by this policy
 
-This privacy policy applies to all 14 connectors / plugins in the Wolfgang Rush family across both distribution tracks:
+This privacy policy applies to all 14 connectors / plugins in the wolfgang_rush family across both distribution tracks:
 
 | # | Connector / Plugin name | Distribution tracks |
 |---|---|---|
@@ -72,7 +72,7 @@ The Publisher is not a party to that data flow, has no access to user prompts or
 
 ## 5. Privacy firewall built into the connectors
 
-Each Wolfgang Rush drafting connector applies a three-layer privacy firewall **before** any text leaves the user's machine:
+Each wolfgang_rush drafting connector applies a three-layer privacy firewall **before** any text leaves the user's machine:
 
 | Layer | Where | What happens |
 |---|---|---|
@@ -142,4 +142,4 @@ Security-sensitive disclosures should be marked clearly in the email subject lin
 
 ---
 
-*This privacy policy is published as the canonical privacy URL for all Wolfgang Rush MCPB Desktop Extensions in the Anthropic MCP Connector Directory, and for all Wolfgang Rush plugins in the Claude Code plugin marketplace. The `privacy_policies` array in every Wolfgang Rush MCPB manifest.json points to this URL: <https://wolfgangrush.github.io/privacy/>*
+*This privacy policy is published as the canonical privacy URL for all wolfgang_rush MCPB Desktop Extensions in the Anthropic MCP Connector Directory, and for all wolfgang_rush plugins in the Claude Code plugin marketplace. The `privacy_policies` array in every wolfgang_rush MCPB manifest.json points to this URL: <https://wolfgangrush.github.io/privacy/>*
