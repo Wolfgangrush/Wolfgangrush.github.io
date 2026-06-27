@@ -1,3 +1,18 @@
+<div align="center">
+
+<img src="docs/banner.png" width="820"/>
+
+**The canonical home of the wolfgang_rush software family — brand landing and privacy policy in one place.**
+
+Visit the live site: [wolfgangrush.github.io](https://wolfgangrush.github.io)
+
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-live-brightgreen.svg)
+![Static Site](https://img.shields.io/badge/static-site-blue.svg)
+
+</div>
+
+
 # Wolfgangrush.github.io
 
 Canonical site for the **wolfgang_rush** software family.
