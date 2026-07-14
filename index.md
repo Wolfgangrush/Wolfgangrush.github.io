@@ -11,6 +11,12 @@ Published by **Rushikesh R. Mahajan**, Advocate, High Courts of India.
 
 ---
 
+## 📚 Full Software Catalog
+
+**[→ Browse the complete wolfgang_rush family](./catalog/)** — litigation drafting plugins, Claude Desktop Extensions, jurisdiction-native AI Brains (solo & enterprise), the AI Law Firm practice OS, the GC In-House Brain, the **Vidhi Likhit** reasoning suite (AI-native law school · NYAYA-CHECK · PRAMAAN · PRATIPAKSHA), and DPDP / privacy tooling. Public tools link to source; private products are listed with access on request.
+
+---
+
 ## 🆕 Claude Desktop Extensions (MCPB) — 14 plugins LIVE
 
 **[→ Browse the 14 Claude Desktop Extensions](./mcpb/)** — install directly into the Claude Desktop App on Mac or Windows. Covers Supreme Court, all 25 High Courts, District Courts, Family Courts, Consumer Forums, MACT, NCLT/NCLAT, Rent Control, Tax, IP, Banking, Labour, Property, and Contracts. Zero data collection. Pseudonymisation gateway. Filing-grade `.docx` output.
