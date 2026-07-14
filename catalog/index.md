@@ -48,13 +48,10 @@ Local-first practice brain per jurisdiction — the individual lawyer's cockpit:
 ## 4 · AI Brain — Enterprise editions 🔒
 Firm-grade moat: in-tenant server, SSO/RBAC, data-cocoon, injection defence, tamper-evident audit — one per jurisdiction (India · USA · UK · EU · Singapore · Dubai · Australia). *Private — access on request.*
 
-## 5 · AI Law Firm — Practice OS 🔒
-A full practice operating system for a solo / boutique firm (India · UK · Dubai-DIFC editions). *Private — access on request.*
-
-## 6 · GC In-House Brain 🔒
+## 5 · GC In-House Brain 🔒
 Cross-jurisdictional AI for in-house counsel / General Counsel teams — a data-sovereign alternative to cloud GC tools. Solo + Enterprise. *Private — access on request.*
 
-## 7 · Vidhi Likhit — the litigator's toolbench 🔒
+## 6 · Vidhi Likhit — the litigator's toolbench 🔒
 The reasoning layer for Indian litigation — deterministic legal engines, not black-box generation:
 
 - **Vidhi Likhit** (solo + enterprise) — AI-native Indian law school + agentic research over 10,000+ bare acts.
@@ -65,11 +62,14 @@ The reasoning layer for Indian litigation — deterministic legal engines, not b
 
 *Private — access on request.*
 
-## 8 · Compliance & Privacy tooling
-- [dpdp-law-to-code](https://github.com/Wolfgangrush/dpdp-law-to-code) 🟢 — India's DPDP Act 2023 (ss. 5–16) as runnable, testable Python.
-- [pseudonymisation-gateway](https://github.com/Wolfgangrush/pseudonymisation-gateway) 🟢 — jurisdiction-aware PII pseudonymisation middleware for any legal-AI pipeline.
-- [Citation-Parser](https://github.com/Wolfgangrush/Citation-Parser) 🟢 — save, normalise and recall the citations a lawyer actually uses.
-- [SC AI-in-Courts Regulations 2026 — clause mapping](https://github.com/Wolfgangrush/sc-ai-regulations-2026-mapping) 🟢 — clause-by-clause analysis of the Supreme Court's Draft AI Regulations.
+## 7 · Supreme Court AI Regulations 2026 — our analysis 🟢
+Our public **clause-by-clause mapping** of the Supreme Court of India's *Draft Regulations for Use of Artificial Intelligence in Courts, 2026*, with a strategic read of what each clause means for local-first, human-in-the-loop legal AI.
+**[→ github.com/Wolfgangrush/sc-ai-regulations-2026-mapping](https://github.com/Wolfgangrush/sc-ai-regulations-2026-mapping)**
+
+## 8 · Compliance & Privacy tooling 🟢
+- [dpdp-law-to-code](https://github.com/Wolfgangrush/dpdp-law-to-code) — India's DPDP Act 2023 (ss. 5–16) as runnable, testable Python.
+- [pseudonymisation-gateway](https://github.com/Wolfgangrush/pseudonymisation-gateway) — jurisdiction-aware PII pseudonymisation middleware for any legal-AI pipeline.
+- [Citation-Parser](https://github.com/Wolfgangrush/Citation-Parser) — save, normalise and recall the citations a lawyer actually uses.
 
 ## 9 · Research toolkit 🟢
 Human-oversight quantification for autonomous / high-assurance systems (academic line):
