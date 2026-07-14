@@ -13,7 +13,7 @@ Published by **Rushikesh R. Mahajan**, Advocate, High Courts of India.
 
 ## 📚 Full Software Catalog
 
-**[→ Browse the complete wolfgang_rush family](./catalog/)** — litigation drafting plugins, Claude Desktop Extensions, jurisdiction-native AI Brains (solo & enterprise), the AI Law Firm practice OS, the GC In-House Brain, the **Vidhi Likhit** reasoning suite (AI-native law school · NYAYA-CHECK · PRAMAAN · PRATIPAKSHA), and DPDP / privacy tooling. Public tools link to source; private products are listed with access on request.
+**[→ Browse the complete wolfgang_rush family](./catalog/)** — litigation drafting plugins, Claude Desktop Extensions, jurisdiction-native AI Brains (solo & enterprise), the GC In-House Brain, the **Vidhi Likhit** reasoning suite (AI-native law school · NYAYA-CHECK · PRAMAAN · PRATIPAKSHA), our **clause-by-clause analysis of the Supreme Court's Draft AI Regulations 2026**, and DPDP / privacy tooling. Public tools link to source; private products are listed with access on request.
 
 ---
 
