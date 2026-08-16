@@ -63,23 +63,40 @@ offline and ship with **no network entitlement at all**. Such a tool cannot reac
 internet even if its code asked to, because the operating system will refuse. Where that
 is true, it is stated, and it can be verified in about ten seconds (see Section 6).
 
-The **practice brains** are different, and this is the part that matters most:
+The **practice brains** are different, and this is the part that matters most.
 
-**Local mode.** You install a local language model (Ollama with Qwen3, or an equivalent).
-All reasoning happens on your own machine. **Nothing leaves it. There is no transmission,
-so there is no transfer, no cross-border question, and no third-party recipient.** You can
-disconnect the network entirely and the software continues to work. This is the mode
-intended for privileged material, client-confidential instructions, and special-category
-or sensitive personal data.
+### 4.1 Your files stay on your machine
 
-**Cloud mode.** You may instead configure the software to use a third-party language
-model. If you do, **the text of your prompts is transmitted to that provider**, which is a
-company independent of the Publisher, operating under its own terms and its own privacy
-policy. Before any such transmission, the content passes through the
-[Pseudonymisation Gateway](https://github.com/Wolfgangrush/pseudonymisation-gateway),
-which substitutes identifying values with structural placeholders in memory, writes no
-personal data to disk, and surfaces to you — rather than silently transmitting — anything
-it could not fully resolve.
+Your matters, drafts, notes, configuration and audit logs are written only to your own home
+directory. They are never uploaded anywhere, in any mode. That part is unconditional.
+
+### 4.2 The language model currently runs in the cloud
+
+**As shipped today, reasoning is performed by a third-party language model, which means the
+text of your prompts is transmitted to that provider** — a company independent of the
+Publisher, operating under its own terms and its own privacy policy.
+
+Before any such transmission, the content passes through the
+[Pseudonymisation Gateway](https://github.com/Wolfgangrush/pseudonymisation-gateway), which
+substitutes identifying values with structural placeholders in memory, writes no personal
+data to disk, restores the real values in the reply you read, and surfaces to you — rather
+than silently transmitting — anything it could not fully resolve. Every outbound call in the
+brain is funnelled through that single point, so this is not a setting you can forget to turn
+on.
+
+### 4.3 The local model tier is not wired yet — said plainly
+
+The intended design — **not implemented, not wired, not available today** — is a second mode in
+which the language model runs on your own machine (Ollama with Qwen3 or equivalent), so that
+nothing leaves at all. A `connect-local` setup command exists and will run to completion.
+
+**That tier is not implemented in the current release.** The setup command writes a
+configuration value which the inference path does not yet read, so queries continue to go to
+the cloud provider regardless. It is the next milestone, and it is described here as a plan
+rather than a feature.
+
+**Do not rely on a local, no-transmission mode today.** If your material cannot lawfully or
+professionally leave your machine, do not put it into a practice brain until this ships.
 
 **Pseudonymisation is a technical safeguard. It is not a legal discharge.** It reduces
 what is exposed; it does not perform your cross-border transfer assessment, obtain your
@@ -91,8 +108,8 @@ hard exception the Publisher is aware of — section 77 My Health Records data i
 where the prohibition attaches to offshore handling itself and pseudonymisation therefore
 cures nothing.
 
-**Neither mode costs money.** The choice between them is a professional judgment about the
-material in front of you, not a pricing decision.
+**Neither mode will cost money.** When the local tier ships, the choice between the two will
+be a professional judgment about the material in front of you, not a pricing decision.
 
 ## 5. This website, and the newsletter
 
@@ -122,8 +139,12 @@ privacy promise you cannot check is only a promise, which is why the source is p
   `codesign -d --entitlements - /Applications/<AppName>.app`. A tool that claims to be
   offline will show no network entitlement, and the operating system will then refuse any
   connection regardless of what the code asks for.
-- For a practice brain, the honest test is simpler still: **configure local mode, then
-  disconnect the network.** If it keeps working, nothing was leaving.
+- For a practice brain, do not take Section 4.3 on trust either — check it the same way.
+  `ailawfirm_india/connect_local.py` writes `ai_provider` into the config file;
+  `ailawfirm_india/brain/llm.py` reads its provider settings from environment variables only
+  and never opens that file. That is the whole reason the local tier is described here as
+  unwired. When it ships, the test becomes simple: **disconnect the network.** If it keeps
+  working, nothing was leaving.
 - Watch it. A network monitor over a full session is the simplest test there is.
 
 ## 7. Children's data

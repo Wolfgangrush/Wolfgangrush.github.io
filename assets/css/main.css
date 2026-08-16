@@ -164,19 +164,50 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
 .muted{color:var(--ink-mute);margin:0}
 .small{font-size:13px;margin-top:26px}
 
-/* ---------- two-column split (home) ---------- */
-.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin:28px 0 8px}
-.split-card{
+/* ---------- the three doors (home) ---------- */
+.doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(288px,1fr));gap:18px;margin:28px 0 8px}
+.door{
   display:flex;flex-direction:column;gap:9px;
   background:var(--card);border:1px solid var(--line);border-radius:14px;
   padding:26px 24px 22px;transition:.16s;color:var(--ink);
 }
-.split-card:hover{border-color:var(--gold-dim);transform:translateY(-2px);text-decoration:none}
-.split-eyebrow{font:600 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-dim)}
-.split-title{font-family:var(--serif);font-size:24px;line-height:1.25;color:var(--ink)}
-.split-card:hover .split-title{color:var(--gold)}
-.split-body{font-size:15px;color:var(--ink-mute);line-height:1.6}
-.split-cta{margin-top:6px;font:600 15px/1 var(--sans);color:var(--gold)}
+.door:hover{border-color:var(--gold-dim);transform:translateY(-3px);text-decoration:none}
+.door-eyebrow{font:600 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-dim)}
+.door-title{font-family:var(--serif);font-size:25px;line-height:1.22;color:var(--ink)}
+.door:hover .door-title{color:var(--gold)}
+.door-body{font-size:15px;color:var(--ink-mute);line-height:1.62;flex:1}
+.door-cta{margin-top:8px;font:600 15px/1 var(--sans);color:var(--gold)}
+
+/* ---------- tool blocks ---------- */
+.tool{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:30px 30px 24px;margin:26px 0;
+}
+.tool:hover{border-color:var(--gold-dim)}
+.tool-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:6px}
+.tool-head h2{
+  margin:0;border:0;padding:0;font-family:var(--serif);font-weight:400;
+  font-size:28px;line-height:1.2;color:var(--ink);
+}
+.badge{
+  font:600 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;
+  color:var(--gold-dim);border:1px solid var(--line);background:var(--navy-700);
+  padding:7px 12px;border-radius:99px;white-space:nowrap;
+}
+.tool p{max-width:76ch}
+.what-is{
+  margin:16px 0 0;padding:16px 18px;border-radius:10px;font-size:17px;line-height:1.6;
+  background:rgba(245,200,66,.08);border-left:3px solid var(--gold);color:var(--ink-soft);
+}
+.what-is strong{color:var(--gold)}
+.tool-problem{
+  margin:16px 0 0;padding-left:18px;border-left:3px solid var(--line);color:var(--ink-soft);
+}
+.tool-meta{
+  margin:18px 0 0;padding:14px 16px;border-radius:10px;font-size:15px;
+  background:var(--navy-700);color:var(--ink-mute);
+}
+.tool-meta strong{color:var(--ink-soft)}
 
 /* ---------- latest-issue box ---------- */
 .latest-box{
@@ -243,6 +274,22 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
 }
 .juris-links{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin:20px 0 0}
 
+/* ---------- pending / warning states ---------- */
+.alert{
+  margin:24px 0;padding:20px 22px;border-radius:12px;max-width:none;
+  background:rgba(214,92,74,.10);border:1px solid #d65c4a;border-left-width:4px;
+  color:var(--ink-soft);font-size:16px;line-height:1.6;
+}
+.alert strong{color:#ff8f7a}
+.status-pending{
+  display:inline-block;margin-left:8px;font:700 10px/1 var(--sans);
+  letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;
+  color:#ff8f7a;background:rgba(214,92,74,.14);border:1px solid rgba(214,92,74,.5);
+  padding:5px 9px;border-radius:99px;
+}
+.dt-pending{color:var(--ink-mute) !important}
+.juris-body dd:has(+ dt), .juris-body .dt-pending + dd{opacity:.78}
+
 /* ---------- code block ---------- */
 .code-block{
   background:var(--navy-700);border:1px solid var(--line);border-radius:10px;
@@ -284,8 +331,15 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
   .site-footer{background:#f5f2ec}
 
   /* new components, light */
-  .split-cta{color:#8a6a08}
-  .split-card:hover .split-title{color:#8a6a08}
+  .door-cta{color:#8a6a08}
+  .door:hover .door-title{color:#8a6a08}
+  .what-is{background:rgba(138,106,8,.08);border-left-color:#8a6a08}
+  .what-is strong{color:#6b5406}
+  .badge{background:#f1eee7;color:#6b5406}
+  .tool-meta{background:#f1eee7}
+  .alert{background:rgba(178,45,26,.07);border-color:#b22d1a}
+  .alert strong{color:#9c2413}
+  .status-pending{color:#9c2413;background:rgba(178,45,26,.10);border-color:rgba(178,45,26,.45)}
   .latest-box{border-color:#c9a339;background:linear-gradient(135deg,#fffaf0,#fff)}
   .latest-box .tag,.featured .tag{background:#8a6a08;color:#fff}
   .price{background:#8a6a08;color:#fff}
@@ -308,5 +362,9 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
   .latest-cta .btn{width:100%;text-align:center}
   .juris{padding:20px}
   .juris-head h3{font-size:22px}
-  .split-card{padding:22px 20px}
+  .door{padding:22px 20px}
+  .tool{padding:22px 20px}
+  .tool-head h2{font-size:23px}
+  .what-is{font-size:16px;padding:14px 15px}
+  .code-block{font-size:13px}
 }

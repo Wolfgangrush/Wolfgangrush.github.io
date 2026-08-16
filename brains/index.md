@@ -1,7 +1,7 @@
 ---
 layout: default
 title: What is a practice brain?
-description: A plain explanation of the local-first practice brains — what they are, what you type, what they cost, why there are two privacy modes, and how to install one. Eight jurisdictions.
+description: A plain explanation of the practice brains — what they are, what you type, what they cost, why there are two privacy modes, and how to install one. Eight jurisdictions.
 ---
 
 <h1>What is a practice brain?</h1>
@@ -55,11 +55,14 @@ do not need to learn commands. There are four, and one of them does everything.<
   </tbody>
 </table>
 
-<h2>The seven specialists inside it</h2>
+<h2>The specialists inside it</h2>
 
-<p>Behind that one conversation sit seven functions. You never call them by name &mdash; the
-brain routes your question to the right one. They are listed here so you know what is actually
-in the box.</p>
+<p>Behind that one conversation sit a handful of separate functions. You never call them by name
+&mdash; the brain routes your question to the right one. They are listed here so you know what
+is actually in the box. <strong>The exact set varies by jurisdiction:</strong> India and the
+United States ship six; the UK, EU, Singapore and Australia add a calendar function; Dubai adds
+a system-switch instead, because it has to move between DIFC common law and Dubai Mainland civil
+law. Check the repository for your own jurisdiction rather than assuming parity.</p>
 
 <ul class="posture">
   <li><strong>The Receptionist.</strong> Listens, works out what you need, calls the right
@@ -97,9 +100,12 @@ language model, and a language model is a large piece of software that has to ru
 <p>There are exactly two places it can run, and they are not equivalent:</p>
 
 <ul class="posture">
-  <li><strong>On your own laptop.</strong> You install a free program called Ollama and
-  download an open model &mdash; Qwen3 is the default. From then on nothing leaves your
-  machine, at all, ever. You can unplug the internet and it still works. It is slower than a
+  <li><strong>On your own laptop &mdash; <em>not wired yet</em>.</strong> The intended design is
+  that you install a free program called Ollama, download an open model (Qwen3), and from then on
+  nothing leaves your machine at all. <strong>This tier is not implemented in the current
+  release:</strong> the setup steps run, but no code path yet routes the model call to your
+  machine, so do not rely on it for confidential work today. It is the next milestone. When it
+  ships it will be slower than a
   cloud model and not as sharp, and on an older laptop it may be too slow to be pleasant. It
   costs nothing.</li>
   <li><strong>On a cloud provider.</strong> Faster, and materially more capable. But the text
@@ -138,6 +144,13 @@ The table below sets out, jurisdiction by jurisdiction, exactly what is still ow
 <p>Each brain is written against its own bar's conduct rules and its own data-protection
 statute. This is not one product with the place-name changed.</p>
 
+<p class="alert"><strong>⛔ Read this before the table.</strong> The
+&ldquo;running the model locally&rdquo; column below describes what the local tier
+<em>would</em> satisfy. <strong>That tier is not wired in any current release</strong> &mdash; no
+code path routes inference to a local model today, so none of it is delivered by absence of
+transmission right now. Treat every line of it as a design target for the next milestone, not as
+a present-day guarantee. <a href="#tiers">The full explanation is above &uarr;</a></p>
+
 <div class="juris-stack">
 {% for j in site.data.jurisdictions %}
   <section class="juris">
@@ -147,9 +160,9 @@ statute. This is not one product with the place-name changed.</p>
     </div>
     <p class="juris-who">{{ j.who }}</p>
     <dl class="juris-body">
-      <dt>Running the model locally</dt>
+      <dt class="dt-pending">Running the model locally <span class="status-pending">⛔ not wired yet &mdash; design target</span></dt>
       <dd>{{ j.local_covers }}</dd>
-      <dt>If you choose cloud mode, you still owe</dt>
+      <dt>What you owe today, on the cloud tier as shipped</dt>
       <dd>{{ j.cloud_owes }}</dd>
     </dl>
     {% if j.note != "" %}<p class="juris-note"><strong>Hard exception.</strong> {{ j.note }}</p>{% endif %}
@@ -178,20 +191,22 @@ unchanged.</p>
 
 <pre class="code-block"><code>pip install git+https://github.com/Wolfgangrush/ai-brain-india.git</code></pre>
 
-<h3>Step 3 &mdash; decide your privacy mode</h3>
+<h3>Step 3 &mdash; understand where your questions go</h3>
 
-<p>If you will put client material into it &mdash; and you should assume you will &mdash;
-install the local model as well. Two steps, both free:</p>
+<p><strong>Read this before you put a real matter in.</strong> As shipped today, the reasoning
+happens at a cloud provider, and the text of your questions is transmitted there &mdash; with
+identifying details stripped by the Pseudonymisation Gateway first, on every request, with no
+setting to forget. Your matters, drafts and notes are never uploaded; only the text of the
+question you ask is.</p>
 
-<ol>
-  <li>Download Ollama from <a href="https://ollama.com/download">ollama.com/download</a> and
-  install it like any other application.</li>
-  <li>In the terminal, run: <code>ollama pull qwen3:14b</code></li>
-</ol>
+<p>There is a <code>connect-local</code> command, and it will run to completion. <strong>It does
+not yet change where the model runs</strong> &mdash; it writes a configuration value that the
+inference path does not read. Running it does not make the tool offline. That is the next
+milestone, and it is stated here as a plan rather than sold as a feature.</p>
 
-<p>That downloads the model to your machine once. After that it runs offline permanently. If
-you skip this step, the brain will look for a cloud model instead &mdash; which is a legitimate
-choice, but make it deliberately, having read the section above.</p>
+<p><strong>So: if this material cannot lawfully or professionally leave your machine, do not put
+it in yet.</strong> Use the tool for the work where a pseudonymised cloud call is a decision you
+can defend, and wait for the local tier for the rest.</p>
 
 <h3>Step 4 &mdash; start it</h3>
 
@@ -215,7 +230,7 @@ Other jurisdictions ship fewer languages.</p>
 <ul class="posture">
   <li><strong>It is not finished.</strong> These are early releases. The Drafting Assistant and
   the Deadline Tracker in particular are partial. Read each repository's own status notes
-  rather than assuming parity across the seven specialists.</li>
+  rather than assuming parity across the specialists.</li>
   <li><strong>It does not give legal advice</strong> and it does not replace your judgment. AI
   makes mistakes, including confident ones. Every citation, statutory reference, procedural step,
   limitation calculation and ground of relief must be verified by you before you file it, advise

@@ -4,7 +4,11 @@
 # and conduct-mapping documentation. If a repository changes its position, change it
 # here too — this file is what the website tells the public.
 #
-# `local_covers`  — what running the model on your own machine actually satisfies.
+# `local_covers`  — what running the model on your own machine WOULD satisfy.
+#                   ⛔ 2026-08-16: THE LOCAL TIER IS NOT WIRED IN ANY RELEASE YET. No code path
+#                   routes inference to a local model, so nothing below is delivered by absence
+#                   of transmission TODAY. These are the design targets for the local milestone,
+#                   not current guarantees. Do not render them as present-tense assurances.
 # `cloud_owes`    — what remains YOUR obligation if you choose the cloud tier.
 #                   Pseudonymisation is a technical safeguard. It is not a discharge.
 
@@ -122,6 +126,8 @@
   cloud_owes: >-
     Standard APP 8 cross-border disclosure obligations remain yours.
   note: >-
-    Hard exception — section 77 My Health Records data. The prohibition is on offshore
-    handling itself, not on what is transmitted, so gateway sanitisation does not cure it.
-    For actual My Health Records matters, use the local tier only.
+    ⛔ Hard exception — section 77 My Health Records data. The prohibition attaches to offshore
+    handling itself, not to what is transmitted, so gateway pseudonymisation does not cure it.
+    The local tier would cure it, and the local tier is NOT WIRED YET. That means there is
+    currently NO configuration of this tool that is safe for My Health Records matters.
+    Do not use it for them until the local milestone ships.
