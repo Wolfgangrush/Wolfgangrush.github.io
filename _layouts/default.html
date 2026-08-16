@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% seo %}
+<link rel="icon" href="{{ '/assets/favicon.png' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap head-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/logo.png' | relative_url }}" alt="" width="40" height="40">
+      <span class="brand-text">wolfgang_rush</span>
+    </a>
+    <nav class="site-nav">
+      <a href="{{ '/#tools' | relative_url }}">Tools</a>
+      <a href="{{ '/#posture' | relative_url }}">Posture</a>
+      <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
+      <a class="ext" href="https://github.com/Wolfgangrush">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+{% if page.url == "/" %}
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Local-first legal software</p>
+    <h1 class="hero-title">Software for advocates that<br><em>never phones home.</em></h1>
+    <p class="hero-sub">
+      Built to run on the practitioner&rsquo;s own machine, with the source published
+      so the privacy claims can be <strong>checked</strong> rather than believed.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#tools">Browse the tools</a>
+      <a class="btn btn-ghost" href="{{ '/privacy/' | relative_url }}">How privacy works</a>
+    </div>
+    <ul class="hero-facts">
+      <li><span>0</span> accounts</li>
+      <li><span>0</span> telemetry</li>
+      <li><span>0</span> servers</li>
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+<main id="main" class="wrap content {% if page.url != '/' %}page{% endif %}">
+  {{ content }}
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot-inner">
+    <div>
+      <p class="foot-brand">wolfgang_rush</p>
+      <p class="muted">Published by Rushikesh R. Mahajan.</p>
+    </div>
+    <div class="foot-links">
+      <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a>
+      <a href="https://github.com/Wolfgangrush">GitHub</a>
+      <a href="mailto:advrushikeshravindramahajan@gmail.com">Contact</a>
+    </div>
+  </div>
+  <p class="wrap muted small">MIT and Apache-2.0, per repository. See each repository&rsquo;s <code>LICENSE</code>.</p>
+</footer>
+
+</body>
+</html>
