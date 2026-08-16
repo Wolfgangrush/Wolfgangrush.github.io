@@ -2,7 +2,7 @@
 
 <img src="docs/banner.png" width="820"/>
 
-**The canonical home of the wolfgang_rush software family — brand landing and privacy policy in one place.**
+**The canonical home of the wolfgang_rush software family — landing page and privacy policy in one place.**
 
 Visit the live site: [wolfgangrush.github.io](https://wolfgangrush.github.io)
 
@@ -11,7 +11,6 @@ Visit the live site: [wolfgangrush.github.io](https://wolfgangrush.github.io)
 ![Static Site](https://img.shields.io/badge/static-site-blue.svg)
 
 </div>
-
 
 # Wolfgangrush.github.io
 
@@ -22,11 +21,12 @@ Canonical site for the **wolfgang_rush** software family.
 ## Pages
 
 - `/` — Landing page
-- `/privacy/` — Canonical privacy policy covering all 14 wolfgang_rush connectors (Plugin family + MCPB family)
+- `/privacy/` — Canonical privacy policy for the wolfgang_rush software family
 
 ## Privacy URL
 
-The canonical privacy URL referenced by the `privacy_policies` array in every wolfgang_rush MCPB manifest.json:
+This is the canonical privacy URL referenced by wolfgang_rush software manifests.
+**It must remain reachable at this exact path:**
 
 ```
 https://wolfgangrush.github.io/privacy/
@@ -34,11 +34,12 @@ https://wolfgangrush.github.io/privacy/
 
 ## Maintenance
 
-Built with Jekyll (GitHub Pages default). Edit `*.md` files and commit; Pages rebuilds within ~1 minute.
+Built with Jekyll (GitHub Pages default). Edit `*.md` files and commit; Pages rebuilds
+within about a minute.
 
 ## Brand assets
 
-- `assets/logo.png` — wolfgang_rush logo (512×512 PNG, transparent background) for MCPB manifest `icon` field
+- `assets/logo.png` — wolfgang_rush logo (512×512 PNG, transparent background)
 - `assets/favicon.png` — 32×32 favicon
 
 ## License
