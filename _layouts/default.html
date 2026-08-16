@@ -18,8 +18,9 @@
       <span class="brand-text">wolfgang_rush</span>
     </a>
     <nav class="site-nav">
+      <a href="{{ '/brains/' | relative_url }}">Practice brains</a>
       <a href="{{ '/#tools' | relative_url }}">Tools</a>
-      <a href="{{ '/#posture' | relative_url }}">Posture</a>
+      <a href="{{ '/newsletter/' | relative_url }}">Newsletter</a>
       <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
       <a class="ext" href="https://github.com/Wolfgangrush">GitHub</a>
     </nav>
@@ -30,19 +31,24 @@
 <section class="hero">
   <div class="wrap">
     <p class="eyebrow">Local-first legal software</p>
-    <h1 class="hero-title">Software for advocates that<br><em>never phones home.</em></h1>
+    <h1 class="hero-title">Legal software that runs<br><em>on your own machine.</em></h1>
     <p class="hero-sub">
-      Built to run on the practitioner&rsquo;s own machine, with the source published
-      so the privacy claims can be <strong>checked</strong> rather than believed.
+      There is no account to create, no telemetry, and <strong>no server of mine anywhere
+      in the picture</strong>. Whether your work also reaches an AI model is a separate
+      decision, and it is <strong>yours</strong> &mdash; run the model locally and nothing
+      leaves at all, or use a cloud model behind a pseudonymisation gateway. Both modes are
+      documented, per jurisdiction, and the source is published so you can check rather
+      than believe.
     </p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="#tools">Browse the tools</a>
-      <a class="btn btn-ghost" href="{{ '/privacy/' | relative_url }}">How privacy works</a>
+      <a class="btn btn-primary" href="{{ '/brains/' | relative_url }}">Start here &mdash; what is a practice brain?</a>
+      <a class="btn btn-ghost" href="{{ '/newsletter/' | relative_url }}">Read the newsletter</a>
     </div>
     <ul class="hero-facts">
       <li><span>0</span> accounts</li>
       <li><span>0</span> telemetry</li>
-      <li><span>0</span> servers</li>
+      <li><span>0</span> servers of mine</li>
+      <li><span>8</span> jurisdictions</li>
     </ul>
   </div>
 </section>
@@ -57,8 +63,14 @@
     <div>
       <p class="foot-brand">wolfgang_rush</p>
       <p class="muted">Published by Rushikesh R. Mahajan.</p>
+      <p class="muted small" style="margin-top:10px;max-width:46ch">
+        Informational and educational only. Nothing here is legal advice and no
+        solicitor&ndash;client or advocate&ndash;client relationship arises from reading it.
+      </p>
     </div>
     <div class="foot-links">
+      <a href="{{ '/brains/' | relative_url }}">Practice brains</a>
+      <a href="{{ '/newsletter/' | relative_url }}">Newsletter</a>
       <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a>
       <a href="https://github.com/Wolfgangrush">GitHub</a>
       <a href="mailto:advrushikeshravindramahajan@gmail.com">Contact</a>

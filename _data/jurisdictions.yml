@@ -1,0 +1,127 @@
+# The eight practice brains.
+#
+# Every claim in this file is taken from the corresponding repository's own README
+# and conduct-mapping documentation. If a repository changes its position, change it
+# here too — this file is what the website tells the public.
+#
+# `local_covers`  — what running the model on your own machine actually satisfies.
+# `cloud_owes`    — what remains YOUR obligation if you choose the cloud tier.
+#                   Pseudonymisation is a technical safeguard. It is not a discharge.
+
+- slug: india
+  name: India
+  who: "Advocates enrolled with a State Bar Council"
+  repo: "https://github.com/Wolfgangrush/ai-brain-india"
+  price: "₹0 forever"
+  regulator: "Bar Council of India"
+  local_covers: >-
+    Bar Council Rule 17 confidentiality is supported by absence of transmission — nothing
+    is sent, so no transfer question arises. Legal-professional privilege under section 132
+    of the Bharatiya Sakshya Adhiniyam 2023 is untouched.
+  cloud_owes: >-
+    Transmission engages the DPDP Act. Use for privileged work should rest on an engagement
+    letter that discloses AI use and on your own audit basis.
+  note: ""
+
+- slug: uk
+  name: United Kingdom
+  who: "Solicitors (SRA), barristers (BSB), advocates (Faculty of Advocates), CILEx practitioners, in-house counsel"
+  repo: "https://github.com/Wolfgangrush/ai-brain-uk"
+  price: "£0 forever"
+  regulator: "SRA · BSB · Faculty of Advocates · CILEx"
+  local_covers: >-
+    Implements the Bar Standards Board's Guidance on the use of Artificial Intelligence and
+    Other Technologies (effective 18 May 2026) — the risk matrix, AI audit logs under rC87.2,
+    outsourcing classification under rC86, the rC19 transparency gate and rC20 human-in-the-loop.
+  cloud_owes: >-
+    The same conduct duties, plus the transmission itself. The Hamid-jurisdiction line
+    (Ayinde · Al-Haroun [2025] EWHC 1383 Admin; Munir [2026] UKUT 81 IAC; Oakley [2024]
+    UKFTT 315 GRC) is what happens when output is not checked.
+  note: ""
+
+- slug: eu
+  name: European Union
+  who: "Avocat · Anwalt · advocaat · abogado · avvocato · advokát · δικηγόρος · adwokat and the rest of the EU bar"
+  repo: "https://github.com/Wolfgangrush/ai-brain-eu"
+  price: "€0 forever"
+  regulator: "National bars · GDPR · the AI Act"
+  local_covers: >-
+    GDPR Article 5(1)(f) integrity and confidentiality at the architecture layer. No
+    cross-border transfer occurs, so Schrems II is moot. Article 9 special-category data
+    stays on your machine.
+  cloud_owes: >-
+    Chapter V Article 46 supplementary safeguards remain YOUR responsibility for any
+    US-routed transmission. Pseudonymisation does not perform that assessment for you.
+  note: ""
+
+- slug: usa
+  name: United States
+  who: "Solo attorneys, in-house counsel, supervised paralegals"
+  repo: "https://github.com/Wolfgangrush/ai-brain-usa"
+  price: "$0 forever"
+  regulator: "State bars · ABA Model Rules"
+  local_covers: >-
+    ABA Model Rule 1.6 confidentiality is supported by absence of transmission. Federal
+    focus with state scaffolding.
+  cloud_owes: >-
+    Rule 1.6(c) reasonable efforts, and your own vendor diligence, apply to the model you choose.
+  note: ""
+
+- slug: singapore
+  name: Singapore
+  who: "Advocates and solicitors of the Supreme Court of Singapore"
+  repo: "https://github.com/Wolfgangrush/ai-brain-singapore"
+  price: "S$0 forever"
+  regulator: "Law Society of Singapore · PDPC"
+  local_covers: >-
+    LPCR Rule 8 confidentiality and PDPA section 24 reasonable security, supported by
+    absence of transmission.
+  cloud_owes: >-
+    PDPA section 26 cross-border transfer obligations remain YOUR responsibility.
+  note: ""
+
+- slug: hongkong
+  name: Hong Kong
+  who: "Solicitors (Law Society of Hong Kong) and barristers (Hong Kong Bar Association)"
+  repo: "https://github.com/Wolfgangrush/ai-brain-hongkong"
+  price: "Free"
+  regulator: "Law Society of Hong Kong · Hong Kong Bar Association · PCPD"
+  local_covers: >-
+    Built for the split profession — solicitor and barrister conduct duties are handled
+    separately, not merged. Covers PDPO and PCPD guidance, client-money rules and AML/KYC
+    risk flagging.
+  cloud_owes: >-
+    Gateway pseudonymisation does not discharge the Personal Data (Privacy) Ordinance
+    (Cap. 486), PCPD guidance, or conduct duties. Note the PDPO is principle-based and has
+    no mandatory general breach-notification regime.
+  note: ""
+
+- slug: dubai
+  name: Dubai
+  who: "Practitioners across DIFC (common law, English) and Dubai Mainland (civil law, Arabic)"
+  repo: "https://github.com/Wolfgangrush/ai-brain-dubai"
+  price: "AED 0 forever"
+  regulator: "DIFC Courts · Dubai Legal Affairs · DIFC Commissioner of Data Protection"
+  local_covers: >-
+    A dual-system brain — DIFC offshore and Dubai Mainland in one tool. DIFC-DPL and UAE
+    PDPL supported at the architecture layer by absence of transmission.
+  cloud_owes: >-
+    UAE PDPL Article 22 and DIFC-DPL Article 26 cross-border transfer obligations remain
+    YOUR responsibility.
+  note: ""
+
+- slug: australia
+  name: Australia
+  who: "Solo solicitors and barristers, LPUL era"
+  repo: "https://github.com/Wolfgangrush/ai-brain-australia"
+  price: "AU$0 forever"
+  regulator: "State and territory legal services commissioners · OAIC · AUSTRAC"
+  local_covers: >-
+    Australian Privacy Principle 8, LPUL Rule 9 confidentiality and Tranche 2 AML
+    obligations supported at the architecture layer.
+  cloud_owes: >-
+    Standard APP 8 cross-border disclosure obligations remain yours.
+  note: >-
+    Hard exception — section 77 My Health Records data. The prohibition is on offshore
+    handling itself, not on what is transmitted, so gateway sanitisation does not cure it.
+    For actual My Health Records matters, use the local tier only.

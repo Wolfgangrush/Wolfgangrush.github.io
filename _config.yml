@@ -1,5 +1,8 @@
 title: wolfgang_rush
-description: Local-first legal software for Indian advocates. Published by Rushikesh R. Mahajan.
+description: >-
+  Local-first legal software for practitioners in eight jurisdictions, and a fortnightly
+  brief on Indian data-protection and AI-governance law. Free, open source, and nothing
+  runs on the Publisher's servers.
 url: https://wolfgangrush.github.io
 permalink: pretty
 markdown: kramdown

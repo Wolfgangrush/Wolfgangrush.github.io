@@ -1,0 +1,33 @@
+# The India Data & AI Governance Desk — published issues.
+#
+# TO ADD A NEW ISSUE: copy the block below, put it at the TOP of the list,
+# fill in the five fields, commit. The site rebuilds itself. Nothing else to do.
+# The newest entry is automatically the one in the big "latest issue" box.
+#
+#   - number: "04"
+#     title: "…"
+#     date: 2026-09-01          # yyyy-mm-dd
+#     url: "https://buttondown.com/the_desk/archive/…/"
+#     summary: "One or two sentences. Plain English. What a reader gets."
+
+- number: "02"
+  title: "DPDP Alert: the Consent-Manager deadline is real"
+  date: 2026-08-05
+  url: "https://buttondown.com/the_desk/archive/dpdp-alert-the-consent-manager-deadline-is-real/"
+  platform: Buttondown
+  summary: >-
+    The Consent Manager registration regime goes live on 13 November 2026, and most
+    data fiduciaries have not started. Plus the RBI's draft data-governance guidance
+    (comments closed 17 August 2026) and where the Supreme Court's draft AI-in-Courts
+    regulations actually stand.
+
+- number: "01"
+  title: "DPDP: the 2027 compliance clock is now running"
+  date: 2026-07-18
+  url: "https://wolfgangrush.substack.com/p/dpdp-the-2027-compliance-clock-is"
+  platform: Substack
+  summary: >-
+    The full DPDP timeline in one place — the 13 November 2025 Rules notification,
+    Consent Managers from 13 November 2026, core obligations from 13 May 2027, who
+    counts as a Significant Data Fiduciary, and how section 3(1)(b) reaches companies
+    with no Indian office. Plus EU AI Act Article 50 and Connecticut's CTDPA.
