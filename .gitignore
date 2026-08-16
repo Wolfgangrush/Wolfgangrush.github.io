@@ -6,3 +6,4 @@ _site/
 __pycache__/
 .env
 .env.local
+_preview.html

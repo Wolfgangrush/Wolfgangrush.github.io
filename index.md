@@ -3,65 +3,105 @@ layout: default
 title: wolfgang_rush
 ---
 
-# wolfgang_rush
+<h2 id="tools">What is here</h2>
 
-Local-first legal software for Indian advocates. Built to run on the practitioner's
-own machine, with the source published so the privacy claims can be checked rather
-than believed.
+<p class="lede">Everything below runs on your own machine. Nothing is a service, nothing
+needs an account, and every privacy claim on this page can be checked against the source.</p>
 
----
+<div class="featured">
+  <div>
+    <span class="tag">New · macOS app</span>
+    <h3>NAKASHA — High Court board parser</h3>
+    <p><strong>Make tomorrow's board tonight.</strong> The daily board is published in the
+    evening and runs to 87 pages and 700 or more matters. NAKASHA reads it on your Mac and
+    gives you your own matters out of it — type your surname, get your list, click any row to
+    verify it against the printed page, export what you keep.</p>
+    <p>It reads a bar association's daily board and a High Court daily causelist, and when you
+    open both for the same date it uses one to complete the other. Loose matching survives the
+    board's mid-word hard wraps and field-width truncation, because a missed matter is the one
+    failure this tool may not have. Universal binary, macOS 13+, zero third-party dependencies,
+    no network entitlement at all.</p>
+    <p style="margin-top:16px">
+      <a class="btn btn-primary" href="https://github.com/Wolfgangrush/nakasha/releases/latest">Download for macOS</a>
+      <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/nakasha">Read the source</a>
+    </p>
+  </div>
+</div>
 
-## What is here
+<h3>Practice brains</h3>
 
-**Practice brains** — jurisdiction-native, local-first research and practice tooling
-for advocates, per jurisdiction:
-[India](https://github.com/Wolfgangrush/ai-brain-india) ·
-[UK](https://github.com/Wolfgangrush/ai-brain-uk) ·
-[USA](https://github.com/Wolfgangrush/ai-brain-usa) ·
-[EU](https://github.com/Wolfgangrush/ai-brain-eu) ·
-[Singapore](https://github.com/Wolfgangrush/ai-brain-singapore) ·
-[Hong Kong](https://github.com/Wolfgangrush/ai-brain-hongkong) ·
-[Dubai](https://github.com/Wolfgangrush/ai-brain-dubai) ·
-[Australia](https://github.com/Wolfgangrush/ai-brain-australia)
+<p>Jurisdiction-native, local-first research and practice tooling for advocates.</p>
 
-**Privacy and data-protection tooling**
-- [Pseudonymisation Gateway](https://github.com/Wolfgangrush/pseudonymisation-gateway) —
-  jurisdiction-aware PII pseudonymisation middleware. Zero runtime dependencies.
-- [DPDP Act 2023 as runnable code](https://github.com/Wolfgangrush/dpdp-law-to-code) —
-  Sections 5–16 of the Indian Digital Personal Data Protection Act, expressed as Python.
+<ul class="pills">
+  <li><a href="https://github.com/Wolfgangrush/ai-brain-india">India</a></li>
+  <li><a href="https://github.com/Wolfgangrush/ai-brain-uk">UK</a></li>
+  <li><a href="https://github.com/Wolfgangrush/ai-brain-usa">USA</a></li>
+  <li><a href="https://github.com/Wolfgangrush/ai-brain-eu">EU</a></li>
+  <li><a href="https://github.com/Wolfgangrush/ai-brain-singapore">Singapore</a></li>
+  <li><a href="https://github.com/Wolfgangrush/ai-brain-hongkong">Hong Kong</a></li>
+  <li><a href="https://github.com/Wolfgangrush/ai-brain-dubai">Dubai</a></li>
+  <li><a href="https://github.com/Wolfgangrush/ai-brain-australia">Australia</a></li>
+</ul>
 
-**Regulatory analysis**
-- [Draft AI Regulations 2026 — clause-by-clause mapping](https://github.com/Wolfgangrush/sc-ai-regulations-2026-mapping) —
-  the Supreme Court of India's draft regulations mapped against open-source legal tooling,
-  with a stakeholder comment template.
+<h3>Privacy and data protection</h3>
 
-**Human-oversight toolkit**
-- [CHOF calculator](https://github.com/Wolfgangrush/chof-calc) and
-  [CHOF kernel](https://github.com/Wolfgangrush/chof-kernel) — quantifying and embedding
-  human-oversight requirements for autonomous systems.
+<ul class="cards">
+  <li>
+    <a href="https://github.com/Wolfgangrush/pseudonymisation-gateway">Pseudonymisation Gateway</a>
+    <p>Jurisdiction-aware PII pseudonymisation middleware. Zero runtime dependencies.</p>
+  </li>
+  <li>
+    <a href="https://github.com/Wolfgangrush/dpdp-law-to-code">DPDP Act 2023 as runnable code</a>
+    <p>Sections 5–16 of the Indian Digital Personal Data Protection Act, expressed as Python.</p>
+  </li>
+</ul>
 
-**Everyday practice utilities**
-- [Citation Parser](https://github.com/Wolfgangrush/Citation-Parser) — save and recall
-  the citations you have already used.
+<h3>Regulatory analysis</h3>
 
----
+<ul class="cards">
+  <li>
+    <a href="https://github.com/Wolfgangrush/sc-ai-regulations-2026-mapping">Draft AI Regulations 2026 — clause-by-clause mapping</a>
+    <p>The Supreme Court of India's draft regulations mapped against open-source legal tooling,
+    with a stakeholder comment template.</p>
+  </li>
+</ul>
 
-## The posture
+<h3>Human-oversight toolkit</h3>
 
-Everything here is built the same way, for the same reason.
+<ul class="cards">
+  <li>
+    <a href="https://github.com/Wolfgangrush/chof-calc">CHOF calculator</a>
+    <p>Quantifying human-oversight requirements for autonomous systems.</p>
+  </li>
+  <li>
+    <a href="https://github.com/Wolfgangrush/chof-kernel">CHOF kernel</a>
+    <p>Embedding those requirements into a system that has to answer for them.</p>
+  </li>
+</ul>
 
-- **It runs on your machine.** Case material stays where it already is.
-- **The Publisher collects nothing.** No accounts, no telemetry, no analytics, no
-  crash reporting. There is no server to receive anything.
-- **The source is published** so that each of those claims can be verified by you, or by
-  anyone you ask to check, instead of taken on trust.
+<h3>Everyday practice utilities</h3>
 
-Read the full [Privacy Policy](./privacy/).
+<ul class="cards">
+  <li>
+    <a href="https://github.com/Wolfgangrush/Citation-Parser">Citation Parser</a>
+    <p>Save and recall the citations you have already used.</p>
+  </li>
+</ul>
 
-## Licence
+<h2 id="posture">The posture</h2>
 
-MIT and Apache-2.0, per repository. See each repository's `LICENSE`.
+<p>Everything here is built the same way, for the same reason.</p>
 
-## Contact
+<ul class="posture">
+  <li><strong>It runs on your machine.</strong> Case material stays where it already is.</li>
+  <li><strong>The Publisher collects nothing.</strong> No accounts, no telemetry, no analytics,
+  no crash reporting. There is no server to receive anything.</li>
+  <li><strong>The source is published</strong> so that each of those claims can be verified by
+  you, or by anyone you ask to check, instead of taken on trust.</li>
+</ul>
 
-advrushikeshravindramahajan@gmail.com
+<p>Read the full <a href="./privacy/">Privacy Policy</a>.</p>
+
+<h2>Contact</h2>
+
+<p><a href="mailto:advrushikeshravindramahajan@gmail.com">advrushikeshravindramahajan@gmail.com</a></p>
