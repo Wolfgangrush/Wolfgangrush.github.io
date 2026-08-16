@@ -5,51 +5,62 @@ title: wolfgang_rush
 
 # wolfgang_rush
 
-Open-source legal-drafting software for Indian advocates.
-
-Published by **Rushikesh R. Mahajan**, Advocate, High Courts of India.
-
----
-
-## 📚 Full Software Catalog
-
-**[→ Browse the complete wolfgang_rush family](./catalog/)** — litigation drafting plugins, Claude Desktop Extensions, jurisdiction-native AI Brains (solo & enterprise), the GC In-House Brain, the **Vidhi Likhit** reasoning suite (AI-native law school · NYAYA-CHECK · PRAMAAN · PRATIPAKSHA), our **clause-by-clause analysis of the Supreme Court's Draft AI Regulations 2026**, and DPDP / privacy tooling. Public tools link to source; private products are listed with access on request.
+Local-first legal software for Indian advocates. Built to run on the practitioner's
+own machine, with the source published so the privacy claims can be checked rather
+than believed.
 
 ---
 
-## 🆕 Claude Desktop Extensions (MCPB) — 14 plugins LIVE
+## What is here
 
-**[→ Browse the 14 Claude Desktop Extensions](./mcpb/)** — install directly into the Claude Desktop App on Mac or Windows. Covers Supreme Court, all 25 High Courts, District Courts, Family Courts, Consumer Forums, MACT, NCLT/NCLAT, Rent Control, Tax, IP, Banking, Labour, Property, and Contracts. Zero data collection. Pseudonymisation gateway. Filing-grade `.docx` output.
+**Practice brains** — jurisdiction-native, local-first research and practice tooling
+for advocates, per jurisdiction:
+[India](https://github.com/Wolfgangrush/ai-brain-india) ·
+[UK](https://github.com/Wolfgangrush/ai-brain-uk) ·
+[USA](https://github.com/Wolfgangrush/ai-brain-usa) ·
+[EU](https://github.com/Wolfgangrush/ai-brain-eu) ·
+[Singapore](https://github.com/Wolfgangrush/ai-brain-singapore) ·
+[Hong Kong](https://github.com/Wolfgangrush/ai-brain-hongkong) ·
+[Dubai](https://github.com/Wolfgangrush/ai-brain-dubai) ·
+[Australia](https://github.com/Wolfgangrush/ai-brain-australia)
 
-**Multilingual install guides**: [हिन्दी](./mcpb/hi/) · [मराठी](./mcpb/mr/) · [தமிழ்](./mcpb/ta/) · [తెలుగు](./mcpb/te/) · [বাংলা](./mcpb/bn/) · [ગુજરાતી](./mcpb/gu/) · [ಕನ್ನಡ](./mcpb/kn/) · [ਪੰਜਾਬੀ](./mcpb/pa/) · [മലയാളം](./mcpb/ml/) · [اردو](./mcpb/ur/)
+**Privacy and data-protection tooling**
+- [Pseudonymisation Gateway](https://github.com/Wolfgangrush/pseudonymisation-gateway) —
+  jurisdiction-aware PII pseudonymisation middleware. Zero runtime dependencies.
+- [DPDP Act 2023 as runnable code](https://github.com/Wolfgangrush/dpdp-law-to-code) —
+  Sections 5–16 of the Indian Digital Personal Data Protection Act, expressed as Python.
+
+**Regulatory analysis**
+- [Draft AI Regulations 2026 — clause-by-clause mapping](https://github.com/Wolfgangrush/sc-ai-regulations-2026-mapping) —
+  the Supreme Court of India's draft regulations mapped against open-source legal tooling,
+  with a stakeholder comment template.
+
+**Human-oversight toolkit**
+- [CHOF calculator](https://github.com/Wolfgangrush/chof-calc) and
+  [CHOF kernel](https://github.com/Wolfgangrush/chof-kernel) — quantifying and embedding
+  human-oversight requirements for autonomous systems.
+
+**Everyday practice utilities**
+- [Citation Parser](https://github.com/Wolfgangrush/Citation-Parser) — save and recall
+  the citations you have already used.
 
 ---
 
-## What this site is
+## The posture
 
-The canonical home for the **wolfgang_rush** software family — 14 jurisdiction-native litigation drafting connectors covering Indian Supreme Court, High Courts, District Courts, Family Courts, Consumer Forums, MACT, NCLT/NCLAT, Rent Control, Tax, IP, Banking, Labour, Property, and Contracts work.
+Everything here is built the same way, for the same reason.
 
-## Distribution
-
-- **Claude Desktop Extensions (MCPB)** — 14 extensions LIVE as of June 2026. Install via Claude Desktop App → Settings → Extensions. [Browse all 14](./mcpb/).
-- **Claude Code Plugins** — 14 plugins published on the Claude Code plugin marketplace since 2026-05-17. Browse at [Wolfgang Rush marketplace](https://github.com/Wolfgangrush/wolfgang-rush-marketplace).
-- **Pseudonymisation Gateway** — standalone privacy middleware used across Wolfgang Rush legal-tech repos. [Browse](https://github.com/Wolfgangrush/pseudonymisation-gateway).
-
-## Privacy
-
-This software collects **zero user data**. The Publisher never sees case facts, party names, financial figures, or generated outputs. Every connector applies a pseudonymisation gateway at the Reader stage — real identifying data is substituted with structural placeholders BEFORE the LLM-driven downstream agents process any facts.
+- **It runs on your machine.** Case material stays where it already is.
+- **The Publisher collects nothing.** No accounts, no telemetry, no analytics, no
+  crash reporting. There is no server to receive anything.
+- **The source is published** so that each of those claims can be verified by you, or by
+  anyone you ask to check, instead of taken on trust.
 
 Read the full [Privacy Policy](./privacy/).
 
-## DPDP Act 2023
+## Licence
 
-The Publisher is neither a Data Fiduciary nor a Data Processor under the DPDP Act 2023 for the MCPB software itself. The advocate using the connector remains the Data Fiduciary for their own client's data, as they were before installing this connector.
-
-Full DPDP applicability analysis at **[/mcpb/dpdp/](./mcpb/dpdp/)**.
-
-## Source
-
-All source code is MIT-licensed and published at [github.com/Wolfgangrush](https://github.com/Wolfgangrush).
+MIT and Apache-2.0, per repository. See each repository's `LICENSE`.
 
 ## Contact
 
