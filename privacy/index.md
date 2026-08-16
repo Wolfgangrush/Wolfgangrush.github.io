@@ -25,63 +25,120 @@ analytics, no crash reporting, no usage statistics, and no update check that rep
 you are or what you opened. There is no channel by which your data could reach the
 Publisher, and nothing at the other end of one if there were.
 
+That statement is about **the Publisher's infrastructure**, and it holds unconditionally.
+It is deliberately not the same as saying that nothing ever leaves your machine — because
+for one class of tool, that depends on a choice you make. Section 4 sets out that choice
+in full, without softening it.
+
 ## 2. What the software processes, and where
 
 wolfgang_rush software runs **on your own machine**. Documents you open are read where
-they already sit. Nothing is copied to the Publisher, to a hosted service, or to any
-third party by the act of using the software.
+they already sit. Nothing is copied to the Publisher or to a hosted service operated by
+the Publisher, because no such service exists.
 
 Where a tool stores anything at all between sessions — a list of names you asked it to
-watch, a display preference — that data is written to your own machine's local
-application preferences and nowhere else. Deleting the application, or its preference
-file, removes it.
+watch, your matters, a display preference — that data is written to your own machine's
+local storage and nowhere else. Deleting the application, or its data directory, removes
+it.
 
 ## 3. Data protection responsibility
 
 The Publisher is **neither a Data Fiduciary nor a Data Processor** under the Digital
 Personal Data Protection Act, 2023, in respect of the material you process with this
-software — because the Publisher never receives, stores or processes it.
+software, because the Publisher never receives, stores or processes it. The equivalent
+holds under the GDPR, the PDPA, the PDPO, the UAE PDPL, the DIFC-DPL and the Australian
+Privacy Act: the Publisher is not a controller, processor or equivalent of your client
+material.
 
-Where you are an advocate handling client material, you remain the Data Fiduciary for
-that material, exactly as you were before installing anything published here. Your
-obligations to your client are unchanged by this software, because the software does not
-move their data anywhere.
+Where you are a practitioner handling client material, **you** remain the Data Fiduciary
+or controller for that material, exactly as you were before installing anything published
+here. Your obligations to your client and to your regulator are unchanged by this
+software. If you choose a mode that transmits data (Section 4), those obligations attach
+to that transmission, and they attach to you.
 
-## 4. Tools that call an external service
+## 4. The two modes, stated plainly
 
-Some wolfgang_rush tools are designed to run entirely offline and hold no network
-permission at all. Where a tool *does* call an external service, that is stated plainly
-in that tool's own documentation, and where such a call carries personal data it is
-passed through a pseudonymisation stage first, so that identifying values are replaced
-with structural placeholders before they leave the machine.
+Some wolfgang_rush tools — **NAKASHA** is the clearest example — are built to run entirely
+offline and ship with **no network entitlement at all**. Such a tool cannot reach the
+internet even if its code asked to, because the operating system will refuse. Where that
+is true, it is stated, and it can be verified in about ten seconds (see Section 6).
 
-If a tool makes no such statement, assume it makes no external call — and verify it.
-Which brings us to:
+The **practice brains** are different, and this is the part that matters most:
 
-## 5. Verify this rather than believe it
+**Local mode.** You install a local language model (Ollama with Qwen3, or an equivalent).
+All reasoning happens on your own machine. **Nothing leaves it. There is no transmission,
+so there is no transfer, no cross-border question, and no third-party recipient.** You can
+disconnect the network entirely and the software continues to work. This is the mode
+intended for privileged material, client-confidential instructions, and special-category
+or sensitive personal data.
+
+**Cloud mode.** You may instead configure the software to use a third-party language
+model. If you do, **the text of your prompts is transmitted to that provider**, which is a
+company independent of the Publisher, operating under its own terms and its own privacy
+policy. Before any such transmission, the content passes through the
+[Pseudonymisation Gateway](https://github.com/Wolfgangrush/pseudonymisation-gateway),
+which substitutes identifying values with structural placeholders in memory, writes no
+personal data to disk, and surfaces to you — rather than silently transmitting — anything
+it could not fully resolve.
+
+**Pseudonymisation is a technical safeguard. It is not a legal discharge.** It reduces
+what is exposed; it does not perform your cross-border transfer assessment, obtain your
+client's informed consent, satisfy your professional-conduct obligations, or answer to
+your regulator on your behalf. Those remain yours in full. The obligations that survive
+cloud mode are set out jurisdiction by jurisdiction on the
+[practice brains page]({{ '/brains/#jurisdictions' | relative_url }}), including the one
+hard exception the Publisher is aware of — section 77 My Health Records data in Australia,
+where the prohibition attaches to offshore handling itself and pseudonymisation therefore
+cures nothing.
+
+**Neither mode costs money.** The choice between them is a professional judgment about the
+material in front of you, not a pricing decision.
+
+## 5. This website, and the newsletter
+
+This website is served as static files by GitHub Pages. The Publisher runs no analytics on
+it, sets no advertising or tracking cookies, and operates no logging of its own. GitHub, as
+the host, may keep ordinary server-level request logs; that is GitHub's processing under
+GitHub's own privacy statement, not the Publisher's.
+
+**The one place this website collects anything from you** is the newsletter subscription
+form on the [newsletter page]({{ '/newsletter/' | relative_url }}). If you use it, your
+email address is submitted to **Buttondown**, the service that delivers the newsletter, and
+is processed there under Buttondown's own privacy policy. That address is used for one
+purpose — sending you issues of *The India Data & AI Governance Desk*. It is not sold, not
+shared, and not used to contact you about anything else. Every issue carries a one-click
+unsubscribe. Issue No. 01 remains hosted on Substack, its original platform.
+
+You never have to give the address at all: every issue is published publicly on the web
+and can be read, bookmarked and forwarded without subscribing to anything.
+
+## 6. Verify this rather than believe it
 
 Every claim on this page is a claim about what software does when nobody is watching. A
 privacy promise you cannot check is only a promise, which is why the source is published.
 
-- Read the source. It is public.
-- On macOS, inspect what the application is actually permitted to do:
+- Read the source. It is public, under MIT or Apache-2.0 per repository.
+- On macOS, inspect what an application is actually permitted to do:
   `codesign -d --entitlements - /Applications/<AppName>.app`. A tool that claims to be
   offline will show no network entitlement, and the operating system will then refuse any
   connection regardless of what the code asks for.
+- For a practice brain, the honest test is simpler still: **configure local mode, then
+  disconnect the network.** If it keeps working, nothing was leaving.
 - Watch it. A network monitor over a full session is the simplest test there is.
 
-## 6. Children's data
+## 7. Children's data
 
 None of this software is directed at children, and none of it collects personal data from
-anyone, children included.
+anyone, children included. The tools are intended for qualified legal practitioners and
+the staff they supervise.
 
-## 7. Changes to this policy
+## 8. Changes to this policy
 
 Material changes will be published at this URL with a new effective date above. The
 posture described in Section 1 is not something the Publisher intends to change; if it
 ever did, it would be stated here in plain words rather than absorbed into a longer
 document.
 
-## 8. Contact
+## 9. Contact
 
 advrushikeshravindramahajan@gmail.com
