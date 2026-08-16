@@ -19,7 +19,7 @@
     </a>
     <nav class="site-nav">
       <a href="{{ '/brains/' | relative_url }}">Practice brains</a>
-      <a href="{{ '/#tools' | relative_url }}">Tools</a>
+      <a href="{{ '/tools/' | relative_url }}">Tools</a>
       <a href="{{ '/newsletter/' | relative_url }}">Newsletter</a>
       <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
       <a class="ext" href="https://github.com/Wolfgangrush">GitHub</a>
@@ -30,15 +30,15 @@
 {% if page.url == "/" %}
 <section class="hero">
   <div class="wrap">
-    <p class="eyebrow">Local-first legal software</p>
+    <p class="eyebrow">Free, open-source legal software</p>
     <h1 class="hero-title">Legal software that runs<br><em>on your own machine.</em></h1>
     <p class="hero-sub">
       There is no account to create, no telemetry, and <strong>no server of mine anywhere
-      in the picture</strong>. Whether your work also reaches an AI model is a separate
-      decision, and it is <strong>yours</strong> &mdash; run the model locally and nothing
-      leaves at all, or use a cloud model behind a pseudonymisation gateway. Both modes are
-      documented, per jurisdiction, and the source is published so you can check rather
-      than believe.
+      in the picture</strong>. Your matters, drafts and notes live only on your machine.
+      The AI itself currently runs in the cloud, behind a <strong>pseudonymisation gateway
+      that strips identifiers before any prompt leaves your computer</strong> &mdash; wired on
+      every request and covered by tests. A fully local model tier is the next milestone and is
+      not wired yet. The source is published so you can check all of that rather than believe it.
     </p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="{{ '/brains/' | relative_url }}">Start here &mdash; what is a practice brain?</a>
@@ -70,6 +70,7 @@
     </div>
     <div class="foot-links">
       <a href="{{ '/brains/' | relative_url }}">Practice brains</a>
+      <a href="{{ '/tools/' | relative_url }}">Tools</a>
       <a href="{{ '/newsletter/' | relative_url }}">Newsletter</a>
       <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a>
       <a href="https://github.com/Wolfgangrush">GitHub</a>
