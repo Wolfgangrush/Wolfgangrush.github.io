@@ -10,6 +10,18 @@
 #     url: "https://buttondown.com/the_desk/archive/…/"
 #     summary: "One or two sentences. Plain English. What a reader gets."
 
+- number: "03"
+  title: "No EU office? Article 50 still applies from 2 August"
+  date: 2026-08-18
+  url: "https://buttondown.com/the_desk/archive/no-eu-office-article-50-still-applies-from-2/"
+  platform: Buttondown
+  summary: >-
+    Article 50 of the EU AI Act became applicable on 2 August 2026, and the Commission's
+    own guidance confirms it reaches providers outside the EU whenever their system's
+    output is used inside it — no EU entity required. Plus why compliance with India's
+    SGI labelling rules, live since 20 February 2026, is not compliance with Article 50,
+    and the transitional carve-out that closes on 2 December 2026.
+
 - number: "02"
   title: "DPDP Alert: the Consent-Manager deadline is real"
   date: 2026-08-05
