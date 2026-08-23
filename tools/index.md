@@ -1,231 +1,371 @@
 ---
 layout: default
 title: Tools
-description: The individual tools — NAKASHA board parser, the Pseudonymisation Gateway, the DPDP Act as runnable code, the Supreme Court AI regulations mapping, and the Citation Parser. Each one explained plainly.
+description: Single-purpose tools for practitioners — the NAKASHA board reader, samanvaya privacy conformance, offline multi-script OCR, the pseudonymisation gateway, the DPDP Act as runnable code, the Supreme Court AI regulations mapping, a citation manager, a news digest bot, and the CHOF human-oversight toolkit.
 ---
 
-<h1>Tools</h1>
+<section class="section reveal">
+<div class="mg">
+  <p class="note"><span class="n">00</span>How to read this page</p>
+  <div>
+    <h2>Nine tools. Each one does exactly one job.</h2>
+    <p class="lede">These are separate from the
+    <a class="link" href="{{ '/brains/' | relative_url }}">practice brains</a>, which are a different
+    thing entirely. Every tool here is free, the source is published, and it runs on your own
+    machine.</p>
+    <p>Each is described the same way: <strong>what it actually is</strong>, then <strong>the problem
+    it exists for</strong>, then what it does about it, then the honest limits. If a description here
+    does not make sense to a working practitioner, that is a defect in the description, and I would
+    rather hear about it than have it politely ignored.</p>
 
-<p class="lede">These are the smaller, single-purpose tools &mdash; separate from the
-<a href="{{ '/brains/' | relative_url }}">practice brains</a>, which are a different thing
-entirely. Each one below does exactly one job. Every one is free, open source, and runs on your
-own machine.</p>
-
-<p>Each tool is explained the same way: <strong>what it actually is</strong>, then
-<strong>the problem it exists for</strong>, then what it does about it, and then the honest
-limits. If a description here does not make sense to a working practitioner, that is a defect
-in the description, and I would rather hear about it than have it politely ignored.</p>
-
-<section class="tool" id="nakasha">
-  <div class="tool-head">
-    <h2>NAKASHA</h2>
-    <span class="badge">macOS application &middot; free</span>
+<ul class="jump">
+  <li><a href="#nakasha">NAKASHA</a></li>
+  <li><a href="#samanvaya">samanvaya</a></li>
+  <li><a href="#multi-script-ocr">Multi-script OCR</a></li>
+  <li><a href="#pseudonymisation-gateway">Pseudonymisation gateway</a></li>
+  <li><a href="#dpdp-law-to-code">DPDP as code</a></li>
+  <li><a href="#sc-ai-regulations">SC AI regulations</a></li>
+  <li><a href="#citation-parser">Citation manager</a></li>
+  <li><a href="#news-bot">News digest</a></li>
+  <li><a href="#chof">CHOF</a></li>
+  <li><a href="#saptarishi">saptarishi</a></li>
+</ul>
   </div>
-
-  <p class="what-is"><strong>What it is.</strong> A small Mac application that reads tomorrow&rsquo;s
-  court board and pulls out the matters that are yours.</p>
-
-  <p class="tool-problem"><strong>The problem.</strong> The daily board is published in the
-  evening. It runs to 87 pages and 700 or more matters. Finding your own name in it means
-  scrolling a PDF on a phone, late, tired, hoping you do not skip a line &mdash; and a missed
-  matter is not a small mistake.</p>
-
-  <p><strong>What it does.</strong> Type your surname. It gives you your list. Click any row and
-  it shows you that entry against the printed page, so you can confirm it with your own eyes
-  rather than trusting the software. Export the ones you keep. It reads both a bar
-  association&rsquo;s daily board and a High Court daily causelist, and when you open both for
-  the same date it uses one to fill the gaps in the other.</p>
-
-  <p>The matching is deliberately loose, because boards are printed with words broken mid-line
-  and fields cut off at fixed widths. A tool like this is allowed to show you an extra row you
-  do not need. It is not allowed to hide one you do.</p>
-
-  <p class="tool-meta"><strong>What you need:</strong> a Mac running macOS&nbsp;13 or later.
-  Universal binary, no third-party dependencies, and <strong>no network entitlement at all</strong>
-  &mdash; it cannot reach the internet even if it tried, and the operating system will refuse on
-  its behalf.</p>
-
-  <p class="juris-links">
-    <a class="btn btn-primary" href="https://github.com/Wolfgangrush/nakasha/releases/latest">Download for macOS</a>
-    <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/nakasha">Read the source</a>
-  </p>
+</div>
 </section>
 
-<section class="tool" id="pseudonymisation-gateway">
-  <div class="tool-head">
-    <h2>Pseudonymisation Gateway</h2>
-    <span class="badge">Software component &middot; free</span>
+<section class="section reveal">
+<div class="mg">
+  <p class="note"><span class="n">01</span>Tomorrow's board</p>
+  <div>
+    <div class="tool" id="nakasha">
+      <div class="tool-head"><h2>NAKASHA</h2><span class="badge badge-live">macOS app · free</span></div>
+
+      <p class="what-is"><strong>What it is.</strong> A small Mac application that reads tomorrow's
+      court board and pulls out the matters that are yours.</p>
+
+      <p class="tool-problem"><strong>The problem.</strong> The daily board is published in the
+      evening. It runs to 87 pages and 700 or more matters. Finding your own name in it means
+      scrolling a PDF on a phone, late, tired, hoping you do not skip a line — and a missed matter is
+      not a small mistake.</p>
+
+      <p><strong>What it does.</strong> Type your surname. It gives you your list. Click any row and
+      it shows you that entry against the printed page, so you confirm it with your own eyes rather
+      than trusting the software. Export the ones you keep. It reads both a bar association's daily
+      board and a High Court daily causelist, and when you open both for the same date it uses one to
+      fill the gaps in the other.</p>
+
+      <p>The matching is deliberately loose, because boards are printed with words broken mid-line and
+      fields cut off at fixed widths. A tool like this is allowed to show you an extra row you do not
+      need. It is not allowed to hide one you do.</p>
+
+      <p class="tool-meta"><strong>What you need:</strong> a Mac running macOS 13 or later. Universal
+      binary, no third-party dependencies, and <strong>no network entitlement at all</strong> — it
+      cannot reach the internet even if it tried, and the operating system refuses on its behalf.</p>
+
+      <p class="juris-links">
+        <a class="btn btn-primary" href="https://github.com/Wolfgangrush/nakasha/releases/latest">Download for macOS</a>
+        <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/nakasha">Read the source</a>
+      </p>
+    </div>
   </div>
+</div>
+</section>
 
-  <p class="what-is"><strong>What it is.</strong> A filter that sits between you and any cloud AI
-  and takes your client&rsquo;s identity out of your words before they leave your computer
-  &mdash; then puts it back into the answer when it returns. <em>Pseudonymisation</em> is simply
-  the technical word for that swap.</p>
+<section class="section reveal">
+<div class="mg">
+  <p class="note"><span class="n">02</span>Privacy conformance</p>
+  <div>
+    <div class="tool" id="samanvaya">
+      <div class="tool-head"><h2>samanvaya <span class="muted" style="font-weight:400">· समन्वय</span></h2><span class="badge">Source published · no release yet</span></div>
 
-  <p class="tool-problem"><strong>The problem.</strong> The moment you type
-  <em>&ldquo;draft a reply for Ramesh Kulkarni, PAN ABCDE1234F&rdquo;</em> into any cloud AI
-  service, that name and that PAN are on another company&rsquo;s servers. Logged. Retained under
-  their policy, not yours. Potentially reachable by a court order directed at them. Nothing you
-  do afterwards takes it back, and you did not decide any of that &mdash; you just asked a
-  question.</p>
+      <p class="what-is"><strong>What it is.</strong> An adviser writes down one declaration
+      describing an organisation. samanvaya reads it and returns a local report saying which
+      obligations under four named privacy regimes appear satisfied, which are unaddressed, and which
+      cannot be resolved on the facts as declared.</p>
 
-  <p><strong>What it does.</strong> Before anything is transmitted, it replaces every identifying
-  value with a neutral placeholder, sends only that version, and restores the real values in the
-  reply you read:</p>
+      <p class="tool-problem"><strong>The problem.</strong> Four separate compliance reports are four
+      separate compliance reports. The sentence an adviser actually needs is the one that falls out of
+      comparing them — where the regimes agree, where they diverge, and where the declaration is
+      simply silent.</p>
+
+      <p><strong>What it does.</strong> It reconciles, and it refuses to rank. It never touches the
+      organisation's systems, networks or data; it reads what a human wrote down. It makes no network
+      calls at all.</p>
+
+      <p><strong>The honest limits, from its own README.</strong> Of the four regimes, <strong>one is
+      sourced and three are draft</strong> — the repository badges say so on its front page rather
+      than burying it. It reports; it does not advise. 790 tests, 90.8% coverage.</p>
+
+      <p class="tool-meta"><strong>Availability:</strong> the source is public and the Mac build
+      exists, but <strong>no release has been published yet</strong> — the signed build is waiting on
+      Apple notarisation. Until that clears, this is source you can read and run, not a download.</p>
+
+      <p class="juris-links">
+        <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/samanvaya">Read the source</a>
+      </p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section reveal">
+<div class="mg">
+  <p class="note"><span class="n">03</span>Scanned paper</p>
+  <div>
+    <div class="tool" id="multi-script-ocr">
+      <div class="tool-head"><h2>Multi-Script PDF OCR</h2><span class="badge badge-live">macOS app · free</span></div>
+
+      <p class="what-is"><strong>What it is.</strong> A Mac app with three buttons — Open, OCR, Save —
+      that reads text out of scanned PDFs in <strong>12 or more Indian scripts and 17 other
+      languages</strong>, and saves a smaller copy. That is the whole feature set.</p>
+
+      <p class="tool-problem"><strong>The problem.</strong> A certified copy arrives as a scan. It has
+      no text layer, so you cannot search it, quote from it, or paste a paragraph into a draft. The
+      cloud OCR services that handle Devanagari want you to upload the document — which is the one
+      thing you cannot do with a client's papers. And the file is 40&nbsp;MB, which the registry's
+      upload form will not take.</p>
+
+      <p><strong>What it does.</strong> English and sixteen other non-Indic languages go through
+      Apple's on-device Vision framework. Every major Indian language goes through a Tesseract binary
+      bundled <em>inside</em> the app with its language data — nothing is downloaded at runtime. The
+      text appears in a side panel, selectable and copyable per page or in bulk. Saving produces a
+      reduced copy: pages that already have a real text layer are passed through untouched so they
+      stay searchable and small, and only image pages are rasterised. If the source is already
+      optimised, the app refuses to write an inflated "reduced" copy and tells you so instead of
+      silently making the file bigger.</p>
+
+      <p class="tool-meta"><strong>Fully offline.</strong> Zero network calls, no network entitlement,
+      no API key, no account, no telemetry, no version-check ping. It runs indefinitely with the
+      Wi-Fi switched off.</p>
+
+      <p class="juris-links">
+        <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/multi-script-pdf-ocr">Read the source</a>
+      </p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section reveal">
+<div class="mg">
+  <p class="note"><span class="n">04</span>Before it leaves</p>
+  <div>
+    <div class="tool" id="pseudonymisation-gateway">
+      <div class="tool-head"><h2>Pseudonymisation Gateway</h2><span class="badge badge-live">Library · free</span></div>
+
+      <p class="what-is"><strong>What it is.</strong> A filter that sits between you and any cloud AI
+      and takes your client's identity out of your words before they leave your computer — then puts
+      it back into the answer when it returns.</p>
+
+      <p class="tool-problem"><strong>The problem.</strong> The moment you type <em>"draft a reply for
+      Ramesh Kulkarni, PAN ABCDE1234F"</em> into any cloud AI service, that name and that PAN are on
+      another company's servers. Logged. Retained under their policy, not yours. Potentially reachable
+      by a court order directed at them. Nothing you do afterwards takes it back, and you did not
+      decide any of that — you just asked a question.</p>
+
+      <p><strong>What it does.</strong> Before anything is transmitted it replaces every identifying
+      value with a neutral placeholder, sends only that version, and restores the real values in the
+      reply you read:</p>
 
 <pre class="code-block"><code>You type      →  Draft a reply for Ramesh Kulkarni, PAN ABCDE1234F.
 What is sent  →  Draft a reply for [PERSON_1], PAN [PAN_1].
 What you see  →  Draft a reply for Ramesh Kulkarni, PAN ABCDE1234F.</code></pre>
 
-  <p>The substitution is consistent within a session &mdash; the same person is
-  <code>[PERSON_1]</code> every time they appear &mdash; so the AI can still follow who did what
-  to whom. It simply never learns who they are. The mapping between real and placeholder exists
-  in memory for that session only and is never written to disk.</p>
+      <p>The substitution is consistent within a session — the same person is
+      <code>[PERSON_1]</code> every time they appear — so the model can still follow who did what to
+      whom. It simply never learns who they are. The map between real and placeholder lives in memory
+      for that session only and is never written to disk.</p>
 
-  <p><strong>What it covers.</strong> Identifiers that general-purpose tools miss, because most
-  were built for American and European data: Aadhaar, PAN, GSTIN and IFSC for India; National
-  Insurance, NHS and UTR numbers for the UK; NRIC for Singapore; Emirates ID and trade licence
-  numbers for the UAE; TFN and ABN for Australia; SSN and ITIN for the US. Emails, names with
-  honorifics, dates and case numbers work across every jurisdiction. Microsoft&rsquo;s Presidio
-  is good software and does not cover the Asian and Gulf identifiers &mdash; that gap is why this
-  exists.</p>
+      <p><strong>What it covers.</strong> The identifiers general-purpose tools miss, because most
+      were built for American and European data: Aadhaar, PAN, GSTIN and IFSC for India; National
+      Insurance, NHS and UTR numbers for the UK; NRIC for Singapore; Emirates ID and trade licence
+      numbers for the UAE; TFN and ABN for Australia; SSN and ITIN for the US. Emails, names with
+      honorifics, dates and case numbers work everywhere. Microsoft's Presidio is good software and
+      does not cover the Asian and Gulf identifiers — that gap is why this exists.</p>
 
-  <p><strong>The honest limits.</strong> Anything it cannot fully resolve is
-  <em>shown to you and recorded</em> rather than quietly transmitted, so you make the final call
-  rather than discovering it later. And it remains a <strong>technical safeguard, not a legal
-  discharge</strong> &mdash; it reduces what is exposed; it does not perform your cross-border
-  transfer assessment, obtain your client&rsquo;s consent, or answer to your regulator.
-  <a href="{{ '/brains/#jurisdictions' | relative_url }}">What each jurisdiction still requires &rarr;</a></p>
+      <p><strong>The honest limits.</strong> Anything it cannot fully resolve is <em>shown to you and
+      recorded</em> rather than quietly transmitted, so you make the call rather than discovering it
+      later. And it remains a <strong>technical safeguard, not a legal discharge</strong>.</p>
 
-  <p class="tool-meta"><strong>Who this is for.</strong> Two people. If you use a practice brain,
-  <strong>you do not install this</strong> &mdash; it is already inside, and because every
-  outbound call in the brain is funnelled through one function, it runs on <em>every</em> request
-  rather than being a mode you could forget to switch on. If you build legal software yourself,
-  it is a library you can put in front of your own outbound calls.</p>
+      <p class="tool-meta"><strong>Who this is for.</strong> If you use a practice brain, you do not
+      install this — it is already inside, and because every outbound call funnels through one
+      function it runs on <em>every</em> request rather than being a mode you could forget. If you
+      build legal software yourself, it is a library you put in front of your own outbound calls.</p>
 
-  <p class="juris-links">
-    <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/pseudonymisation-gateway">Read the source</a>
-  </p>
-</section>
-
-<section class="tool" id="dpdp-law-to-code">
-  <div class="tool-head">
-    <h2>The DPDP Act 2023, as runnable code</h2>
-    <span class="badge">Reference implementation &middot; free</span>
+      <p class="juris-links">
+        <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/pseudonymisation-gateway">Read the source</a>
+      </p>
+    </div>
   </div>
-
-  <p class="what-is"><strong>What it is.</strong> India&rsquo;s data-protection statute written
-  out as working software instead of prose &mdash; so that a compliance question can be
-  <em>run</em> rather than only argued.</p>
-
-  <p class="tool-problem"><strong>The problem, and why it is not a hobby project.</strong> On
-  20 May 2026 the <em>Economic Times</em> reported that the Ministry of Electronics and IT has
-  been holding industry consultations on a concept it calls
-  <strong>&ldquo;law-to-code&rdquo;</strong> &mdash; translating DPDP Act provisions into
-  machine-executable rules so that systems are compliant by design instead of audited afterwards.
-  The applications the ministry&rsquo;s consultations identified include blocking access to
-  personal data without valid consent, raising alerts when data is kept past its permitted
-  retention period, and deleting it automatically when that period lapses.</p>
-
-  <p>This repository is a <strong>citizen-built reference implementation of that idea</strong>,
-  published while the concept is still at consultation stage &mdash; so that there is something
-  concrete to examine, test and disagree with rather than only a proposal to discuss.</p>
-
-  <p><strong>What it does.</strong> Sections 5 to 16 &mdash; notice, consent, the duties of a data
-  fiduciary, the rights of a data principal &mdash; expressed as runnable Python with 407 tests
-  behind it. It works as a command-line tool, as a library another program can call, and in a
-  form an AI assistant can use directly. The README is published in eleven languages.</p>
-
-  <p><strong>Who it is for.</strong> A practitioner who wants a repeatable, inspectable answer
-  instead of forming the same view from first principles every time. An engineer at a startup who
-  has to build a product that obeys the Act and needs the rule in a form they can actually wire
-  in. And anyone who would rather test a compliance claim than argue about it.</p>
-
-  <p class="tool-meta"><strong>The honest status.</strong> MeitY has committed to nothing. The
-  official quoted in that article describes the concept as <em>&ldquo;relatively new&rdquo;</em>
-  and <em>&ldquo;being looked into&rdquo;</em>. This is one citizen&rsquo;s implementation, not a
-  government standard and not an endorsement by anyone. It encodes the sections; it does not
-  replace advice on the facts of a particular business.</p>
-
-  <p class="juris-links">
-    <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/dpdp-law-to-code">Read the source</a>
-  </p>
+</div>
 </section>
 
-<section class="tool" id="sc-ai-regulations">
-  <div class="tool-head">
-    <h2>Draft AI Regulations 2026 &mdash; clause-by-clause mapping</h2>
-    <span class="badge">Analysis &middot; free</span>
+<section class="section reveal">
+<div class="mg">
+  <p class="note"><span class="n">05</span>Statute as code</p>
+  <div>
+    <div class="tool" id="dpdp-law-to-code">
+      <div class="tool-head"><h2>The DPDP Act 2023, as runnable code</h2><span class="badge badge-live">Reference implementation · free</span></div>
+
+      <p class="what-is"><strong>What it is.</strong> India's data-protection statute written out as
+      working software instead of prose, so that a compliance question can be <em>run</em> rather than
+      only argued.</p>
+
+      <p class="tool-problem"><strong>The problem.</strong> Two advisers read section 8 and reach two
+      answers. Neither is being careless; the text admits both. When the disagreement is about what
+      the section <em>does</em> rather than what it means, code settles it faster than
+      correspondence.</p>
+
+      <p><strong>What it does.</strong> Sections 5 to 16 as Python you can call, with 407 tests
+      standing behind the behaviour. Published as one citizen's reference implementation in response
+      to MeitY's Law-to-Code consultations.</p>
+
+      <p class="tool-meta"><strong>The honest limit.</strong> It is a reading of the Act, not the Act.
+      Where the statute is genuinely ambiguous the code takes a position, and the tests show you which
+      position it took.</p>
+
+      <p class="juris-links">
+        <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/dpdp-law-to-code">Read the source</a>
+      </p>
+    </div>
+
+    <div class="tool" id="sc-ai-regulations">
+      <div class="tool-head"><h2>Supreme Court Draft AI Regulations 2026 — clause map</h2><span class="badge">Analysis · free</span></div>
+
+      <p class="what-is"><strong>What it is.</strong> A clause-by-clause mapping of the Supreme Court
+      of India's draft <em>Regulations for the Use of AI in Courts, 2026</em> against open-source legal
+      tooling, with a stakeholder comment template.</p>
+
+      <p class="tool-problem"><strong>The problem.</strong> A draft regulation lands, the consultation
+      window is short, and every practitioner reads it alone. What is missing is a map that says which
+      clause reaches which kind of tool.</p>
+
+      <p class="tool-meta"><strong>Status.</strong> The regulations remain <strong>draft and
+      unnotified</strong>; the consultation closed on 20 June 2026. This is a reading of a draft, and
+      it says so.</p>
+
+      <p class="juris-links">
+        <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/sc-ai-regulations-2026-mapping">Read the mapping</a>
+      </p>
+    </div>
   </div>
-
-  <p class="what-is"><strong>What it is.</strong> A clause-by-clause reading of the Supreme Court
-  of India&rsquo;s draft regulations on the use of artificial intelligence in courts, setting out
-  what each clause would actually require.</p>
-
-  <p class="tool-problem"><strong>The problem.</strong> The draft is written as a regulatory
-  instrument. It is not written as a list of the things a practitioner would have to start doing
-  differently &mdash; and those two are not the same document.</p>
-
-  <p><strong>What it does.</strong> Takes the draft clause by clause and maps each one against
-  open-source legal tooling, saying what it would require of a practitioner and of the software
-  they use. It carries the stakeholder comment template that was prepared for the consultation.</p>
-
-  <p class="tool-meta"><strong>Status, stated plainly.</strong> These regulations remain a
-  <strong>draft and are not notified</strong>. The consultation closed on 20 June 2026, so the
-  comment template is now a record of what could be filed rather than a live opportunity. Read
-  this as analysis of a proposal, not as a statement of law in force.</p>
-
-  <p class="juris-links">
-    <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/sc-ai-regulations-2026-mapping">Read the mapping</a>
-  </p>
+</div>
 </section>
 
-<section class="tool" id="citation-parser">
-  <div class="tool-head">
-    <h2>Citation Parser</h2>
-    <span class="badge">Utility &middot; free</span>
+<section class="section reveal">
+<div class="mg">
+  <p class="note"><span class="n">06</span>Keeping track</p>
+  <div>
+    <div class="tool" id="citation-parser">
+      <div class="tool-head"><h2>Legal Citation Manager</h2><span class="badge badge-live">Local system · free</span></div>
+
+      <p class="what-is"><strong>What it is.</strong> A local system that receives judgment PDFs,
+      pulls the citation metadata out of them, stores it in a database on your own machine, and lets
+      you search, edit and export the library.</p>
+
+      <p class="tool-problem"><strong>The problem.</strong> You read a judgment in court, you use it,
+      and four months later you remember the proposition but not the citation. There is no record,
+      because the reading happened on a phone between two boards.</p>
+
+      <p><strong>What it does.</strong> Send the PDF to your own bot from court. It extracts the
+      metadata, files it in local SQLite, and gives you a dashboard to search and edit. Export the
+      whole library when you need it elsewhere.</p>
+
+      <p class="juris-links">
+        <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/Citation-Parser">Read the source</a>
+      </p>
+    </div>
+
+    <div class="tool" id="news-bot">
+      <div class="tool-head"><h2>News digest bot</h2><span class="badge">Server-side · free</span></div>
+
+      <p class="what-is"><strong>What it is.</strong> A bot that gathers legal and current-affairs
+      news from several sources, removes the duplicates, attaches judgment and order links where it
+      can find them, and delivers a short digest written for Indian lawyers.</p>
+
+      <p class="tool-meta"><strong>Stated plainly:</strong> unlike everything else on this page, this
+      one <strong>is not local and is not offline</strong>. It fetches from the open web and uses a
+      language model to summarise. It handles published news, not your files — but it is the one tool
+      here that does not run on your own machine, and it should not be described as if it did.</p>
+
+      <p class="small muted">Built with the help of Sidinsights — credited in the repository, and
+      credited here.</p>
+
+      <p class="juris-links">
+        <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/telegram_news_bot">Read the source</a>
+      </p>
+    </div>
   </div>
-
-  <p class="what-is"><strong>What it is.</strong> A small tool that remembers the citations you
-  have already looked up, and tells you whether a reference is properly formed.</p>
-
-  <p class="tool-problem"><strong>The problem.</strong> You find a case, use it, and three weeks
-  later go hunting for the same case again. Separately, at 11:48 at night, you find yourself
-  staring at <code>AIR 1973 SC 1461</code> trying to decide whether that is the right shape.</p>
-
-  <p><strong>What it does.</strong> Reads Indian citation formats &mdash; AIR, SCC, SCC OnLine
-  &mdash; checks that a reference is well-formed, and keeps what you have used in a list you can
-  search later.</p>
-
-  <p class="juris-links">
-    <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/Citation-Parser">Read the source</a>
-  </p>
+</div>
 </section>
 
-<h2 id="research">Academic research</h2>
+<section class="section reveal">
+<div class="mg">
+  <p class="note"><span class="n">07</span>From the dissertation</p>
+  <div>
+    <div class="tool" id="chof">
+      <div class="tool-head"><h2>CHOF — quantifying human oversight</h2><span class="badge">Research · free</span></div>
 
-<p>Separate from everything above, and of no use in a general practice. This is the software
-side of an LL.M. dissertation at Queen&rsquo;s University Belfast asking how much human oversight
-autonomous weapon systems require, and how that balance could be legally codified and enforced.
-Listed here because the code is public and someone working in international humanitarian law or
-AI governance may want it.</p>
+      <p class="what-is"><strong>What it is.</strong> The working implementation of a formula I
+      proposed in my LL.M. dissertation at Queen's University Belfast.</p>
 
-<ul class="cards">
-  <li>
-    <a href="https://github.com/Wolfgangrush/chof-calc">chof-calc</a>
-    <p>Implements the H equation from Mahajan (2024) to put a number on the human oversight a
-    given autonomous system requires.</p>
-  </li>
-  <li>
-    <a href="https://github.com/Wolfgangrush/chof-kernel">chof-kernel</a>
-    <p>Embeds those oversight requirements inside a running system, so that it has to answer for
-    them rather than merely be measured against them.</p>
-  </li>
-</ul>
+      <p>The dissertation asked how much human oversight an autonomous system must retain before the
+      law is satisfied, and proposed a way of measuring it rather than asserting it. Writing it
+      surfaced two problems with my own answer. The first was that a formula on paper cannot be
+      applied consistently by two different assessors. The second was that a figure calculated once,
+      before deployment, says nothing about the moment the system is actually running.</p>
 
-<h2>Looking for the practice brains?</h2>
+      <p><strong>These two repositories are the fix.</strong> <code>chof-calc</code> is the formula as
+      software — the same inputs give the same number, and the working is shown. <code>chof-kernel</code>
+      is the second answer: an embedded governor that applies the measure in real time rather than
+      once on paper, following the pattern of a tactical safety governor, and writing a
+      cryptographically signed audit trail so the record of what it did cannot be quietly revised
+      afterwards.</p>
 
-<p>They are a different thing and live on their own page &mdash; a second brain for your whole
-practice, in eight jurisdictions, rather than a single-purpose tool.</p>
+      <p class="tool-meta"><strong>Source:</strong> Mahajan (2024), <em>What Balance Between Human
+      Oversight and Machine Autonomy Is Necessary To Uphold Ethical Standards in Warfare, and How Can
+      This Balance Be Legally Codified and Enforced</em>, LL.M. dissertation, Queen's University
+      Belfast School of Law. Published so the argument can be checked against a working
+      implementation rather than taken on the strength of the prose.</p>
 
-<p><a class="btn btn-primary" href="{{ '/brains/' | relative_url }}">What is a practice brain?</a></p>
+      <p class="juris-links">
+        <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/chof-calc">chof-calc — the formula</a>
+        <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/chof-kernel">chof-kernel — the governor</a>
+      </p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section reveal">
+<div class="mg">
+  <p class="note"><span class="n">08</span>Before the accountant</p>
+  <div>
+    <div class="tool" id="saptarishi">
+      <div class="tool-head"><h2>saptarishi</h2><span class="badge">For chartered accountants · free</span></div>
+
+      <p class="what-is"><strong>What it is.</strong> A planning-only screening tool that walks a
+      founder through the tax questions a chartered accountant will ask, <em>before</em> the meeting
+      happens.</p>
+
+      <p class="tool-problem"><strong>The problem.</strong> A founder arrives at a CA's office without
+      the facts the CA needs, so the first meeting is spent gathering them and the advice waits for
+      the second. The CA's time goes on collection rather than judgement, and the founder pays for
+      both meetings.</p>
+
+      <p><strong>What it does.</strong> It structures the intake — the questions, in order, with the
+      reason each one matters — so the founder walks in with the picture assembled and the CA starts
+      at judgement instead of collection.</p>
+
+      <p class="tool-meta"><strong>Stated plainly:</strong> this is <strong>not tax advice</strong>
+      and it is not a substitute for a chartered accountant. It is founder-side preparation, and
+      screening is the whole of what it does. Nothing it produces is filed anywhere.</p>
+
+      <p class="juris-links">
+        <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/saptarishi">Read the source</a>
+      </p>
+    </div>
+  </div>
+</div>
+</section>

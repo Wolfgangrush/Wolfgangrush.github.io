@@ -1,11 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 {% seo %}
 <link rel="icon" href="{{ '/assets/favicon.png' | relative_url }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<script>
+(function(){
+  var r = document.documentElement;
+  r.classList.remove('no-js');
+  try {
+    var t = localStorage.getItem('wr-theme');
+    if (t === 'light' || t === 'dark') r.setAttribute('data-theme', t);
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 
@@ -14,71 +27,184 @@
 <header class="site">
   <div class="wrap head-inner">
     <a class="brand" href="{{ '/' | relative_url }}">
-      <img src="{{ '/assets/logo.png' | relative_url }}" alt="" width="40" height="40">
+      <img src="{{ '/assets/logo.png' | relative_url }}" alt="" width="30" height="30">
       <span class="brand-text">wolfgang_rush</span>
     </a>
-    <nav class="site-nav">
+    <nav class="site-nav" aria-label="Primary">
       <a href="{{ '/brains/' | relative_url }}">Practice brains</a>
       <a href="{{ '/tools/' | relative_url }}">Tools</a>
+      <a href="{{ '/built/' | relative_url }}">What is built</a>
       <a href="{{ '/newsletter/' | relative_url }}">Newsletter</a>
       <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
       <a class="ext" href="https://github.com/Wolfgangrush">GitHub</a>
+      <button type="button" class="theme-toggle" id="theme-toggle"
+              aria-label="Switch between light and dark" title="Light / dark / system">
+        <span class="tt-label" id="tt-label">System</span>
+      </button>
     </nav>
   </div>
 </header>
 
 {% if page.url == "/" %}
 <section class="hero">
-  <div class="wrap">
+  <div class="wrap hero-inner">
     <p class="eyebrow">Free, open-source legal software</p>
-    <h1 class="hero-title">Legal software that runs<br><em>on your own machine.</em></h1>
-    <p class="hero-sub">
-      There is no account to create, no telemetry, and <strong>no server of mine anywhere
-      in the picture</strong>. Your matters, drafts and notes live only on your machine.
-      The AI itself currently runs in the cloud, behind a <strong>pseudonymisation gateway
-      that strips identifiers before any prompt leaves your computer</strong> &mdash; wired on
-      every request and covered by tests. A fully local model tier is the next milestone and is
-      not wired yet. The source is published so you can check all of that rather than believe it.
-    </p>
+    <h1 class="hero-title">Legal software that runs <em>on your own machine.</em></h1>
+    <p class="hero-sub">No account. No telemetry. No server of mine anywhere in the picture.
+    Your matters, drafts and notes live in your own home directory, and the source is
+    published so you can check that rather than believe it.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="{{ '/brains/' | relative_url }}">Start here &mdash; what is a practice brain?</a>
-      <a class="btn btn-ghost" href="{{ '/newsletter/' | relative_url }}">Read the newsletter</a>
+      <a class="btn btn-primary btn-lg" href="{{ '/brains/' | relative_url }}">Start here — what is a practice brain?</a>
+      <a class="btn btn-ghost btn-lg" href="{{ '/newsletter/' | relative_url }}">Read the newsletter</a>
     </div>
-    <ul class="hero-facts">
-      <li><span>0</span> accounts</li>
-      <li><span>0</span> telemetry</li>
-      <li><span>0</span> servers of mine</li>
-      <li><span>8</span> jurisdictions</li>
-    </ul>
+
+    <div class="fan" aria-label="The eight jurisdictions">
+      <div class="fan-inner">
+        <a class="sheet" style="--i:0" href="{{ '/brains/#j-india' | relative_url }}">
+          <span class="code">IN</span>
+          <span>
+            <span class="rule"></span>
+            <span class="place">India</span>
+          </span>
+        </a>
+        <a class="sheet" style="--i:1" href="{{ '/brains/#j-uk' | relative_url }}">
+          <span class="code">UK</span>
+          <span>
+            <span class="rule"></span>
+            <span class="place">United&nbsp;Kingdom</span>
+          </span>
+        </a>
+        <a class="sheet" style="--i:2" href="{{ '/brains/#j-eu' | relative_url }}">
+          <span class="code">EU</span>
+          <span>
+            <span class="rule"></span>
+            <span class="place">European&nbsp;Union</span>
+          </span>
+        </a>
+        <a class="sheet" style="--i:3" href="{{ '/brains/#j-usa' | relative_url }}">
+          <span class="code">US</span>
+          <span>
+            <span class="rule"></span>
+            <span class="place">United&nbsp;States</span>
+          </span>
+        </a>
+        <a class="sheet" style="--i:4" href="{{ '/brains/#j-singapore' | relative_url }}">
+          <span class="code">SG</span>
+          <span>
+            <span class="rule"></span>
+            <span class="place">Singapore</span>
+          </span>
+        </a>
+        <a class="sheet" style="--i:5" href="{{ '/brains/#j-hongkong' | relative_url }}">
+          <span class="code">HK</span>
+          <span>
+            <span class="rule"></span>
+            <span class="place">Hong&nbsp;Kong</span>
+          </span>
+        </a>
+        <a class="sheet" style="--i:6" href="{{ '/brains/#j-dubai' | relative_url }}">
+          <span class="code">AE</span>
+          <span>
+            <span class="rule"></span>
+            <span class="place">Dubai · DIFC</span>
+          </span>
+        </a>
+        <a class="sheet" style="--i:7" href="{{ '/brains/#j-australia' | relative_url }}">
+          <span class="code">AU</span>
+          <span>
+            <span class="rule"></span>
+            <span class="place">Australia</span>
+          </span>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 {% endif %}
 
-<main id="main" class="wrap content {% if page.url != '/' %}page{% endif %}">
-  {{ content }}
+<main id="main">
+  <div class="wrap">
+    {{ content }}
+  </div>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap foot-inner">
-    <div>
-      <p class="foot-brand">wolfgang_rush</p>
-      <p class="muted">Published by Rushikesh R. Mahajan.</p>
-      <p class="muted small" style="margin-top:10px;max-width:46ch">
-        Informational and educational only. Nothing here is legal advice and no
-        solicitor&ndash;client or advocate&ndash;client relationship arises from reading it.
-      </p>
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="foot-h">Software</p>
+        <a href="{{ '/brains/' | relative_url }}">Practice brains</a>
+        <a href="{{ '/tools/' | relative_url }}">Tools</a>
+        <a href="{{ '/built/' | relative_url }}">Everything built</a>
+      </div>
+      <div>
+        <p class="foot-h">Writing</p>
+        <a href="{{ '/newsletter/' | relative_url }}">The India Data &amp; AI Governance Desk</a>
+        <a href="https://buttondown.com/the_desk/archive/">Every issue</a>
+      </div>
+      <div>
+        <p class="foot-h">Source</p>
+        <a href="https://github.com/Wolfgangrush">GitHub</a>
+        <a href="{{ '/privacy/' | relative_url }}">Privacy policy</a>
+      </div>
+      <div>
+        <p class="foot-h">Contact</p>
+        <a href="mailto:advrushikeshravindramahajan@gmail.com">advrushikeshravindramahajan@gmail.com</a>
+        <a href="mailto:wolfgangrush@gmail.com">wolfgangrush@gmail.com</a>
+      </div>
     </div>
-    <div class="foot-links">
-      <a href="{{ '/brains/' | relative_url }}">Practice brains</a>
-      <a href="{{ '/tools/' | relative_url }}">Tools</a>
-      <a href="{{ '/newsletter/' | relative_url }}">Newsletter</a>
-      <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a>
-      <a href="https://github.com/Wolfgangrush">GitHub</a>
-      <a href="mailto:advrushikeshravindramahajan@gmail.com">Contact</a>
-    </div>
+    <p class="foot-legal">
+      Published by <strong>Rushikesh R. Mahajan</strong> — Advocate, with right of audience before
+      the courts of India. LL.M. in Law and Technology, Queen&rsquo;s University Belfast.
+      Everything here is informational and educational. None of it is legal advice, and none of it
+      creates an advocate&ndash;client or solicitor&ndash;client relationship. The software is built
+      for qualified practitioners and the staff they supervise. MIT and Apache-2.0, per repository.
+    </p>
   </div>
-  <p class="wrap muted small">MIT and Apache-2.0, per repository. See each repository&rsquo;s <code>LICENSE</code>.</p>
 </footer>
+
+<script>
+(function(){
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+})();
+
+(function(){
+  var btn = document.getElementById('theme-toggle');
+  var label = document.getElementById('tt-label');
+  if (!btn || !label) return;
+  var root = document.documentElement;
+  function current(){
+    var t = root.getAttribute('data-theme');
+    return (t === 'light' || t === 'dark') ? t : 'system';
+  }
+  function paint(){
+    var c = current();
+    label.textContent = c.charAt(0).toUpperCase() + c.slice(1);
+    btn.setAttribute('aria-label', 'Colour scheme: ' + c + '. Click to change.');
+  }
+  btn.addEventListener('click', function(){
+    var next = { system: 'light', light: 'dark', dark: 'system' }[current()];
+    if (next === 'system'){
+      root.removeAttribute('data-theme');
+      try { localStorage.removeItem('wr-theme'); } catch(e){}
+    } else {
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('wr-theme', next); } catch(e){}
+    }
+    paint();
+  });
+  paint();
+})();
+</script>
 
 </body>
 </html>

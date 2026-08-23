@@ -1,0 +1,29 @@
+# GENERATED — do not hand-edit.
+# Written by audit-localtier.sh, which reads each repo's own brain/llm.py.
+# Regenerate before every publish. Source of truth is the code, not this file.
+# generated_at: 2026-08-23T18:44:04+0530
+
+- slug: india
+  name: "India"
+  local_tier: "wired"
+- slug: uk
+  name: "United Kingdom"
+  local_tier: "wired"
+- slug: eu
+  name: "European Union"
+  local_tier: "wired"
+- slug: usa
+  name: "United States"
+  local_tier: "wired"
+- slug: singapore
+  name: "Singapore"
+  local_tier: "wired"
+- slug: hongkong
+  name: "Hong Kong"
+  local_tier: "wired"
+- slug: dubai
+  name: "Dubai · DIFC"
+  local_tier: "wired"
+- slug: australia
+  name: "Australia"
+  local_tier: "wired"

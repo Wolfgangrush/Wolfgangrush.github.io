@@ -8,7 +8,7 @@ permalink: /privacy/
 
 **Effective date:** 2026-08-16
 **Publisher:** Rushikesh R. Mahajan, publishing as **wolfgang_rush**
-**Contact:** advrushikeshravindramahajan@gmail.com
+**Contact:** advrushikeshravindramahajan@gmail.com / wolfgangrush@gmail.com
 
 This is the canonical privacy policy for the wolfgang_rush software family. It is the
 URL referenced by wolfgang_rush software manifests, and it covers every tool published
@@ -162,4 +162,4 @@ document.
 
 ## 9. Contact
 
-advrushikeshravindramahajan@gmail.com
+advrushikeshravindramahajan@gmail.com / wolfgangrush@gmail.com
