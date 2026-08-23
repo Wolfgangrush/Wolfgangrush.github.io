@@ -4,7 +4,6 @@ description: >-
   brief on Indian data-protection and AI-governance law. Free, open source, and nothing
   runs on the Publisher's servers.
 url: https://wolfgangrush.github.io
-image: /assets/og-image.png
 permalink: pretty
 markdown: kramdown
 plugins:
@@ -14,3 +13,12 @@ exclude:
   - README.md
   - .gitignore
   - "*.py"
+
+twitter:
+  card: summary_large_image
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/og-image.png
