@@ -47,12 +47,13 @@
   --step-2:  clamp(1.7rem, 1.45rem + 1.2vw, 2.35rem);
   --step-3:  clamp(2.3rem, 1.8rem + 2.4vw, 3.7rem);
   --step-4:  clamp(3rem, 2.1rem + 4.4vw, 5.6rem);
-}
 
-:root:not([data-theme="light"]) { }
+  color-scheme: light;
+}
 
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
+    color-scheme: dark;
     --paper:        #15171B;
     --paper-raised: #1D2025;
     --paper-sunk:   #101216;
@@ -69,6 +70,7 @@
 }
 
 :root[data-theme="dark"]{
+  color-scheme: dark;
   --paper:        #15171B;
   --paper-raised: #1D2025;
   --paper-sunk:   #101216;
@@ -81,6 +83,25 @@
   --rule-faint:   #262B31;
   --shadow-sheet: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
   --shadow-lift:  0 2px 4px rgba(0,0,0,.45), 0 24px 48px -20px rgba(0,0,0,.7);
+}
+
+/* Light, declared explicitly and last. Light must never depend on the ABSENCE
+   of a match — it is stated at the same specificity as dark, after dark, so a
+   reader who picks light gets light regardless of their operating system.     */
+:root[data-theme="light"]{
+  color-scheme: light;
+  --paper:        #E9EBEE;
+  --paper-raised: #F6F7F8;
+  --paper-sunk:   #DFE2E6;
+  --ink:          #14161A;
+  --ink-soft:     #4E545C;
+  --ink-faint:    #7C838C;
+  --seal:         #8C2F24;
+  --seal-bright:  #A8382B;
+  --rule:         #C7CCD2;
+  --rule-faint:   #D8DCE1;
+  --shadow-sheet: 0 1px 2px rgba(20,22,26,.05), 0 8px 24px -12px rgba(20,22,26,.18);
+  --shadow-lift:  0 2px 4px rgba(20,22,26,.06), 0 24px 48px -20px rgba(20,22,26,.28);
 }
 
 /* ---------- base -------------------------------------------------------- */
@@ -629,3 +650,38 @@ footer.site{
 }
 .mg > .note a.anchor:hover{ color:var(--seal); }
 .mg > .note a.anchor:hover .n{ text-decoration:underline; text-underline-offset:.2em; }
+
+/* ---------- the wordmark ------------------------------------------------ */
+/* The brand is "wolfgang_rush" and the underscore is its own punctuation —
+   so the underscore IS the mark. It is set as a seal-red rule on the
+   baseline rather than a typed character, sized to the type around it.     */
+
+.brand{ display:inline-flex; align-items:center; text-decoration:none; }
+.brand-text{
+  display:inline-flex; align-items:baseline; gap:0;
+  font-family:var(--margin-face);
+  font-weight:600;
+  font-size:1.02rem;
+  letter-spacing:.1em;
+  text-transform:lowercase;
+  color:var(--ink);
+  line-height:1;
+}
+.brand-text .us{
+  display:inline-block;
+  width:.72em;
+  height:.13em;
+  margin:0 .16em;
+  background:var(--seal);
+  border-radius:.5px;
+  transform-origin:left center;
+  transition:width .3s cubic-bezier(.2,.8,.25,1), background .25s;
+}
+.brand:hover .brand-text{ color:var(--seal); }
+.brand:hover .brand-text .us{ width:1.05em; }
+.brand:focus-visible{ outline:2px solid var(--seal-bright); outline-offset:4px; }
+
+@media (prefers-reduced-motion: reduce){
+  .brand-text .us{ transition:none; }
+  .brand:hover .brand-text .us{ width:.72em; }
+}
