@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="wolfgang_rush">
+  <title>wolfgang_rush</title>
+  <style>
+    .mark{fill:#14161A}
+    @media (prefers-color-scheme: dark){ .mark{fill:#E9EBEE} }
+  </style>
+  <path class="mark" fill-rule="evenodd" d="M88 89 L176 171 L256 149 L336 171 L424 89 L438 217 L392 277 L338 267 L312 331 L280 387 L256 423 L232 387 L200 331 L174 267 L120 277 L74 217 Z M168 213 L222 227 L216 249 L162 235 Z M344 213 L290 227 L296 249 L350 235 Z"/>
+</svg>
