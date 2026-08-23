@@ -29,12 +29,9 @@ description: Everything built so far — the public tools and practice brains an
       <tbody>
         <tr><td><a class="link" href="{{ '/brains/' | relative_url }}">Practice brains</a> — one per jurisdiction</td><td>8</td><td>MIT</td></tr>
         <tr><td><a class="link" href="{{ '/tools/' | relative_url }}">Single-purpose tools</a></td><td>9</td><td>MIT / Apache-2.0</td></tr>
-        <tr><td>Drafting plugins and connectors for Indian courts</td><td>28</td><td>MIT</td></tr>
       </tbody>
     </table>
     </div>
-    <p class="small muted">The drafting families are indexed separately and are not part of this
-    site's three doors.</p>
   </div>
 </div>
 </section>
@@ -138,7 +135,7 @@ description: Everything built so far — the public tools and practice brains an
     <table>
       <thead><tr><th>Tier</th><th>Repositories</th><th>Status</th></tr></thead>
       <tbody>
-        <tr><td>Public — brains, tools, drafting families</td><td>51</td><td>free, MIT / Apache-2.0, downloadable</td></tr>
+        <tr><td>Public — everything on this site, plus the supporting libraries</td><td>51</td><td>free, MIT / Apache-2.0, downloadable</td></tr>
         <tr><td>Private — enterprise, GC, Vidhi Likhit, oversight, infrastructure</td><td>43</td><td>closed; described here, not linked</td></tr>
       </tbody>
     </table>
