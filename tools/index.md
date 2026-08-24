@@ -8,7 +8,7 @@ description: Single-purpose tools for practitioners — the NAKASHA board reader
 <div class="mg">
   <p class="note"><span class="n">00</span>How to read this page</p>
   <div>
-    <h2>Nine tools. Each one does exactly one job.</h2>
+    <h2>Ten tools. Each one does exactly one job.</h2>
     <p class="lede">These are separate from the
     <a class="link" href="{{ '/brains/' | relative_url }}">practice brains</a>, which are a different
     thing entirely. Every tool here is free, the source is published, and it runs on your own
@@ -29,6 +29,7 @@ description: Single-purpose tools for practitioners — the NAKASHA board reader
   <li><a href="#news-bot">News digest</a></li>
   <li><a href="#chof">CHOF</a></li>
   <li><a href="#saptarishi">saptarishi</a></li>
+  <li><a href="#repofacts">repofacts</a></li>
 </ul>
   </div>
 </div>
@@ -364,6 +365,47 @@ What you see  →  Draft a reply for Ramesh Kulkarni, PAN ABCDE1234F.</code></pr
 
       <p class="juris-links">
         <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/saptarishi">Read the source</a>
+      </p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section reveal">
+<div class="mg">
+  <p class="note"><span class="n">09</span>Before you install it</p>
+  <div>
+    <div class="tool" id="repofacts">
+      <div class="tool-head"><h2>repofacts</h2><span class="badge">Command line · free</span></div>
+
+      <p class="what-is"><strong>What it is.</strong> A command-line tool that checks the GitHub
+      repositories an AI recommended to you, before you install any of them.</p>
+
+      <p class="tool-problem"><strong>The problem.</strong> You ask a model which library to use and
+      it hands back a confident list. One of them does not exist. One has no licence file at all, so
+      there is no grant of rights whatever its README implies. One has been dead for two years. On the
+      page, all three look exactly like the ones that are fine.</p>
+
+      <p><strong>What it does.</strong> Give it the list — a chat log, a markdown file, your notes. It
+      pulls out every repository reference, asks GitHub about each one, and prints a verdict per repo:
+      <strong>STOP</strong>, <strong>CAUTION</strong> or <strong>OK</strong>, with the reason in
+      plain words. A repository with no licence file is a STOP rather than a warning, because there
+      is nothing to rely on. It can also compare what the model <em>claimed</em> — the star count, the
+      licence — against what GitHub actually reports, and a deeper pass adds security, quality and
+      install-simulation checks.</p>
+
+      <p>A check that could not run says so. It never reports an unchecked thing as a pass — which
+      matters more here than usual, since the tool exists to catch exactly that habit in something
+      else.</p>
+
+      <p class="tool-meta"><strong>Stated plainly:</strong> GitHub only — no GitLab, no Bitbucket. It
+      never clones, installs, executes or writes anything, and there is no telemetry. It has
+      <strong>zero third-party dependencies</strong>, which for a tool whose subject is dependency
+      risk is the whole point rather than a detail. Python 3.11 or later. Not on PyPI yet, so install
+      it from the source.</p>
+
+      <p class="juris-links">
+        <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/repofacts">Read the source</a>
       </p>
     </div>
   </div>
