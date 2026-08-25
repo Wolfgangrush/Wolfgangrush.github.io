@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Tools
-description: Single-purpose tools for practitioners — the NAKASHA board reader, samanvaya privacy conformance, offline multi-script OCR, the pseudonymisation gateway, the DPDP Act as runnable code, the Supreme Court AI regulations mapping, a citation manager, a news digest bot, and the CHOF human-oversight toolkit.
+description: Single-purpose tools for practitioners — the NAKASHA board reader, samanvaya privacy conformance, offline multi-script OCR, the pseudonymisation gateway, the DPDP Act as runnable code, the Supreme Court AI regulations mapping, a citation manager, a news digest bot, the CHOF human-oversight toolkit, saptarishi startup-tax pre-screening, and repofacts.
 ---
 
 <section class="section reveal">
 <div class="mg">
   <p class="note"><span class="n">00</span>How to read this page</p>
   <div>
-    <h2>Ten tools. Each one does exactly one job.</h2>
+    <h2>Eleven tools. Each one does exactly one job.</h2>
     <p class="lede">These are separate from the
     <a class="link" href="{{ '/brains/' | relative_url }}">practice brains</a>, which are a different
     thing entirely. Every tool here is free, the source is published, and it runs on your own
