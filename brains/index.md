@@ -77,7 +77,7 @@ description: A free, open-source practice brain for solo lawyers — one edition
 
     <h3>Your files never move</h3>
     <p>{{ site.umbrella | capitalize }} — parties, hearing dates, reminders, correspondence,
-    compliance records and the audit log — live in <code>~/.aibrain-&lt;jurisdiction&gt;/</code> on
+    compliance records and the audit log — live in <code>~/.ailawfirm-&lt;jurisdiction&gt;/</code> on
     your own machine, in a local database you can copy to a USB stick. I operate no
     infrastructure that touches it and I cannot read that folder. This holds unconditionally and
     is not contingent on any setting.</p>
@@ -111,10 +111,16 @@ description: A free, open-source practice brain for solo lawyers — one edition
     through, so there is no second path around it, and it is held in place by tests.
     <a class="link" href="{{ '/tools/#pseudonymisation-gateway' | relative_url }}">See exactly what the swap looks like →</a></p>
 
-    <h3>And the strongest setting of all, now in every edition</h3>
+    <h3>And the strongest setting of all, now in seven of the eight</h3>
     <p>There is a <strong>fully local model tier</strong> — the model itself runs on your own
-    laptop and nothing leaves at all. As of 25 August 2026 it is wired in all eight editions. One
-    command, <code>connect-local</code>, installs it and switches the brain over.</p>
+    laptop and nothing leaves at all. As of 26 August 2026 it is published in seven editions:
+    India, the United Kingdom, the European Union, the United States, Singapore, Hong Kong and
+    Dubai. One command, <code>connect-local</code>, installs it and switches the brain over.</p>
+
+    <p><strong>Australia is the exception, and it is named rather than averaged into a count.</strong>
+    The code is written but is not yet in the published repository, so an Australian practitioner
+    cannot download it today. That gap matters more in Australia than anywhere else, for the
+    reason set out under section 77 of the My Health Records Act below.</p>
 
     <p>Once it is on, it does not quietly come off. If the local model is unreachable the request
     <em>fails</em>; it does not fall back to a cloud vendor. A silent fallback would send
