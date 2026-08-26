@@ -702,3 +702,140 @@ footer.site{
   #main.prose-justified p,
   #main.prose-justified li { text-align: left; hyphens: manual; }
 }
+
+/* ---------- mobile / phone hardening ------------------------------------
+   2026-08-26 — no phone breakpoint existed for buttons, hero copy, nav,
+   .doors, .tool cards, or the footer. The page rendered, but it did not
+   fit. These rules scope their fixes to viewport widths that mean
+   "phone in portrait" and leave every desktop layout byte-identical.
+
+   Two breakpoints: 640px catches every modern phone in portrait; 380px
+   catches the smallest cases (360px-class devices) for a second pass on
+   the hero type and the jurisdiction sheet cards.                          */
+
+@media (max-width: 640px){
+  /* The classic "the whole page scrolls sideways" symptom: one
+     overflowing child stretches the body, because body has no
+     overflow guard. clip is invisible unless something tries to
+     overflow; it does not establish a scroll container the way
+     hidden does, so position:sticky on the header keeps working. */
+  body{ overflow-x:clip; }
+
+  /* ---- type ----
+     The hero h1 was clamped to never go below 3rem (~48px). On a
+     360-390px phone that is still 48px, which crowds the line and
+     can push a long word past the edge. Pull the floor down for
+     phones only; the desktop clamp is untouched.                   */
+  :root{
+    --step-4: clamp(2.2rem, 1.55rem + 5.2vw, 3.4rem);
+    --step-3: clamp(1.7rem, 1.35rem + 2.6vw, 2.5rem);
+  }
+
+  /* ---- header ----
+     Seven nav items + the theme toggle + the brand cannot share a
+     360px row. Stack the brand above the nav; let the nav scroll
+     horizontally so it never wraps and never eats more than one
+     strip of vertical space.                                          */
+  .head-inner{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:.55rem;
+    min-height:0;
+    padding-block:.55rem;
+  }
+  .site-nav{
+    width:100%;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;
+    gap:.85rem;
+    padding-bottom:.15rem;
+  }
+  .site-nav::-webkit-scrollbar{ height:2px; }
+  .site-nav a, .theme-toggle{ white-space:nowrap; }
+
+  /* ---- hero ----
+     The h1 and lead already clamp, but their max-widths were set for
+     a wider viewport; let them breathe on a phone.                 */
+  .hero{ padding:clamp(2.6rem,7vh,4rem) 0 clamp(2rem,5vh,3.4rem); }
+  .hero-title{ max-width:none; }
+  .hero-sub{ max-width:none; margin-bottom:1.6rem; }
+
+  /* ---- buttons ----
+     Two long labels side by side (.hero-actions, .latest-cta,
+     .juris-links) overflow a phone. Stack them and stretch each
+     to the row.                                                     */
+  .hero-actions,
+  .latest-cta,
+  .juris-links{ flex-direction:column; align-items:stretch; }
+  .hero-actions .btn,
+  .latest-cta .btn,
+  .juris-links .btn{
+    width:100%;
+    justify-content:center;
+  }
+
+  /* ---- the fan ----
+     8 sheets across a phone at 3 per row makes each card ~110px
+     wide, and "United Kingdom" overflows the .place element. Two
+     per row keeps every word readable.                              */
+  .sheet{
+    width:calc(50% - .35rem);
+    aspect-ratio:4/5;
+    padding:.65rem .6rem;
+  }
+  .sheet .place{ font-size:.82rem; line-height:1.18; }
+
+  /* ---- doors / sheets / tools / latest ----
+     Auto-fit already collapses .doors and .foot-grid to a single
+     column on a phone. The padding stays at its clamp minimum,
+     which is fine; just nudge it down a touch.                      */
+  .door,
+  .sheet-block,
+  .latest-box{ padding:1.3rem 1.15rem; }
+  .tool{ padding:1.8rem 0; }
+  .tool-head{ gap:.55rem; }
+
+  /* ---- code blocks ----
+     pre.code-block already had overflow-x:auto. What was missing
+     was any rule on inline <code> to break very long tokens that
+     sit inside paragraphs and would otherwise push the paragraph
+     past the viewport.                                              */
+  pre.code-block{
+    padding:.85rem 1rem;
+    font-size:.78rem;
+    line-height:1.62;
+    border-left-width:2px;
+  }
+  code{ overflow-wrap:anywhere; word-break:break-word; }
+
+  /* ---- tables ----
+     .table-scroll already provides horizontal scroll. Trim cell
+     padding so the table does not look cramped against the
+     scrollbar.                                                       */
+  table{ font-size:.88rem; min-width:30rem; }
+  th, td{ padding:.6rem .65rem; }
+
+  /* ---- subscribe ----
+     The email field and the button side-by-side squeeze at 360px.
+     Stack them; field first, button full-width below.              */
+  form.subscribe{ flex-direction:column; align-items:stretch; }
+  form.subscribe input[type=email]{ flex:1 1 auto; width:100%; }
+
+  /* ---- footer ----
+     Long email addresses should be allowed to break if they
+     would otherwise overflow.                                        */
+  footer.site{ padding:1.8rem 0; }
+  .foot-grid{ gap:1.5rem; }
+  .foot-grid a{ overflow-wrap:anywhere; }
+}
+
+/* Smallest phones (≤380px) — one more pass for the most cramped cases. */
+@media (max-width: 380px){
+  :root{
+    --step-4: clamp(2rem, 1.4rem + 5.6vw, 3.1rem);
+  }
+  .sheet{ padding:.55rem .5rem; }
+  .sheet .place{ font-size:.76rem; }
+}
