@@ -15,11 +15,11 @@ description: A free, open-source practice brain for solo lawyers — one edition
 
     <p>You install one edition and you talk to it in ordinary sentences. A <strong>receptionist</strong>
     listens to what you type, works out which specialist you actually need, and routes the question.
-    Behind it sit specialists for citations, court lookup, drafting, bar-conduct compliance, and
-    calendar — each pre-loaded with the statute digests and drafting templates of your own
+    Behind it sit specialists for citations, court lookup, document preparation, bar-conduct compliance, and
+    calendar — each pre-loaded with the statute digests and preparation templates of your own
     jurisdiction, the ones you would otherwise keep on a shelf behind your desk.</p>
 
-    <p>Everything you give it — matters, clients, drafts, hearing dates, audit logs — lives in your
+    <p>Everything you give it — {{ site.umbrella }}, hearing dates, reminders, audit logs — lives in your
     own home directory. Not on a server of mine, because there isn't one. You can copy that folder
     to a USB stick and hold your whole practice in your hand.</p>
 
@@ -49,11 +49,11 @@ description: A free, open-source practice brain for solo lawyers — one edition
       to your edition.</li>
       <li><strong>Add a hearing date</strong> and sync it to your phone through a local calendar
       feed.</li>
-      <li><strong>Run a draft advertisement or post past the compliance officer</strong> before you
+      <li><strong>Run a proposed advertisement or post past the compliance officer</strong> before you
       publish it, and find out whether it touches your bar's publicity rule — BCI Rule 36, the SRA
       and BSB conduct rules, the CCBE Code, ABA Model Rule 7, LPCR Rule 8, the Solicitors' Conduct
       Rules, the DIFC Code of Conduct, or the UAE Legal Profession Code.</li>
-      <li><strong>Draft a pleading</strong> from a template that belongs to your forum — an
+      <li><strong>Prepare a pleading</strong> from a template that belongs to your forum — an
       Originating Claim under ROC 2021, a CPR N1 claim form, a complaint under the FRCP, an Indian
       written statement, an Article 263 TFEU application, an HKCFI originating summons.</li>
       <li><strong>Switch between DIFC and Mainland UAE mid-session</strong> in the Dubai edition,
@@ -76,30 +76,52 @@ description: A free, open-source practice brain for solo lawyers — one edition
     and they do not protect you in the same way, so they are set out separately.</p>
 
     <h3>Your files never move</h3>
-    <p>Matters, clients, drafts, hearing dates, audit logs and configuration live in
-    <code>~/.ailawfirm-&lt;jurisdiction&gt;/</code> on your own machine, in a local database. I
-    operate no infrastructure that touches it and I cannot read that folder. This holds
-    unconditionally and is not contingent on any setting.</p>
+    <p>{{ site.umbrella | capitalize }} — parties, hearing dates, reminders, correspondence,
+    compliance records and the audit log — live in <code>~/.aibrain-&lt;jurisdiction&gt;/</code> on
+    your own machine, in a local database you can copy to a USB stick. I operate no
+    infrastructure that touches it and I cannot read that folder. This holds unconditionally and
+    is not contingent on any setting.</p>
 
-    <h3>You bring your own key</h3>
+    <h3>You bring your own key — and it must be a paid one</h3>
     <p>Where a language model is used, it is reached on <strong>your</strong> account with
     <strong>your</strong> credentials. There is no shared key, no account of mine in the path, and
-    no request of yours passes through anything I run. Your relationship with that vendor is yours,
-    on their terms, which you can read.</p>
+    no request of yours passes through anything I run.</p>
+
+    <p>The key must be a <strong>paid API key</strong>, not a consumer subscription. That is a
+    deliberate requirement, not a technical one. A vendor's commercial API terms and its consumer
+    terms are different documents, and the difference is exactly the point that matters to a
+    practitioner. Anthropic, for one, states it plainly: <em>"By default, we will not use your
+    inputs or outputs from our commercial products&nbsp;… to train our models."</em> Its consumer
+    tiers are governed separately. One exception worth knowing on any vendor: if you press a
+    thumbs-up or thumbs-down inside that vendor's own interface, the conversation can be retained
+    and used for training. The brain never sends such feedback.</p>
+
+    <p>Six providers are supported — <strong>Anthropic, OpenAI, Google Gemini, GLM, DeepSeek and
+    MiniMax</strong> — plus a fully local model that needs no key at all. Which one you point the
+    brain at is your choice and your relationship, on that vendor's published terms, which you
+    should read. What I can guarantee is narrower, and it is the part that is mine to guarantee:
+    nothing reaches any of them without passing the pseudonymisation gateway first.</p>
 
     <h3>Identifiers are stripped before anything leaves</h3>
-    <p>Every outbound request passes through one function, and that function sanitises before it
-    sends and restores after it returns. Names, government identifiers and case references are
+    <p>Every outbound request passes through one named component — the
+    <strong>pseudonymisation gateway</strong> — and it sanitises before it sends and restores
+    after it returns. Names, government identifiers and case references are
     replaced with neutral placeholders on the way out and put back on the way in. It is not a mode
-    you can forget to switch on, and it is held in place by tests.
+    you can forget to switch on: it is a hook on the single function every cloud call funnels
+    through, so there is no second path around it, and it is held in place by tests.
     <a class="link" href="{{ '/tools/#pseudonymisation-gateway' | relative_url }}">See exactly what the swap looks like →</a></p>
 
-    <h3>And one that is a work in progress, said plainly</h3>
-    <p>A <strong>fully local model tier</strong> — where the model itself runs on your laptop and
-    nothing leaves at all — is being wired edition by edition. The table below reports the state of
-    each edition as verified in its own source, not as a marketing position. Where it says
-    <em>planned</em>, it is not built, and no professional-conduct duty is discharged by absence of
-    transmission in that edition today.</p>
+    <h3>And the strongest setting of all, now in every edition</h3>
+    <p>There is a <strong>fully local model tier</strong> — the model itself runs on your own
+    laptop and nothing leaves at all. As of 25 August 2026 it is wired in all eight editions. One
+    command, <code>connect-local</code>, installs it and switches the brain over.</p>
+
+    <p>Once it is on, it does not quietly come off. If the local model is unreachable the request
+    <em>fails</em>; it does not fall back to a cloud vendor. A silent fallback would send
+    privileged material out while the product told you it was staying in, which is the precise
+    false assurance this tier exists to remove. An explicit setting in your config also beats a
+    stray cloud key sitting in your shell environment — the deliberate statement wins over the
+    ambient one.</p>
 
     <div class="table-scroll">
     <table>
@@ -118,8 +140,9 @@ description: A free, open-source practice brain for solo lawyers — one edition
     </table>
     </div>
 
-    <p class="small muted">This table is generated from an audit that reads each repository's own
-    source at build time. It cannot claim a capability the code does not contain.</p>
+    <p class="small muted">Nobody types this table. A script opens each edition's own source code,
+    checks whether the feature is actually in there, and fills the row in from what it finds. If an
+    edition's code cannot do something, there is no way for the table to say that it can.</p>
   </div>
 </div>
 </section>
@@ -159,7 +182,7 @@ description: A free, open-source practice brain for solo lawyers — one edition
       specialist roster. The citation clerk parses OSCOLA 4th edition: neutral citations, law
       reports, case names. Pseudonymisation covers NI number, NHS number, UTR, UK VAT, UK phone,
       sterling amounts, UK IBAN and EWHC / EWCA / UKSC case numbers — and Indian-diaspora
-      identifiers too, because a substantial part of the client base carries them. 107 drafting
+      identifiers too, because a substantial part of the client base carries them. 107 preparation
       templates across the full litigation backbone.</p>
     </div>
 
@@ -170,7 +193,7 @@ description: A free, open-source practice brain for solo lawyers — one edition
       CJEU C-cases (<code>C-123/22</code>). Pseudonymisation covers IBAN across all 27 Member States,
       EU VAT, EORI, German Steuer-ID, French INSEE, Italian Codice Fiscale, CJEU case numbers and
       euro amounts. Positioned as <strong>limited risk under Article 50 of the AI Act</strong> — a
-      transparency obligation, stated rather than implied. 56 drafting templates.</p>
+      transparency obligation, stated rather than implied. 56 preparation templates.</p>
     </div>
 
     <div class="tool" id="j-usa">
@@ -179,7 +202,7 @@ description: A free, open-source practice brain for solo lawyers — one edition
       registered Foreign Legal Consultants. The citation clerk handles Bluebook — Supreme Court,
       Circuit, District, USC, CFR. Pseudonymisation covers SSN, ITIN, EIN, US phone, dollar amounts,
       driver-licence placeholders and federal docket numbers. ABA Formal Opinion 512, issued 29 July
-      2024, is built into the compliance officer for Rule 1.1, Rule 1.6 and Rule 5.3. 89 drafting
+      2024, is built into the compliance officer for Rule 1.1, Rule 1.6 and Rule 5.3. 89 preparation
       templates. State-specific procedure is v0.2 and is not claimed today.</p>
     </div>
 
@@ -190,7 +213,7 @@ description: A free, open-source practice brain for solo lawyers — one edition
       of the High Court, the State Courts, the Family Justice Courts, the Syariah Court and the SICC.
       Pseudonymisation covers NRIC, FIN, UEN, CPF references, SG phone, SGD amounts and SGCA / SGHC /
       SGDC case numbers. The privacy posture is written against PDPA Section 24 and Section 26.
-      17 statute digests, 6 ROC 2021 scaffolds, 55 drafting templates.</p>
+      17 statute digests, 6 ROC 2021 scaffolds, 55 preparation templates.</p>
     </div>
 
     <div class="tool" id="j-hongkong">
@@ -214,7 +237,7 @@ description: A free, open-source practice brain for solo lawyers — one edition
       contaminate each other. Pseudonymisation covers Emirates ID, trade licence, DIFC Court case
       numbers, UAE phone, AED amounts and UAE IBAN — plus Aadhaar, for Dubai's Indian-diaspora
       client base. Privacy posture written against UAE PDPL Article 22 and DIFC-DPL Articles 26–31.
-      81 dual-track drafting templates.</p>
+      81 dual-track preparation templates.</p>
     </div>
 
     <div class="tool" id="j-australia">
@@ -226,7 +249,7 @@ description: A free, open-source practice brain for solo lawyers — one edition
       <em>Dayal</em> [2024] FedCFamC2F 1166 read with the Law Council's 2024 joint statement.
       Citation clerk handles AGLC4. Pseudonymisation covers TFN, Medicare, ABN, ACN, BSB codes, AU
       phone, AUD amounts and HCA / FCA / FCAFC / state Supreme Court numbers. 13 statute digests,
-      39 research files, 79 drafting templates.</p>
+      39 research files, 79 preparation templates.</p>
     </div>
   </div>
 </div>
@@ -240,7 +263,7 @@ description: A free, open-source practice brain for solo lawyers — one edition
 
     <ul class="posture">
       <li><strong>It is not a lawyer and does not supervise itself.</strong> Everything it produces
-      is a draft for a qualified practitioner to check. The bar rules it knows about are the same
+      is a first version for a qualified practitioner to check. The bar rules it knows about are the same
       rules that make that your responsibility and not its own.</li>
       <li><strong>It is not a research service with a live case database.</strong> It carries statute
       digests and citation grammar. It does not subscribe to a reporter on your behalf, and it will

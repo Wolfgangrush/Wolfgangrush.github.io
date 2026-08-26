@@ -685,3 +685,20 @@ footer.site{
   .brand-text .us{ transition:none; }
   .brand:hover .brand-text .us{ width:.72em; }
 }
+
+
+/* Justified body copy — the privacy policy reads as a legal instrument, so it is
+   set justified rather than ragged-right. Hyphenation is on, because justified
+   text without it opens rivers of whitespace. Turned off on narrow screens,
+   where justification does more harm than good. */
+#main.prose-justified p,
+#main.prose-justified li {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  text-wrap: pretty;
+}
+@media (max-width: 600px) {
+  #main.prose-justified p,
+  #main.prose-justified li { text-align: left; hyphens: manual; }
+}

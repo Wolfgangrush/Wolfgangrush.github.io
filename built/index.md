@@ -1,7 +1,7 @@
 ---
 layout: default
 title: What is built
-description: Everything built so far, named — the practice brains, tools and drafting plugins anyone can download, and the private tier behind them, named and described rather than linked.
+description: Everything built so far, named — the practice brains and tools anyone can download, and the private tier behind them, named and described rather than linked.
 ---
 
 <section class="section reveal">
@@ -77,47 +77,7 @@ description: Everything built so far, named — the practice brains, tools and d
 
 <section class="section reveal">
 <div class="mg">
-  <p class="note"><span class="n">03</span>Public — drafting plugins and connectors</p>
-  <div>
-    <h2>Fourteen forums, twenty-nine repositories</h2>
-    <p>Every Indian forum I draft for, as a Claude Code plugin and a Claude Desktop connector. Each
-    runs the same six-agent pipeline — reader, format, drafter, verifier, refiner, overseer — where
-    the verifier stage exists specifically to catch invented citations before they reach a document
-    that goes to a court. Explained in full on the
-    <a class="link" href="{{ '/catalog/claude/' | relative_url }}">plugins and connectors</a> page.</p>
-    <div class="table-scroll">
-    <table>
-      <thead><tr><th>Forum</th><th>Claude Code plugin</th><th>Claude Desktop connector</th></tr></thead>
-      <tbody>
-        <tr><td>Supreme Court of India</td><td><code>supreme-court-drafting-litigation</code></td><td><code>supreme-court-drafting-mcpb</code></td></tr>
-        <tr><td>High Courts — all 25</td><td><code>indian-hc-drafting-litigation</code></td><td><code>indian-hc-drafting-mcpb</code></td></tr>
-        <tr><td>District and Sessions Courts</td><td><code>district-court-drafting-litigation</code></td><td><code>district-court-drafting-mcpb</code></td></tr>
-        <tr><td>Family Courts</td><td><code>indian-family-drafting-litigation</code></td><td><code>indian-family-drafting-mcpb</code></td></tr>
-        <tr><td>Consumer forums — District · State · NCDRC</td><td><code>indian-consumer-drafting</code></td><td><code>indian-consumer-drafting-mcpb</code></td></tr>
-        <tr><td>Company law — NCLT · NCLAT</td><td><code>indian-company-drafting</code></td><td><code>indian-company-drafting-mcpb</code></td></tr>
-        <tr><td>Banking and debt recovery — DRT · DRAT</td><td><code>indian-banking-drafting-litigation</code></td><td><code>indian-banking-drafting-mcpb</code></td></tr>
-        <tr><td>Labour and industrial disputes</td><td><code>indian-labour-drafting-litigation</code></td><td><code>indian-labour-drafting-mcpb</code></td></tr>
-        <tr><td>Motor Accident Claims Tribunals</td><td><code>indian-mact-drafting</code></td><td><code>indian-mact-drafting-mcpb</code></td></tr>
-        <tr><td>Property and conveyancing</td><td><code>indian-property-drafting-litigation</code></td><td><code>indian-property-drafting-mcpb</code></td></tr>
-        <tr><td>Rent control and Small Causes</td><td><code>indian-rent-control-drafting</code></td><td><code>indian-rent-control-drafting-mcpb</code></td></tr>
-        <tr><td>Direct tax — CIT(A) · ITAT · DRP</td><td><code>indian-tax-drafting</code></td><td><code>indian-tax-drafting-mcpb</code></td></tr>
-        <tr><td>Intellectual property</td><td><code>indian-ip-drafting</code></td><td><code>indian-ip-drafting-mcpb</code></td></tr>
-        <tr><td>Contracts and instruments</td><td><code>indian-contracts-drafting-litigation</code></td><td><code>indian-contracts-drafting-mcpb</code></td></tr>
-      </tbody>
-    </table>
-    </div>
-    <p>Two more sit underneath the family:
-    <a class="link ext" href="https://github.com/Wolfgangrush/drafting-agents-core"><code>drafting-agents-core</code></a>,
-    the shared agent library every plugin loads, and
-    <a class="link ext" href="https://github.com/Wolfgangrush/wolfgang-rush-marketplace"><code>wolfgang-rush-marketplace</code></a>,
-    the Claude Code marketplace they install from.</p>
-  </div>
-</div>
-</section>
-
-<section class="section reveal">
-<div class="mg">
-  <p class="note"><span class="n">04</span>Private — the practice tier</p>
+  <p class="note"><span class="n">03</span>Private — the practice tier</p>
   <div>
     <h2>Enterprise editions</h2>
     <p>Most public practice brains have a closed counterpart built for a firm rather than a solo
@@ -140,34 +100,46 @@ description: Everything built so far, named — the practice brains, tools and d
     </table>
     </div>
 
-    <h3>General counsel</h3>
-    <p>A cross-jurisdictional brain for in-house counsel and general counsel teams, in two editions —
-    <code>gc-inhouse-brain</code> for the team, and <code>gc-inhouse-brain-enterprise</code> for the
-    enterprise deployment. It is not a per-country product; the point of an in-house desk is that the
-    matter arrives without asking which jurisdiction it belongs to.</p>
+    <h3>In-house and company builds</h3>
+    <p>The same architecture aimed at a company's own legal function rather than a practice. The
+    in-house brain is deliberately not a per-country product: the point of an in-house desk is
+    that a matter arrives without first announcing which jurisdiction it belongs to.</p>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Build</th><th>Repository</th><th>For</th></tr></thead>
+      <tbody>
+        <tr><td>GC in-house brain</td><td><code>gc-inhouse-brain</code></td><td>An in-house or general-counsel team</td></tr>
+        <tr><td>GC in-house brain — Enterprise</td><td><code>gc-inhouse-brain-enterprise</code></td><td>The in-tenant enterprise deployment</td></tr>
+        <tr><td>Startup brain — Enterprise</td><td><code>ai-startup-brain-enterprise</code></td><td>A company's own legal function</td></tr>
+        <tr><td>Startup firm — India</td><td><code>ai-startup-firm-india</code></td><td>India-specific startup build</td></tr>
+      </tbody>
+    </table>
+    </div>
 
-    <h3>Startup and firm builds</h3>
-    <p><code>ai-startup-brain-enterprise</code> and <code>ai-startup-firm-india</code> — the same
-    architecture aimed at a company's own legal function rather than a practice.</p>
-
-    <h3>Consolidated drafting builds</h3>
-    <p><code>indian-drafting-plugins</code> and <code>indian-drafting-mcpb</code> collapse all
-    fourteen public drafting families into a single repository with one shared spine, for a firm
-    that wants one install rather than fourteen. <code>samanvaya-workshop</code> is the
-    facilitated build of the public conformance tool.</p>
   </div>
 </div>
 </section>
 
 <section class="section reveal">
 <div class="mg">
-  <p class="note"><span class="n">05</span>Private — Vidhi Likhit</p>
+  <p class="note"><span class="n">04</span>Private — Vidhi Likhit</p>
   <div>
     <h2>The law-school family</h2>
-    <p>A corpus and a set of engines built around Indian statute — <strong>11,715 Acts</strong> across
-    the Union and the States and Union Territories, and <strong>90,715 sections</strong>.</p>
+    <p class="lede">Vidhi Likhit is Indian statute itself, turned into something you can teach and
+    practise from: <strong>11,715 Acts</strong> across the Union, the States and the Union
+    Territories, and <strong>90,715 sections</strong>, held as one searchable, citable corpus.</p>
 
-    <p>Three editions of the teaching product, each a separate repository sharing the one corpus:</p>
+    <p>The point is what it replaces. A student ordinarily meets a section through a textbook's
+    summary of it, and a practitioner meets it through whichever commentary is on the shelf. Here
+    the text itself is in front of you — every Act, every section, searchable by what it says
+    rather than by what someone wrote about it, and citable straight from the source.</p>
+
+    <p><strong>A law school teaching from it</strong> sets exercises against real statutory text
+    instead of extracts. Students search the whole corpus, trace a provision through its
+    amendments, and cite the section itself. The institution gets its own seats over one shared
+    corpus rather than every student assembling their own.</p>
+
+    <p>Three editions, each a separate repository over that one corpus:</p>
     <div class="table-scroll">
     <table>
       <thead><tr><th>Edition</th><th>Repository</th><th>For</th></tr></thead>
@@ -178,24 +150,30 @@ description: Everything built so far, named — the practice brains, tools and d
       </tbody>
     </table>
     </div>
+  </div>
+</div>
+</section>
 
-    <p>Four deterministic engines sit alongside the corpus, each doing one narrow thing without a
-    language model in the decision path:</p>
-
-    <ul class="posture">
-      <li><strong><code>nyaya-check</code></strong> — a cause-of-action checker for section 138 of the
-      Negotiable Instruments Act, with a CPC, BNSS and BSA kernel behind it. Deterministic: the same
-      facts give the same answer, and the answer shows its reasoning.</li>
-      <li><strong><code>pramaan</code></strong> — an electronic-evidence integrity engine for section
-      63 of the Bharatiya Sakshya Adhiniyam: hash at capture, chain of custody, certificate at the
-      end.</li>
-      <li><strong><code>pratipaksha</code></strong> — an opposing-counsel red team that reads a draft
-      and names which ground, prayer or clause gets attacked, with the counter-authority that would
-      be cited against it and the defensive fix. Read-only, and built so it cannot invent a
-      citation.</li>
-      <li><strong><code>vidhi-delta</code></strong> — a statute-delta engine that tracks what changed
-      in an Act between two dates.</li>
-    </ul>
+<section class="section reveal">
+<div class="mg">
+  <p class="note"><span class="n">05</span>Practitioner engines</p>
+  <div>
+    <h2>Four engines with no language model in the decision path</h2>
+    <p class="lede">These are working tools for a practitioner, not teaching material. Each does one
+    narrow thing deterministically — the same facts give the same answer every time, and the answer
+    shows its reasoning. Nothing here asks a model what it thinks.</p>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Engine</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr><td><code>nyaya-check</code></td><td>Cause-of-action checker for section 138 of the Negotiable Instruments Act, with a CPC, BNSS and BSA kernel behind it</td></tr>
+        <tr><td><code>pramaan</code></td><td>Electronic-evidence integrity for section 63 of the Bharatiya Sakshya Adhiniyam — hash at capture, chain of custody, certificate at the end</td></tr>
+        <tr><td><code>pratipaksha</code></td><td>Reads a document and names which ground, prayer or clause gets attacked, the counter-authority that would be cited against it, and the defensive fix. Read-only, and built so it cannot invent a citation</td></tr>
+        <tr><td><code>vidhi-delta</code></td><td>Tracks what changed in an Act between two dates</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="small muted">Currently closed. These four are being prepared for public release.</p>
   </div>
 </div>
 </section>
@@ -239,28 +217,18 @@ description: Everything built so far, named — the practice brains, tools and d
     <table>
       <thead><tr><th>Tier</th><th>Repositories</th><th>Status</th></tr></thead>
       <tbody>
-        <tr><td><strong>Public</strong></td><td><strong>53</strong></td><td>free, MIT / Apache-2.0, downloadable</td></tr>
-        <tr><td>— practice brains</td><td>8</td><td>named in 01</td></tr>
-        <tr><td>— single-purpose tools</td><td>12</td><td>named in 02</td></tr>
-        <tr><td>— drafting plugins, connectors and shared library</td><td>29</td><td>named in 03</td></tr>
-        <tr><td>— plugin marketplace</td><td>1</td><td>named in 03</td></tr>
-        <tr><td>— this website</td><td>1</td><td>source of this page</td></tr>
-        <tr><td>— personal, non-legal</td><td>2</td><td>not described here</td></tr>
-        <tr><td><strong>Private</strong></td><td><strong>42</strong></td><td>closed; described here, not linked</td></tr>
-        <tr><td>— enterprise practice brains</td><td>7</td><td>named in 04</td></tr>
-        <tr><td>— general counsel</td><td>2</td><td>named in 04</td></tr>
-        <tr><td>— startup and firm builds</td><td>2</td><td>named in 04</td></tr>
-        <tr><td>— consolidated drafting and workshop builds</td><td>3</td><td>named in 04</td></tr>
-        <tr><td>— Vidhi Likhit editions</td><td>3</td><td>named in 05</td></tr>
-        <tr><td>— Vidhi Likhit engines</td><td>4</td><td>named in 05</td></tr>
-        <tr><td>— human-oversight architecture</td><td>18</td><td>described in 06, not named</td></tr>
-        <tr><td>— personal, non-legal</td><td>3</td><td>not described here</td></tr>
-        <tr><td><strong>Total</strong></td><td><strong>95</strong></td><td></td></tr>
+        <tr><td>Public — practice brains</td><td>8</td><td>free, MIT, linked above</td></tr>
+        <tr><td>Public — single-purpose tools</td><td>11</td><td>free, MIT / Apache-2.0, linked above</td></tr>
+        <tr><td>Private — enterprise practice brains</td><td>7</td><td>closed; named above</td></tr>
+        <tr><td>Private — in-house and company builds</td><td>4</td><td>closed; named above</td></tr>
+        <tr><td>Private — Vidhi Likhit editions</td><td>3</td><td>closed; named above</td></tr>
+        <tr><td>Private — practitioner engines</td><td>4</td><td>closed; named above</td></tr>
+        <tr><td>Private — human-oversight architecture</td><td>18</td><td>closed; described, not named</td></tr>
       </tbody>
     </table>
     </div>
-    <p class="small muted">Counted from the live repository listing on 25 August 2026. Every public
-    repository above is linked; every private one except the human-oversight tier is named.</p>
+    <p class="small muted">Checked against the live repository listing on 25 August 2026. This page
+    describes the practice software; it is not an inventory of every repository I have published.</p>
 
     <p>All of it was built alongside a practice — between boards, after court, and on the Sundays
     that were free. None of it has been sold. It exists because a solo practitioner has no back

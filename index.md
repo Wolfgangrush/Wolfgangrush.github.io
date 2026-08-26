@@ -10,14 +10,17 @@ description: Free, open-source legal software for practitioners in eight jurisdi
 <div class="mg">
   <p class="note"><span class="n">01</span>What lives here</p>
   <div>
-    <h2>Three things, and they are separate on purpose</h2>
-    <p class="lede">A set of <strong>practice brains</strong> — one per jurisdiction. A handful of
-    <strong>tools</strong> that each do one job. And a fortnightly <strong>newsletter</strong> on
-    Indian data-protection and AI-governance law.</p>
+    <h2>Three things</h2>
+    <p class="lede">A <strong>practice brain</strong> is a prefrontal cortex for your practice — the
+    part that holds everything so you do not have to. Every matter, every party, every date, every
+    note, kept in one place on your own computer and still there when you come back to it. There is
+    one edition per jurisdiction. Alongside them, a handful of <strong>tools</strong> that each do
+    exactly one job, and a fortnightly <strong>newsletter</strong> on Indian data-protection and
+    AI-governance law.</p>
 
     <div class="doors">
       <a class="door" href="{{ '/brains/' | relative_url }}">
-        <span class="door-eyebrow">Software · 8 jurisdictions</span>
+        <span class="door-eyebrow">Eight editions · one per jurisdiction</span>
         <span class="door-title">Practice brains</span>
         <span class="door-body">A second brain for your whole practice, living in your own
         computer. It holds your matters and remembers them between sessions; you talk to it in
@@ -27,7 +30,7 @@ description: Free, open-source legal software for practitioners in eight jurisdi
       </a>
 
       <a class="door" href="{{ '/tools/' | relative_url }}">
-        <span class="door-eyebrow">Software · single-purpose</span>
+        <span class="door-eyebrow">Eleven tools · one job each</span>
         <span class="door-title">Tools</span>
         <span class="door-body">Smaller things that each do exactly one job — pulling your matters
         out of tomorrow's 87-page court board, stripping client identities out of anything sent to
@@ -36,7 +39,7 @@ description: Free, open-source legal software for practitioners in eight jurisdi
       </a>
 
       <a class="door" href="{{ '/newsletter/' | relative_url }}">
-        <span class="door-eyebrow">Writing · fortnightly</span>
+        <span class="door-eyebrow">Fortnightly · no paywall</span>
         <span class="door-title">The India Data &amp; AI Governance Desk</span>
         <span class="door-body">A short brief on the DPDP Act and its Rules, the Data Protection
         Board, and India's AI regulation — read against what is moving globally. No paywall, and
@@ -69,15 +72,15 @@ description: Free, open-source legal software for practitioners in eight jurisdi
 <div class="mg">
   <p class="note"><span class="n">03</span>The posture, stated precisely</p>
   <div>
-    <h2>A privacy claim that is not precise is not a privacy claim</h2>
+    <h2>Stated one fact at a time, so each one can be checked</h2>
 
     <ul class="posture">
       <li><strong>There is no server of mine.</strong> No accounts, no telemetry, no analytics, no
       crash reporting, no backend. I do not receive your data because there is nowhere for it to
       arrive. That is a fact about my infrastructure, and it holds unconditionally.</li>
 
-      <li><strong>Your files stay on your machine.</strong> Matters, drafts, audit logs and
-      configuration live only in your own home directory, in a local database you can copy to a
+      <li><strong>Your files stay on your machine.</strong> {{ site.umbrella | capitalize }},
+      audit logs and configuration live only in your own home directory, in a local database you can copy to a
       USB stick. I cannot read that folder.</li>
 
       <li><strong>You bring your own key.</strong> Where a cloud model is used, it is reached
