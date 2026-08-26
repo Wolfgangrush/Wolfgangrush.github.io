@@ -30,7 +30,7 @@ description: Free, open-source legal software for practitioners in eight jurisdi
       </a>
 
       <a class="door" href="{{ '/tools/' | relative_url }}">
-        <span class="door-eyebrow">Eleven tools · one job each</span>
+        <span class="door-eyebrow">Ten tools · one job each</span>
         <span class="door-title">Tools</span>
         <span class="door-body">Smaller things that each do exactly one job — pulling your matters
         out of tomorrow's 87-page court board, stripping client identities out of anything sent to
