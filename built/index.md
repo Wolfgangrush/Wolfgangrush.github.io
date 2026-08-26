@@ -50,7 +50,7 @@ description: Everything built so far, named — the practice brains and tools an
 <div class="mg">
   <p class="note"><span class="n">02</span>Public — single-purpose tools</p>
   <div>
-    <h2>Eleven tools, twelve repositories</h2>
+    <h2>Ten tools, eleven repositories</h2>
     <p>Each does exactly one job and runs on your own machine. Described in full on the
     <a class="link" href="{{ '/tools/' | relative_url }}">tools</a> page.</p>
     <div class="table-scroll">
@@ -66,7 +66,6 @@ description: Everything built so far, named — the practice brains and tools an
         <tr><td>Citation manager</td><td><a class="link ext" href="https://github.com/Wolfgangrush/Citation-Parser"><code>Citation-Parser</code></a></td><td>Saves and recalls citations you have used</td></tr>
         <tr><td>News digest</td><td><a class="link ext" href="https://github.com/Wolfgangrush/telegram_news_bot"><code>telegram_news_bot</code></a></td><td>Curated legal and current-affairs digest</td></tr>
         <tr><td>CHOF toolkit</td><td><a class="link ext" href="https://github.com/Wolfgangrush/chof-calc"><code>chof-calc</code></a> · <a class="link ext" href="https://github.com/Wolfgangrush/chof-kernel"><code>chof-kernel</code></a></td><td>The human-oversight formula as running software</td></tr>
-        <tr><td>saptarishi</td><td><a class="link ext" href="https://github.com/Wolfgangrush/saptarishi"><code>saptarishi</code></a></td><td>Planning-only pre-screening for startup tax positions</td></tr>
         <tr><td>repofacts</td><td><a class="link ext" href="https://github.com/Wolfgangrush/repofacts"><code>repofacts</code></a></td><td>Verifies the GitHub repos an AI recommended</td></tr>
       </tbody>
     </table>
@@ -218,7 +217,7 @@ description: Everything built so far, named — the practice brains and tools an
       <thead><tr><th>Tier</th><th>Repositories</th><th>Status</th></tr></thead>
       <tbody>
         <tr><td>Public — practice brains</td><td>8</td><td>free, MIT, linked above</td></tr>
-        <tr><td>Public — single-purpose tools</td><td>11</td><td>free, MIT / Apache-2.0, linked above</td></tr>
+        <tr><td>Public — single-purpose tools</td><td>10</td><td>free, MIT / Apache-2.0, linked above</td></tr>
         <tr><td>Private — enterprise practice brains</td><td>7</td><td>closed; named above</td></tr>
         <tr><td>Private — in-house and company builds</td><td>4</td><td>closed; named above</td></tr>
         <tr><td>Private — Vidhi Likhit editions</td><td>3</td><td>closed; named above</td></tr>

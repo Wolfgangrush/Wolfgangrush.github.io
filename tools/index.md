@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Tools
-description: Single-purpose tools for practitioners — the NAKASHA board reader, samanvaya privacy conformance, offline multi-script OCR, the pseudonymisation gateway, the DPDP Act as runnable code, the Supreme Court AI regulations mapping, a citation manager, a news digest bot, the CHOF human-oversight toolkit, saptarishi startup-tax pre-screening, and repofacts.
+description: Single-purpose tools for practitioners — the NAKASHA board reader, samanvaya privacy conformance, offline multi-script OCR, the pseudonymisation gateway, the DPDP Act as runnable code, the Supreme Court AI regulations mapping, a citation manager, a news digest bot, the CHOF human-oversight toolkit, and repofacts.
 ---
 
 <section class="section reveal">
 <div class="mg">
   <p class="note"><span class="n">00</span>How to read this page</p>
   <div>
-    <h2>Eleven tools. Each one does exactly one job.</h2>
+    <h2>Ten tools. Each one does exactly one job.</h2>
     <p class="lede">These are separate from the
     <a class="link" href="{{ '/brains/' | relative_url }}">practice brains</a>, which are a different
     thing entirely. Every tool here is free, the source is published, and it runs on your own
@@ -28,7 +28,6 @@ description: Single-purpose tools for practitioners — the NAKASHA board reader
   <li><a href="#citation-parser">Citation manager</a></li>
   <li><a href="#news-bot">News digest</a></li>
   <li><a href="#chof">CHOF</a></li>
-  <li><a href="#saptarishi">saptarishi</a></li>
   <li><a href="#repofacts">repofacts</a></li>
 </ul>
   </div>
@@ -357,44 +356,9 @@ chof-calc</code></pre>
 
 <section class="section reveal">
 <div class="mg">
-  <p class="note"><span class="n">08</span>Before the accountant</p>
+  <p class="note"><span class="n">08</span>Before you install it</p>
   <div>
-    <div class="tool" id="saptarishi">
-      <div class="tool-head"><h2>saptarishi</h2><span class="badge">For chartered accountants · free</span></div>
 
-      <p class="what-is"><strong>What it is.</strong> A planning-only screening tool that walks a
-      founder through the tax questions a chartered accountant will ask, <em>before</em> the meeting
-      happens.</p>
-
-      <p class="tool-problem"><strong>The problem.</strong> A founder arrives at a CA's office without
-      the facts the CA needs, so the first meeting is spent gathering them and the advice waits for
-      the second. The CA's time goes on collection rather than judgement, and the founder pays for
-      both meetings.</p>
-
-      <p><strong>What it does.</strong> It structures the intake — the questions, in order, with the
-      reason each one matters — so the founder walks in with the picture assembled and the CA starts
-      at judgement instead of collection.</p>
-
-      <p class="tool-meta"><strong>Stated plainly:</strong> this is <strong>not tax advice</strong>
-      and it is not a substitute for a chartered accountant. It is founder-side preparation, and
-      screening is the whole of what it does. Nothing it produces is filed anywhere.</p>
-
-<pre class="code-block"><code>pip install git+https://github.com/Wolfgangrush/saptarishi
-saptarishi</code></pre>
-
-      <p class="juris-links">
-        <a class="btn btn-primary" href="https://github.com/Wolfgangrush/saptarishi#readme">Installation guide</a>
-        <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/saptarishi">Read the source</a>
-      </p>
-    </div>
-  </div>
-</div>
-</section>
-
-<section class="section reveal">
-<div class="mg">
-  <p class="note"><span class="n">09</span>Before you install it</p>
-  <div>
     <div class="tool" id="repofacts">
       <div class="tool-head"><h2>repofacts</h2><span class="badge">Command line · free</span></div>
 
