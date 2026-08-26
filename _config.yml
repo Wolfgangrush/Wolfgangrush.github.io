@@ -4,6 +4,10 @@ description: >-
   brief on Indian data-protection and AI-governance law. Free, open source, and nothing
   runs on the Publisher's servers.
 url: https://wolfgangrush.github.io
+# PROVISIONAL 2026-08-25 — the umbrella noun for what a practitioner stores.
+# The final wording is still under review. One edit here
+# changes every page; never hand-write the phrase into a page.
+umbrella: "your matters and your papers"
 permalink: pretty
 markdown: kramdown
 plugins:

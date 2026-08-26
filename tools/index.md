@@ -122,7 +122,7 @@ description: Single-purpose tools for practitioners — the NAKASHA board reader
       languages</strong>, and saves a smaller copy. That is the whole feature set.</p>
 
       <p class="tool-problem"><strong>The problem.</strong> A certified copy arrives as a scan. It has
-      no text layer, so you cannot search it, quote from it, or paste a paragraph into a draft. The
+      no text layer, so you cannot search it, quote from it, or paste a paragraph into your own document. The
       cloud OCR services that handle Devanagari want you to upload the document — which is the one
       thing you cannot do with a client's papers. And the file is 40&nbsp;MB, which the registry's
       upload form will not take.</p>
@@ -159,19 +159,18 @@ description: Single-purpose tools for practitioners — the NAKASHA board reader
       and takes your client's identity out of your words before they leave your computer — then puts
       it back into the answer when it returns.</p>
 
-      <p class="tool-problem"><strong>The problem.</strong> The moment you type <em>"draft a reply for
-      Ramesh Kulkarni, PAN ABCDE1234F"</em> into any cloud AI service, that name and that PAN are on
-      another company's servers. Logged. Retained under their policy, not yours. Potentially reachable
-      by a court order directed at them. Nothing you do afterwards takes it back, and you did not
-      decide any of that — you just asked a question.</p>
+      <p class="tool-problem"><strong>The problem.</strong> The moment you ask any cloud assistant to
+      <em>save this reply against the matter and put the next date in my calendar</em>, the
+      client's name, the other side's name and the case number have already left your machine —
+      because they were in the sentence you typed. You never decided to send them.</p>
 
       <p><strong>What it does.</strong> Before anything is transmitted it replaces every identifying
       value with a neutral placeholder, sends only that version, and restores the real values in the
       reply you read:</p>
 
-<pre class="code-block"><code>You type      →  Draft a reply for Ramesh Kulkarni, PAN ABCDE1234F.
-What is sent  →  Draft a reply for [PERSON_1], PAN [PAN_1].
-What you see  →  Draft a reply for Ramesh Kulkarni, PAN ABCDE1234F.</code></pre>
+<pre class="code-block"><code>You type      →  File this under the Mehta matter, PAN ABCDE1234F.
+What is sent  →  File this under the [PERSON_1] matter, PAN [PAN_1].
+What you see  →  File this under the Mehta matter, PAN ABCDE1234F.</code></pre>
 
       <p>The substitution is consistent within a session — the same person is
       <code>[PERSON_1]</code> every time they appear — so the model can still follow who did what to
@@ -281,9 +280,10 @@ What you see  →  Draft a reply for Ramesh Kulkarni, PAN ABCDE1234F.</code></pr
     <div class="tool" id="news-bot">
       <div class="tool-head"><h2>News digest bot</h2><span class="badge">Server-side · free</span></div>
 
-      <p class="what-is"><strong>What it is.</strong> A bot that gathers legal and current-affairs
-      news from several sources, removes the duplicates, attaches judgment and order links where it
-      can find them, and delivers a short digest written for Indian lawyers.</p>
+      <p class="what-is"><strong>What it is.</strong> A bot that collects the day's reported
+      judgments, statutory notifications and legal news from several sources, drops the duplicates,
+      attaches the judgment or order link where it can find one, and sends you a short digest
+      written for a practitioner rather than a general reader.</p>
 
       <p class="tool-meta"><strong>Stated plainly:</strong> unlike everything else on this page, this
       one <strong>is not local and is not offline</strong>. It fetches from the open web and uses a
@@ -378,13 +378,15 @@ What you see  →  Draft a reply for Ramesh Kulkarni, PAN ABCDE1234F.</code></pr
     <div class="tool" id="repofacts">
       <div class="tool-head"><h2>repofacts</h2><span class="badge">Command line · free</span></div>
 
-      <p class="what-is"><strong>What it is.</strong> A command-line tool that checks the GitHub
-      repositories an AI recommended to you, before you install any of them.</p>
+      <p class="what-is"><strong>What it is.</strong> A command-line tool that checks any GitHub
+      repository before you install it — whether a model recommended it, a colleague sent you the
+      link, or you found it yourself in a search.</p>
 
-      <p class="tool-problem"><strong>The problem.</strong> You ask a model which library to use and
-      it hands back a confident list. One of them does not exist. One has no licence file at all, so
-      there is no grant of rights whatever its README implies. One has been dead for two years. On the
-      page, all three look exactly like the ones that are fine.</p>
+      <p class="tool-problem"><strong>The problem.</strong> A confident list of libraries arrives —
+      from a model, a forum thread, or your own afternoon of searching. One of them does not exist.
+      One has no licence file at all, so there is no grant of rights whatever its README implies.
+      One has been dead for two years. On the page, all three look exactly like the ones that are
+      fine, and none of them announces which it is.</p>
 
       <p><strong>What it does.</strong> Give it the list — a chat log, a markdown file, your notes. It
       pulls out every repository reference, asks GitHub about each one, and prints a verdict per repo:

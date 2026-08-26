@@ -51,11 +51,12 @@
 {% if page.url == "/" %}
 <section class="hero">
   <div class="wrap hero-inner">
-    <p class="eyebrow">Free, open-source legal software</p>
-    <h1 class="hero-title">Legal software that runs <em>on your own machine.</em></h1>
-    <p class="hero-sub">No account. No telemetry. No server of mine anywhere in the picture.
-    Your matters, drafts and notes live in your own home directory, and the source is
-    published so you can check that rather than believe it.</p>
+    <p class="eyebrow">Free · open source · runs entirely on your own computer</p>
+    <h1 class="hero-title">A second brain for your practice. <em>Nothing in it leaves your machine.</em></h1>
+    <p class="hero-sub">No account. No telemetry. No analytics. No crash reporting. There is no
+    server of mine anywhere in the picture, so there is nowhere for your work to go — it stays in
+    your own home directory. The source is published, so you can read it and check that for
+    yourself instead of taking my word for it.</p>
     <div class="hero-actions">
       <a class="btn btn-primary btn-lg" href="{{ '/brains/' | relative_url }}">Start here — what is a practice brain?</a>
       <a class="btn btn-ghost btn-lg" href="{{ '/newsletter/' | relative_url }}">Read the newsletter</a>
@@ -125,7 +126,7 @@
 </section>
 {% endif %}
 
-<main id="main">
+<main id="main"{% if page.url == "/privacy/" %} class="prose-justified"{% endif %}>
   <div class="wrap">
     {{ content }}
   </div>

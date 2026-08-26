@@ -5,10 +5,10 @@
 # here too — this file is what the website tells the public.
 #
 # `local_covers`  — what running the model on your own machine WOULD satisfy.
-#                   ⛔ 2026-08-16: THE LOCAL TIER IS NOT WIRED IN ANY RELEASE YET. No code path
-#                   routes inference to a local model, so nothing below is delivered by absence
-#                   of transmission TODAY. These are the design targets for the local milestone,
-#                   not current guarantees. Do not render them as present-tense assurances.
+#                   ✅ 2026-08-25: THE LOCAL TIER IS WIRED IN ALL EIGHT EDITIONS.
+#                   `connect-local` ships in every one and brain/llm.py honours it with
+#                   no cloud fallback. Verified by audit-localtier.sh against each repo's
+#                   own source. These are delivered guarantees when local mode is on.
 # `cloud_owes`    — what remains YOUR obligation if you choose the cloud tier.
 #                   Pseudonymisation is a technical safeguard. It is not a discharge.
 

@@ -67,7 +67,7 @@ The **practice brains** are different, and this is the part that matters most.
 
 ### 4.1 Your files stay on your machine
 
-Your matters, drafts, notes, configuration and audit logs are written only to your own home
+Your matters, papers, notes, configuration and audit logs are written only to your own home
 directory. They are never uploaded anywhere, in any mode. That part is unconditional.
 
 ### 4.2 The language model currently runs in the cloud
