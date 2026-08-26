@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Tools
-description: Single-purpose tools for practitioners — the NAKASHA board reader, samanvaya privacy conformance, offline multi-script OCR, the pseudonymisation gateway, the DPDP Act as runnable code, the Supreme Court AI regulations mapping, a citation manager, a news digest bot, the CHOF human-oversight toolkit, and repofacts.
+description: Single-purpose tools for practitioners — the pratipaksha opposing-counsel simulator, pramaan electronic-evidence integrity, nyaya-check cheque-dishonour cause-of-action checker, asthir precedent-instability radar, the NAKASHA board reader, samanvaya privacy conformance, offline multi-script OCR, the pseudonymisation gateway, the DPDP Act as runnable code, the Supreme Court AI regulations mapping, a citation manager, a news digest bot, the CHOF human-oversight toolkit, and repofacts.
 ---
 
 <section class="section reveal">
 <div class="mg">
   <p class="note"><span class="n">00</span>How to read this page</p>
   <div>
-    <h2>Ten tools. Each one does exactly one job.</h2>
+    <h2>Fourteen tools. Each one does exactly one job.</h2>
     <p class="lede">These are separate from the
     <a class="link" href="{{ '/brains/' | relative_url }}">practice brains</a>, which are a different
     thing entirely. Every tool here is free, the source is published, and it runs on your own
@@ -29,6 +29,10 @@ description: Single-purpose tools for practitioners — the NAKASHA board reader
   <li><a href="#news-bot">News digest</a></li>
   <li><a href="#chof">CHOF</a></li>
   <li><a href="#repofacts">repofacts</a></li>
+  <li><a href="#pratipaksha">pratipaksha</a></li>
+  <li><a href="#pramaan">pramaan</a></li>
+  <li><a href="#nyaya-check">nyaya-check</a></li>
+  <li><a href="#asthir">asthir</a></li>
 </ul>
   </div>
 </div>
@@ -398,6 +402,152 @@ repofacts</code></pre>
         <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/repofacts">Read the source</a>
       </p>
     </div>
+  </div>
+</div>
+</section>
+
+<section class="section reveal">
+<div class="mg">
+  <p class="note"><span class="n">09</span>Before you file it</p>
+  <div>
+
+    <div class="tool" id="pratipaksha">
+      <div class="tool-head"><h2>pratipaksha <span class="muted" style="font-weight:400">· प्रतिपक्ष</span></h2><span class="badge">AI agent · free</span></div>
+
+      <p class="what-is"><strong>What it is.</strong> The opposing counsel you have not met yet. Point it at
+      your own draft and it attacks it — then tells you how to survive the attack.</p>
+
+      <p class="tool-problem"><strong>The problem.</strong> You find out what was wrong with your petition when
+      the other side says it in open court, or when the Bench asks the question you had not thought about. By
+      then the cheapest moment to fix it — before filing — is gone. Reading your own draft as an opponent is
+      genuinely hard, because you already believe it.</p>
+
+      <p><strong>What it does.</strong> It classifies the document, runs a <strong>threshold pass</strong> first
+      — the objections that end a matter at the door regardless of merits, like pre-institution mediation,
+      court fee on the relief actually claimed, res judicata, limitation, non-joinder — and then runs the
+      attack battery for that document type. There are fourteen: civil and writ pleadings, defensive pleadings,
+      contracts, notices, opinions, criminal pleadings, arbitration, appellate work, execution, consumer,
+      direct tax, rent control, family, and company and insolvency. For each finding it switches register
+      twice: once as the opponent putting the attack to the Bench, coldly and without softening, and once back
+      on your side with the defensive fix. Findings are ranked FATAL through LOW, and it writes a timestamped
+      report without touching your file.</p>
+
+      <p class="tool-meta"><strong>The part that matters most:</strong> it will not give you a case citation
+      unless it looked the case up during that run and confirmed the case says what it is being cited for —
+      with the source listed. Anything it merely believes is marked <code>[VERIFY]</code> and never asserted.
+      An opposing-counsel simulator that invents authority is worse than useless, because it arms you against
+      ghosts while leaving the real exposure untouched.</p>
+
+<pre class="code-block"><code>git clone https://github.com/Wolfgangrush/pratipaksha
+cp -r pratipaksha/agents/pratipaksha ~/.claude/agents/</code></pre>
+
+      <p class="juris-links">
+        <a class="btn btn-primary" href="https://github.com/Wolfgangrush/pratipaksha#readme">Installation guide</a>
+        <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/pratipaksha">Read the source</a>
+      </p>
+    </div>
+
+    <div class="tool" id="pramaan">
+      <div class="tool-head"><h2>pramaan <span class="muted" style="font-weight:400">· प्रमाण</span></h2><span class="badge">Command line · free</span></div>
+
+      <p class="what-is"><strong>What it is.</strong> It makes a screenshot, a CCTV clip, a WhatsApp export or a
+      downloaded statement <em>provable</em> — and produces the certificate an Indian court requires before it
+      will look at any of them.</p>
+
+      <p class="tool-problem"><strong>The problem, in plain words.</strong> You cannot simply hand a printout of
+      a WhatsApp chat to a court in India. Electronic material is admitted only with a certificate — under
+      section 63 of the Bharatiya Sakshya Adhiniyam, which replaced the old section 65B of the Evidence Act —
+      signed by someone responsible for the device or system, stating how the record was produced and that the
+      device was working normally. Get that certificate wrong, get it signed by the wrong person, or forget it,
+      and the evidence simply does not come in. Cases are lost on this and never on the merits. And separately:
+      once a file leaves the phone and travels through email, WhatsApp and three laptops before it reaches the
+      Registry, the other side will ask how you know it was not altered on the way — and usually you cannot
+      answer.</p>
+
+      <p><strong>What it does.</strong> Three things, in order. It <strong>fingerprints the file the moment you
+      take custody of it</strong>, so any later change is detectable and you can prove the copy filed is the copy
+      captured. It keeps a <strong>chain of custody</strong> — who held it, when, what was done to it — as a
+      record you can put before a court. And it <strong>generates the section 63 certificate</strong> with the
+      particulars the section actually asks for, rather than a template someone copied from another matter.</p>
+
+      <p class="tool-meta"><strong>Deterministic.</strong> No language model sits anywhere in the decision path.
+      The same file gives the same fingerprint every time, on any machine, which is the entire point — a
+      fingerprint a court can reproduce is evidence, and one it cannot is an assertion. Nothing is uploaded.
+      <strong>Verify the certificate's wording against the current notified Schedule before you file it</strong>
+      — the tool builds the structure, you own what is signed.</p>
+
+<pre class="code-block"><code>pip install git+https://github.com/Wolfgangrush/pramaan
+pramaan</code></pre>
+
+      <p class="juris-links">
+        <a class="btn btn-primary" href="https://github.com/Wolfgangrush/pramaan#readme">Installation guide</a>
+        <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/pramaan">Read the source</a>
+      </p>
+    </div>
+
+    <div class="tool" id="nyaya-check">
+      <div class="tool-head"><h2>nyaya-check <span class="muted" style="font-weight:400">· न्याय</span></h2><span class="badge">Command line · free</span></div>
+
+      <p class="what-is"><strong>What it is.</strong> A cause-of-action checker for cheque dishonour. It answers
+      one question before you draft anything: <em>is this complaint still alive, or is it already dead on the
+      calendar?</em></p>
+
+      <p class="tool-problem"><strong>The problem.</strong> A section 138 complaint is a sequence of deadlines,
+      and missing any one of them by a single day ends it — whatever the merits, whatever the amount. The cheque
+      must be presented within validity. The demand notice must go within thirty days of the bank's memo. The
+      drawer gets fifteen days to pay. Only then does the cause of action arise, and the complaint must follow
+      within a month of that. Practitioners do this arithmetic by hand, under time pressure, from a file where
+      the dates are scattered across four documents — and a mistake is not recoverable.</p>
+
+      <p><strong>What it does.</strong> You give it the dates. It runs each statutory ingredient in order, tells
+      you which are satisfied and which are not, computes every window with the actual calendar, and shows its
+      reasoning at each step rather than returning a verdict you have to trust. Behind it sits a kernel of civil
+      and criminal procedure and evidence provisions, so the answer is grounded in the sections rather than in
+      a rule of thumb.</p>
+
+      <p class="tool-meta"><strong>Deterministic, and it shows its working.</strong> The same facts give the same
+      answer every time, with the ingredient-by-ingredient trace visible. No language model is in the decision
+      path. It is decision-support for a qualified practitioner, not advice, and not a substitute for reading
+      the section.</p>
+
+<pre class="code-block"><code>pip install git+https://github.com/Wolfgangrush/nyaya-check
+nyaya-check</code></pre>
+
+      <p class="juris-links">
+        <a class="btn btn-primary" href="https://github.com/Wolfgangrush/nyaya-check#readme">Installation guide</a>
+        <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/nyaya-check">Read the source</a>
+      </p>
+    </div>
+
+    <div class="tool" id="asthir">
+      <div class="tool-head"><h2>asthir <span class="muted" style="font-weight:400">· अस्थिर</span></h2><span class="badge">Command line · free</span></div>
+
+      <p class="what-is"><strong>What it is.</strong> A radar for law that is <em>wobbling</em>. Not "this case
+      was overruled" — a citator tells you that. This tells you "this proposition is unsettled, and here is
+      whether the unsettled line is the one that binds <em>your</em> bench."</p>
+
+      <p class="tool-problem"><strong>The problem.</strong> A citator answers a question about a <em>case</em>:
+      is it good law. The question you actually have is about a <em>proposition</em>: if I argue this, will it
+      hold. Those are different, and nothing tells you the second one. A point can be settled in one High Court,
+      openly doubted in another, and sitting under a pending reference in a third — and the judgment you are
+      reading will not mention any of that. You find out when the other side hands up the contrary line.</p>
+
+      <p><strong>What it does.</strong> It reads judgments across India's High Courts, tracks where the same
+      proposition is being decided both ways, and flags the fault line — including which way your own bench has
+      gone, which is the part that decides whether the instability is your problem or your opportunity.</p>
+
+      <p class="tool-meta"><strong>Early build.</strong> It surfaces where to look, not a conclusion to rely on.
+      Read the judgments it points at before you build an argument on them.</p>
+
+<pre class="code-block"><code>pip install git+https://github.com/Wolfgangrush/asthir
+asthir</code></pre>
+
+      <p class="juris-links">
+        <a class="btn btn-primary" href="https://github.com/Wolfgangrush/asthir#readme">Installation guide</a>
+        <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/asthir">Read the source</a>
+      </p>
+    </div>
+
   </div>
 </div>
 </section>

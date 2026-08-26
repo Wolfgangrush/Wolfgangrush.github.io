@@ -50,7 +50,7 @@ description: Everything built so far, named — the practice brains and tools an
 <div class="mg">
   <p class="note"><span class="n">02</span>Public — single-purpose tools</p>
   <div>
-    <h2>Ten tools, eleven repositories</h2>
+    <h2>Fourteen tools, fifteen repositories</h2>
     <p>Each does exactly one job and runs on your own machine. Described in full on the
     <a class="link" href="{{ '/tools/' | relative_url }}">tools</a> page.</p>
     <div class="table-scroll">
@@ -155,9 +155,9 @@ description: Everything built so far, named — the practice brains and tools an
 
 <section class="section reveal">
 <div class="mg">
-  <p class="note"><span class="n">05</span>Practitioner engines</p>
+  <p class="note"><span class="n">05</span>Public — practitioner engines</p>
   <div>
-    <h2>Four engines with no language model in the decision path</h2>
+    <h2>Five engines, four of them with no language model in the decision path</h2>
     <p class="lede">These are working tools for a practitioner, not teaching material. Each does one
     narrow thing deterministically — the same facts give the same answer every time, and the answer
     shows its reasoning. Nothing here asks a model what it thinks.</p>
@@ -165,14 +165,15 @@ description: Everything built so far, named — the practice brains and tools an
     <table>
       <thead><tr><th>Engine</th><th>What it does</th></tr></thead>
       <tbody>
-        <tr><td><code>nyaya-check</code></td><td>Cause-of-action checker for section 138 of the Negotiable Instruments Act, with a CPC, BNSS and BSA kernel behind it</td></tr>
-        <tr><td><code>pramaan</code></td><td>Electronic-evidence integrity for section 63 of the Bharatiya Sakshya Adhiniyam — hash at capture, chain of custody, certificate at the end</td></tr>
-        <tr><td><code>pratipaksha</code></td><td>Reads a document and names which ground, prayer or clause gets attacked, the counter-authority that would be cited against it, and the defensive fix. Read-only, and built so it cannot invent a citation</td></tr>
-        <tr><td><code>vidhi-delta</code></td><td>Tracks what changed in an Act between two dates</td></tr>
+        <tr><td><a class="link ext" href="https://github.com/Wolfgangrush/nyaya-check"><code>nyaya-check</code></a></td><td>Cause-of-action checker for section 138 of the Negotiable Instruments Act, with a CPC, BNSS and BSA kernel behind it</td></tr>
+        <tr><td><a class="link ext" href="https://github.com/Wolfgangrush/pramaan"><code>pramaan</code></a></td><td>Electronic-evidence integrity for section 63 of the Bharatiya Sakshya Adhiniyam — hash at capture, chain of custody, certificate at the end</td></tr>
+        <tr><td><a class="link ext" href="https://github.com/Wolfgangrush/pratipaksha"><code>pratipaksha</code></a></td><td>Reads a document and names which ground, prayer or clause gets attacked, the counter-authority that would be cited against it, and the defensive fix. Read-only, and built so it cannot invent a citation</td></tr>
+        <tr><td><a class="link ext" href="https://github.com/Wolfgangrush/vidhi-delta"><code>vidhi-delta</code></a></td><td>Tracks what changed in an Act between two dates</td></tr>
+        <tr><td><a class="link ext" href="https://github.com/Wolfgangrush/asthir"><code>asthir</code></a></td><td>Precedent-instability radar — flags where a proposition is unsettled across the High Courts, and whether the unsettled line binds your bench</td></tr>
       </tbody>
     </table>
     </div>
-    <p class="small muted">Currently closed. These four are being prepared for public release.</p>
+    <p class="small muted">All five are public and MIT licensed. <code>pratipaksha</code> is the one exception to the no-model rule — it is an AI agent by design, and its discipline is that it will not assert a citation it did not verify during the run.</p>
   </div>
 </div>
 </section>
@@ -217,11 +218,11 @@ description: Everything built so far, named — the practice brains and tools an
       <thead><tr><th>Tier</th><th>Repositories</th><th>Status</th></tr></thead>
       <tbody>
         <tr><td>Public — practice brains</td><td>8</td><td>free, MIT, linked above</td></tr>
-        <tr><td>Public — single-purpose tools</td><td>10</td><td>free, MIT / Apache-2.0, linked above</td></tr>
+        <tr><td>Public — single-purpose tools</td><td>14</td><td>free, MIT / Apache-2.0, linked above</td></tr>
         <tr><td>Private — enterprise practice brains</td><td>7</td><td>closed; named above</td></tr>
         <tr><td>Private — in-house and company builds</td><td>4</td><td>closed; named above</td></tr>
         <tr><td>Private — Vidhi Likhit editions</td><td>3</td><td>closed; named above</td></tr>
-        <tr><td>Private — practitioner engines</td><td>4</td><td>closed; named above</td></tr>
+        <tr><td>Public — practitioner engines</td><td>5</td><td>free, MIT, linked above</td></tr>
         <tr><td>Private — human-oversight architecture</td><td>18</td><td>closed; described, not named</td></tr>
       </tbody>
     </table>
