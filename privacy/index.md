@@ -70,11 +70,13 @@ The **practice brains** are different, and this is the part that matters most.
 Your matters, papers, notes, configuration and audit logs are written only to your own home
 directory. They are never uploaded anywhere, in any mode. That part is unconditional.
 
-### 4.2 The language model currently runs in the cloud
+### 4.2 In cloud mode, the language model runs on a third party's servers
 
-**As shipped today, reasoning is performed by a third-party language model, which means the
-text of your prompts is transmitted to that provider** — a company independent of the
-Publisher, operating under its own terms and its own privacy policy.
+**In cloud mode, which is the default, reasoning is performed by a third-party language
+model, which means the text of your prompts is transmitted to that provider** — a company
+independent of the Publisher, operating under its own terms and its own privacy policy. The
+key must be a paid commercial API key, not a consumer subscription; the two are governed by
+different documents, and the commercial terms are the ones that matter to a practitioner.
 
 Before any such transmission, the content passes through the
 [Pseudonymisation Gateway](https://github.com/Wolfgangrush/pseudonymisation-gateway), which
@@ -84,19 +86,28 @@ than silently transmitting — anything it could not fully resolve. Every outbou
 brain is funnelled through that single point, so this is not a setting you can forget to turn
 on.
 
-### 4.3 The local model tier is not wired yet — said plainly
+### 4.3 The local model tier — shipped in seven editions, not yet in Australia
 
-The intended design — **not implemented, not wired, not available today** — is a second mode in
-which the language model runs on your own machine (Ollama with Qwen3 or equivalent), so that
-nothing leaves at all. A `connect-local` setup command exists and will run to completion.
+There is a second mode in which the language model runs on your own machine (Ollama with
+Qwen3 or equivalent), so that nothing leaves at all. **As of 26 August 2026 this is published
+in seven editions** — India, the United Kingdom, the European Union, the United States,
+Singapore, Hong Kong and Dubai. One command, `connect-local`, installs it and switches the
+brain over.
 
-**That tier is not implemented in the current release.** The setup command writes a
-configuration value which the inference path does not yet read, so queries continue to go to
-the cloud provider regardless. It is the next milestone, and it is described here as a plan
-rather than a feature.
+**It fails closed.** Once local mode is set, an unreachable local model produces an error, not
+a quiet fall-back to a cloud vendor. A silent fall-back would transmit privileged material
+while the interface said nothing was leaving, which is the precise false assurance this mode
+exists to remove. The setting is read from your configuration file and not from the
+environment, so a stray cloud key in your shell cannot redirect it.
 
-**Do not rely on a local, no-transmission mode today.** If your material cannot lawfully or
-professionally leave your machine, do not put it into a practice brain until this ships.
+**Australia is the exception, and it is stated rather than smoothed over.** The code exists
+but is not yet in the published Australian repository, so it cannot be installed there today.
+Until it is, an Australian practitioner should read the paragraph below on section 77 My
+Health Records data as still fully in force.
+
+**Where the local tier is not available to you, do not rely on a no-transmission mode.** If
+your material cannot lawfully or professionally leave your machine, do not put it into a
+practice brain in that edition until this ships.
 
 **Pseudonymisation is a technical safeguard. It is not a legal discharge.** It reduces
 what is exposed; it does not perform your cross-border transfer assessment, obtain your
@@ -140,11 +151,12 @@ privacy promise you cannot check is only a promise, which is why the source is p
   offline will show no network entitlement, and the operating system will then refuse any
   connection regardless of what the code asks for.
 - For a practice brain, do not take Section 4.3 on trust either — check it the same way.
-  `ailawfirm_india/connect_local.py` writes `ai_provider` into the config file;
-  `ailawfirm_india/brain/llm.py` reads its provider settings from environment variables only
-  and never opens that file. That is the whole reason the local tier is described here as
-  unwired. When it ships, the test becomes simple: **disconnect the network.** If it keeps
-  working, nothing was leaving.
+  `ailawfirm_<jurisdiction>/connect_local.py` writes `ai_provider` into the config file, and
+  `ailawfirm_<jurisdiction>/brain/llm.py` reads it and routes to your local endpoint. The
+  test is then the simplest one there is: **disconnect the network.** If the brain keeps
+  working, nothing was leaving. If a repository has no `connect_local.py` in it, that edition
+  has not shipped the local tier — which is exactly how to check the Australian claim above
+  for yourself, rather than believing this page.
 - Watch it. A network monitor over a full session is the simplest test there is.
 
 ## 7. Children's data

@@ -5,10 +5,13 @@
 # here too — this file is what the website tells the public.
 #
 # `local_covers`  — what running the model on your own machine WOULD satisfy.
-#                   ✅ 2026-08-25: THE LOCAL TIER IS WIRED IN ALL EIGHT EDITIONS.
-#                   `connect-local` ships in every one and brain/llm.py honours it with
-#                   no cloud fallback. Verified by audit-localtier.sh against each repo's
-#                   own source. These are delivered guarantees when local mode is on.
+#                   2026-08-26: THE LOCAL TIER IS PUBLISHED IN SEVEN OF EIGHT EDITIONS.
+#                   `connect-local` ships in india/uk/eu/usa/singapore/hongkong/dubai and
+#                   brain/llm.py honours it with no cloud fallback. ⛔ AUSTRALIA IS NOT
+#                   PUBLISHED — the code exists locally but is untracked, so the public
+#                   cannot download it. Verified by audit-localtier.sh against each repo's
+#                   PUBLISHED artifact (not the working tree). Where an edition is not
+#                   published, s.77 My Health Records still bites in full — do not soften it.
 # `cloud_owes`    — what remains YOUR obligation if you choose the cloud tier.
 #                   Pseudonymisation is a technical safeguard. It is not a discharge.
 
@@ -128,6 +131,7 @@
   note: >-
     ⛔ Hard exception — section 77 My Health Records data. The prohibition attaches to offshore
     handling itself, not to what is transmitted, so gateway pseudonymisation does not cure it.
-    The local tier would cure it, and the local tier is NOT WIRED YET. That means there is
-    currently NO configuration of this tool that is safe for My Health Records matters.
-    Do not use it for them until the local milestone ships.
+    The local tier would cure it, and the local tier IS NOT PUBLISHED IN THIS EDITION — the
+    code is written but is not in the downloadable repository, so you cannot install it today.
+    That means there is currently NO configuration of this tool that is safe for My Health
+    Records matters. Do not use it for them until the Australian local tier is published.

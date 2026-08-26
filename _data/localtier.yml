@@ -1,7 +1,7 @@
 # GENERATED — do not hand-edit.
-# Written by audit-localtier.sh, which reads each repo's own source.
-# Regenerate before every publish. Source of truth is the code, not this file.
-# generated_at: 2026-08-25T19:04:06+0530
+# Written by audit-localtier.sh, which checks what each repo actually PUBLISHES.
+# Regenerate before every publish. Source of truth is the published code.
+# generated_at: 2026-08-26T14:02:58+0530
 
 - slug: india
   name: "India"
@@ -26,4 +26,4 @@
   local_tier: "wired"
 - slug: australia
   name: "Australia"
-  local_tier: "wired"
+  local_tier: "not published yet"
