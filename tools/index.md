@@ -78,7 +78,7 @@ description: Single-purpose tools for practitioners — the NAKASHA board reader
   <p class="note"><span class="n">02</span>Privacy conformance</p>
   <div>
     <div class="tool" id="samanvaya">
-      <div class="tool-head"><h2>samanvaya <span class="muted" style="font-weight:400">· समन्वय</span></h2><span class="badge">Source published · no release yet</span></div>
+      <div class="tool-head"><h2>samanvaya <span class="muted" style="font-weight:400">· समन्वय</span></h2><span class="badge badge-live">macOS app · free</span></div>
 
       <p class="what-is"><strong>What it is.</strong> An adviser writes down one declaration
       describing an organisation. samanvaya reads it and returns a local report saying which
@@ -103,6 +103,7 @@ description: Single-purpose tools for practitioners — the NAKASHA board reader
       Apple notarisation. Until that clears, this is source you can read and run, not a download.</p>
 
       <p class="juris-links">
+        <a class="btn btn-primary" href="https://github.com/Wolfgangrush/samanvaya/releases/latest">Download for macOS</a>
         <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/samanvaya">Read the source</a>
       </p>
     </div>
@@ -141,6 +142,7 @@ description: Single-purpose tools for practitioners — the NAKASHA board reader
       Wi-Fi switched off.</p>
 
       <p class="juris-links">
+        <a class="btn btn-primary" href="https://github.com/Wolfgangrush/multi-script-pdf-ocr/releases/latest">Download for macOS</a>
         <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/multi-script-pdf-ocr">Read the source</a>
       </p>
     </div>
@@ -193,7 +195,10 @@ What you see  →  File this under the Mehta matter, PAN ABCDE1234F.</code></pre
       function it runs on <em>every</em> request rather than being a mode you could forget. If you
       build legal software yourself, it is a library you put in front of your own outbound calls.</p>
 
+<pre class="code-block"><code>pip install git+https://github.com/Wolfgangrush/pseudonymisation-gateway</code></pre>
+
       <p class="juris-links">
+        <a class="btn btn-primary" href="https://github.com/Wolfgangrush/pseudonymisation-gateway#readme">Installation guide</a>
         <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/pseudonymisation-gateway">Read the source</a>
       </p>
     </div>
@@ -225,7 +230,11 @@ What you see  →  File this under the Mehta matter, PAN ABCDE1234F.</code></pre
       Where the statute is genuinely ambiguous the code takes a position, and the tests show you which
       position it took.</p>
 
+<pre class="code-block"><code>pip install git+https://github.com/Wolfgangrush/dpdp-law-to-code
+dpdp-check</code></pre>
+
       <p class="juris-links">
+        <a class="btn btn-primary" href="https://github.com/Wolfgangrush/dpdp-law-to-code#readme">Installation guide</a>
         <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/dpdp-law-to-code">Read the source</a>
       </p>
     </div>
@@ -246,6 +255,7 @@ What you see  →  File this under the Mehta matter, PAN ABCDE1234F.</code></pre
       it says so.</p>
 
       <p class="juris-links">
+        <a class="btn btn-primary" href="https://github.com/Wolfgangrush/sc-ai-regulations-2026-mapping/blob/main/clause-mapping.md">Read the clause map</a>
         <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/sc-ai-regulations-2026-mapping">Read the mapping</a>
       </p>
     </div>
@@ -273,6 +283,7 @@ What you see  →  File this under the Mehta matter, PAN ABCDE1234F.</code></pre
       whole library when you need it elsewhere.</p>
 
       <p class="juris-links">
+        <a class="btn btn-primary" href="https://github.com/Wolfgangrush/Citation-Parser/blob/main/SETUP_GUIDE.md">Set-up guide</a>
         <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/Citation-Parser">Read the source</a>
       </p>
     </div>
@@ -294,6 +305,7 @@ What you see  →  File this under the Mehta matter, PAN ABCDE1234F.</code></pre
       credited here.</p>
 
       <p class="juris-links">
+        <a class="btn btn-primary" href="https://github.com/Wolfgangrush/telegram_news_bot#readme">Run your own</a>
         <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/telegram_news_bot">Read the source</a>
       </p>
     </div>
@@ -330,7 +342,11 @@ What you see  →  File this under the Mehta matter, PAN ABCDE1234F.</code></pre
       Belfast School of Law. Published so the argument can be checked against a working
       implementation rather than taken on the strength of the prose.</p>
 
+<pre class="code-block"><code>pip install git+https://github.com/Wolfgangrush/chof-calc
+chof-calc</code></pre>
+
       <p class="juris-links">
+        <a class="btn btn-primary" href="https://github.com/Wolfgangrush/chof-calc#readme">Installation guide</a>
         <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/chof-calc">chof-calc — the formula</a>
         <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/chof-kernel">chof-kernel — the governor</a>
       </p>
@@ -363,7 +379,11 @@ What you see  →  File this under the Mehta matter, PAN ABCDE1234F.</code></pre
       and it is not a substitute for a chartered accountant. It is founder-side preparation, and
       screening is the whole of what it does. Nothing it produces is filed anywhere.</p>
 
+<pre class="code-block"><code>pip install git+https://github.com/Wolfgangrush/saptarishi
+saptarishi</code></pre>
+
       <p class="juris-links">
+        <a class="btn btn-primary" href="https://github.com/Wolfgangrush/saptarishi#readme">Installation guide</a>
         <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/saptarishi">Read the source</a>
       </p>
     </div>
@@ -406,7 +426,11 @@ What you see  →  File this under the Mehta matter, PAN ABCDE1234F.</code></pre
       risk is the whole point rather than a detail. Python 3.11 or later. Not on PyPI yet, so install
       it from the source.</p>
 
+<pre class="code-block"><code>pip install git+https://github.com/Wolfgangrush/repofacts
+repofacts</code></pre>
+
       <p class="juris-links">
+        <a class="btn btn-primary" href="https://github.com/Wolfgangrush/repofacts#readme">Installation guide</a>
         <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/repofacts">Read the source</a>
       </p>
     </div>
