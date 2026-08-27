@@ -123,7 +123,9 @@ description: Single-purpose tools for practitioners — the pratipaksha opposing
 
       <p class="what-is"><strong>What it is.</strong> A Mac app with three buttons — Open, OCR, Save —
       that reads text out of scanned PDFs in <strong>12 or more Indian scripts and 17 other
-      languages</strong>, and saves a smaller copy. That is the whole feature set.</p>
+      languages</strong> and saves a <strong>searchable copy</strong>: the recognised text is
+      written back into the PDF as an invisible layer, so the file looks identical to the scan but
+      the text can be searched and copied out of it.</p>
 
       <p class="tool-problem"><strong>The problem.</strong> A certified copy arrives as a scan. It has
       no text layer, so you cannot search it, quote from it, or paste a paragraph into your own document. The
@@ -134,11 +136,20 @@ description: Single-purpose tools for practitioners — the pratipaksha opposing
       <p><strong>What it does.</strong> English and sixteen other non-Indic languages go through
       Apple's on-device Vision framework. Every major Indian language goes through a Tesseract binary
       bundled <em>inside</em> the app with its language data — nothing is downloaded at runtime. The
-      text appears in a side panel, selectable and copyable per page or in bulk. Saving produces a
-      reduced copy: pages that already have a real text layer are passed through untouched so they
-      stay searchable and small, and only image pages are rasterised. If the source is already
-      optimised, the app refuses to write an inflated "reduced" copy and tells you so instead of
-      silently making the file bigger.</p>
+      text appears in a side panel, selectable and copyable per page or in bulk. There are two ways
+      to save. <em>Save with OCR</em> writes the recognised text back into the PDF as an invisible
+      layer: the page looks identical to the scan but <code>pdftotext</code>, Spotlight and a PDF
+      reader's find function can all reach the text. <em>Save Reduced</em> is the separate
+      size-shrinking pass and does not add a text layer — pages that already have a real text layer
+      are passed through untouched so they stay searchable and small, and only image pages are
+      rasterised. If the source is already optimised, the app refuses to write an inflated "reduced"
+      copy and tells you so instead of silently making the file bigger.</p>
+
+      <p class="tool-meta"><strong>The honest limit on the searchable copy.</strong> Any
+      text-extraction tool recovers the embedded text exactly, but Apple's PDFKit — which Preview
+      uses — can reorder combining marks when extracting Devanagari, so a find-in-page search inside
+      Preview may not match Devanagari text reliably even though the text is correctly stored in
+      the file.</p>
 
       <p class="tool-meta"><strong>Fully offline.</strong> Zero network calls, no network entitlement,
       no API key, no account, no telemetry, no version-check ping. It runs indefinitely with the

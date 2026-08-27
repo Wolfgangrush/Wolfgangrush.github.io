@@ -59,7 +59,7 @@ description: Everything built so far, named — the practice brains and tools an
       <tbody>
         <tr><td>NAKASHA</td><td><a class="link ext" href="https://github.com/Wolfgangrush/nakasha"><code>nakasha</code></a></td><td>Pulls your own matters out of the daily court board</td></tr>
         <tr><td>samanvaya</td><td><a class="link ext" href="https://github.com/Wolfgangrush/samanvaya"><code>samanvaya</code></a></td><td>Offline privacy conformance across six regimes</td></tr>
-        <tr><td>Multi-script OCR</td><td><a class="link ext" href="https://github.com/Wolfgangrush/multi-script-pdf-ocr"><code>multi-script-pdf-ocr</code></a></td><td>Offline OCR for Devanagari and mixed-script PDFs</td></tr>
+        <tr><td>Multi-script OCR</td><td><a class="link ext" href="https://github.com/Wolfgangrush/multi-script-pdf-ocr"><code>multi-script-pdf-ocr</code></a></td><td>Offline OCR for Devanagari and mixed-script PDFs — saved file is searchable</td></tr>
         <tr><td>Pseudonymisation gateway</td><td><a class="link ext" href="https://github.com/Wolfgangrush/pseudonymisation-gateway"><code>pseudonymisation-gateway</code></a></td><td>Jurisdiction-aware PII middleware for cloud LLMs</td></tr>
         <tr><td>DPDP as code</td><td><a class="link ext" href="https://github.com/Wolfgangrush/dpdp-law-to-code"><code>dpdp-law-to-code</code></a></td><td>DPDP Act 2023 sections 5–16 as runnable Python</td></tr>
         <tr><td>SC AI regulations</td><td><a class="link ext" href="https://github.com/Wolfgangrush/sc-ai-regulations-2026-mapping"><code>sc-ai-regulations-2026-mapping</code></a></td><td>Clause-by-clause mapping of the draft AI regulations</td></tr>
