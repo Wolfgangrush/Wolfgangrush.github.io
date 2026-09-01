@@ -34,30 +34,54 @@ description: Free, downloadable practitioner documents from wolfgang_rush. No em
 
 <section class="section reveal" id="documents">
 <div class="mg">
-  <p class="note"><span class="n">03</span>The first document</p>
+  <p class="note"><span class="n">03</span>The documents</p>
   <div>
-    <h2>DPDP-Readiness Checklist — an operational aid for Indian digital businesses</h2>
-    <p class="lede">A non-exhaustive readiness checklist for India's Digital Personal Data Protection
-    Act, 2023 and the Rules made under it. Core obligations plus eight sector overlays — healthtech,
-    fintech, insurtech, HR-tech, adtech, edtech, consumer AI and mobility — with every item cited to
-    the section it comes from. Free, no email required.</p>
+    <h2>Two sheets, both free, both current</h2>
+    <p class="lede">Newest first. Each one is a static PDF — open it in the browser, or save the file.
+    No email required, and nothing on this page collects anything from you.</p>
 
     <div class="latest-box">
+      <span class="tag">New · PDF · 5 pages · current as at 2 September 2026</span>
+      <h3 class="latest-title">Where can your data actually go? — a cross-border sheet for Indian companies</h3>
+      <p class="latest-summary">What the DPDP framework does on cross-border transfer, what it does
+      not do, and what is actually constraining an Indian company's data exports today. The text of
+      Section 16 and Rule 15, why Rule 15 is a foreign-State provision rather than a commercial
+      transfer mechanism, the localisation power that does sit in Rule 12, a ranked hierarchy of what
+      really binds you, and a one-page "what would have to move if a country were named" test to work
+      through per destination.</p>
+      <p class="latest-cta">
+        <a class="btn btn-primary btn-lg"
+           href="{{ '/assets/Cross-Border-Sheet-2026-09-02.pdf' | relative_url }}"
+           target="_blank" rel="noopener">Open the cross-border sheet (PDF, 5 pages)</a>
+      </p>
+      <p class="muted small">
+        Or <a class="link"
+           href="{{ '/assets/Cross-Border-Sheet-2026-09-02.pdf' | relative_url }}"
+           download="Cross-Border-Sheet-2026-09-02.pdf">save the file (PDF, 274&nbsp;KB)</a>.
+      </p>
+    </div>
+
+    <div class="latest-box" style="margin-top:2rem">
       <span class="tag">PDF · 5 pages · current as at 1 August 2026</span>
-      <h3 class="latest-title">DPDP-Readiness Checklist (2026-08-18)</h3>
+      <h3 class="latest-title">DPDP-Readiness Checklist — an operational aid for Indian digital businesses</h3>
       <p class="latest-summary">A non-exhaustive readiness checklist for India's Digital Personal
       Data Protection Act, 2023 and the Rules made under it. Core obligations plus eight sector
       overlays — healthtech, fintech, insurtech, HR-tech, adtech, edtech, consumer AI and mobility —
-      with every item cited to the section it comes from. Free, no email required.</p>
+      with every item cited to the section it comes from.</p>
       <p class="latest-cta">
         <a class="btn btn-primary btn-lg"
            href="{{ '/assets/DPDP-Readiness-Checklist-2026-08-18.pdf' | relative_url }}"
-           download>Download the checklist (PDF, 5 pages)</a>
+           target="_blank" rel="noopener">Open the checklist (PDF, 5 pages)</a>
+      </p>
+      <p class="muted small">
+        Or <a class="link"
+           href="{{ '/assets/DPDP-Readiness-Checklist-2026-08-18.pdf' | relative_url }}"
+           download="DPDP-Readiness-Checklist-2026-08-18.pdf">save the file (PDF, 201&nbsp;KB)</a>.
       </p>
     </div>
 
     <p class="muted small" style="margin-top:1.6rem">
-      The download is a static file. Opening this page sets no cookie; clicking the link sends one
+      Both downloads are static files. Opening this page sets no cookie; clicking a link sends one
       request to GitHub Pages for the file and nothing else. See the
       <a class="link" href="{{ '/privacy/' | relative_url }}">Privacy Policy</a> for the full
       posture.
