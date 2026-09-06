@@ -1,7 +1,7 @@
 ---
 layout: default
 title: wolfgang_rush
-description: Free, open-source legal software for practitioners in eight jurisdictions, single-purpose practice tools, and a fortnightly brief on Indian data-protection and AI-governance law. Nothing runs on the Publisher's servers.
+description: Free, open-source legal software for practitioners in eight jurisdictions, single-purpose practice tools, and a weekly brief on Indian data-protection and AI-governance law. Nothing runs on the Publisher's servers.
 ---
 
 {% assign latest = site.data.newsletters | first %}
@@ -15,7 +15,7 @@ description: Free, open-source legal software for practitioners in eight jurisdi
     part that holds everything so you do not have to. Every matter, every party, every date, every
     note, kept in one place on your own computer and still there when you come back to it. There is
     one edition per jurisdiction. Alongside them, a handful of <strong>tools</strong> that each do
-    exactly one job, and a fortnightly <strong>newsletter</strong> on Indian data-protection and
+    exactly one job, and a weekly <strong>newsletter</strong> on Indian data-protection and
     AI-governance law.</p>
 
     <div class="doors">
@@ -39,7 +39,7 @@ description: Free, open-source legal software for practitioners in eight jurisdi
       </a>
 
       <a class="door" href="{{ '/newsletter/' | relative_url }}">
-        <span class="door-eyebrow">Fortnightly · no paywall</span>
+        <span class="door-eyebrow">Weekly · no paywall</span>
         <span class="door-title">The India Data &amp; AI Governance Desk</span>
         <span class="door-body">A short brief on the DPDP Act and its Rules, the Data Protection
         Board, and India's AI regulation — read against what is moving globally. No paywall, and

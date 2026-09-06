@@ -1,7 +1,7 @@
 ---
 layout: default
 title: The India Data & AI Governance Desk
-description: A fortnightly brief on Indian data-protection and AI-governance law — the DPDP Act and Rules, the Data Protection Board, and India's AI regulation, read against what is moving globally. Every date sourced.
+description: A weekly brief on Indian data-protection and AI-governance law — the DPDP Act and Rules, the Data Protection Board, and India's AI regulation, read against what is moving globally. Every date sourced.
 ---
 
 {% assign latest = site.data.newsletters | first %}
@@ -11,7 +11,7 @@ description: A fortnightly brief on Indian data-protection and AI-governance law
   <p class="note"><span class="n">01</span>The brief</p>
   <div>
     <h2>The India Data &amp; AI Governance Desk</h2>
-    <p class="lede">A fortnightly brief on Indian data-protection and AI-governance law — the DPDP
+    <p class="lede">A weekly brief on Indian data-protection and AI-governance law — the DPDP
     Act and its Rules, the Data Protection Board, and India's AI regulation, read against what is
     moving globally. Short enough to finish. Every date sourced.</p>
 
@@ -32,7 +32,7 @@ description: A fortnightly brief on Indian data-protection and AI-governance law
   <p class="note"><span class="n">02</span>By email</p>
   <div>
     <h2>Get it in your inbox</h2>
-    <p>Fortnightly. No charge, no paywall, and every issue stays permanently readable on the web
+    <p>Weekly. No charge, no paywall, and every issue stays permanently readable on the web
     whether you subscribe or not — so you can forward a link to a client or a colleague and it will
     simply open.</p>
 

@@ -36,12 +36,34 @@ description: Free, downloadable practitioner documents from wolfgang_rush. No em
 <div class="mg">
   <p class="note"><span class="n">03</span>The documents</p>
   <div>
-    <h2>Two sheets, both free, both current</h2>
+    <h2>Three documents, all free, all current</h2>
     <p class="lede">Newest first. Each one is a static PDF — open it in the browser, or save the file.
     No email required, and nothing on this page collects anything from you.</p>
 
     <div class="latest-box">
-      <span class="tag">New · PDF · 5 pages · current as at 2 September 2026</span>
+      <span class="tag">New · PDF · 8 pages · current as at 7 September 2026</span>
+      <h3 class="latest-title">The Primer, Part 1 — It predicts the next word. That is the whole machine.</h3>
+      <p class="latest-summary">The first part of a weekly strand explaining how these systems
+      actually work, from zero, for lawyers who will have to advise on them. What a language model
+      is, why anyone built a next-word guesser in the first place, why a real citation and an
+      invented one are indistinguishable to the mechanism, and what the Digital Personal Data
+      Protection Act, 2023 has to say about any of it. Every term is defined on the page. Includes a
+      word-by-word audit of the Act showing that the entire GDPR Article 22 vocabulary is absent
+      from it.</p>
+      <p class="latest-cta">
+        <a class="btn btn-primary btn-lg"
+           href="{{ '/assets/The-Primer-Part-01-2026-09-07.pdf' | relative_url }}"
+           target="_blank" rel="noopener">Open The Primer, Part 1 (PDF, 8 pages)</a>
+      </p>
+      <p class="muted small">
+        Or <a class="link"
+           href="{{ '/assets/The-Primer-Part-01-2026-09-07.pdf' | relative_url }}"
+           download="The-Primer-Part-01-2026-09-07.pdf">save the file (PDF, 685&nbsp;KB)</a>.
+      </p>
+    </div>
+
+    <div class="latest-box" style="margin-top:2rem">
+      <span class="tag">PDF · 5 pages · current as at 2 September 2026</span>
       <h3 class="latest-title">Where can your data actually go? — a cross-border sheet for Indian companies</h3>
       <p class="latest-summary">What the DPDP framework does on cross-border transfer, what it does
       not do, and what is actually constraining an Indian company's data exports today. The text of

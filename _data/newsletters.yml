@@ -10,6 +10,30 @@
 #     url: "https://buttondown.com/the_desk/archive/…/"
 #     summary: "One or two sentences. Plain English. What a reader gets."
 
+- number: "06"
+  title: "It predicts the next word. That is the whole machine."
+  date: 2026-09-07
+  url: "https://buttondown.com/the_desk/archive/it-predicts-the-next-word-that-is-the-whole/"
+  platform: Buttondown
+  summary: >-
+    THE PRIMER starts here — a weekly strand that explains how these systems actually
+    work, from zero, for lawyers who will have to advise on them. Part 1: what a language
+    model is, why anyone built a next-word guesser in the first place, and why invented
+    citations are a structural property rather than a bug. Plus a word-by-word audit of
+    the DPDP Act showing the entire GDPR Article 22 vocabulary is absent from it, and the
+    IT Amendment Rules 2026 that have been binding AI law in force since 20 February.
+
+- number: "05"
+  title: "No country is restricted. Your data still cannot leave."
+  date: 2026-08-31
+  url: "https://buttondown.com/the_desk/archive/no-country-is-restricted-your-data-still-cannot/"
+  platform: Buttondown
+  summary: >-
+    India did not build a transfer mechanism, and that is the point. Section 16 uses a
+    blacklist — transfer is permitted unless the Central Government restricts a
+    destination — rather than the GDPR's whitelist and adequacy model, and no country has
+    been notified. What actually binds an Indian company's data exports today, ranked.
+
 - number: "04"
   title: "81 days to register. Who exactly receives the application?"
   date: 2026-08-24
