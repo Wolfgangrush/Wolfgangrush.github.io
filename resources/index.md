@@ -36,12 +36,35 @@ description: Free, downloadable practitioner documents from wolfgang_rush. No em
 <div class="mg">
   <p class="note"><span class="n">03</span>The documents</p>
   <div>
-    <h2>Three documents, all free, all current</h2>
+    <h2>Four documents, all free, all current</h2>
     <p class="lede">Newest first. Each one is a static PDF — open it in the browser, or save the file.
     No email required, and nothing on this page collects anything from you.</p>
 
     <div class="latest-box">
-      <span class="tag">New · PDF · 8 pages · current as at 7 September 2026</span>
+      <span class="tag">New · PDF · 12 pages · current as at 13 September 2026</span>
+      <h3 class="latest-title">The Primer, Part 2 — Where your draft actually goes.</h3>
+      <p class="latest-summary">The second part of the weekly strand. You paste three paragraphs of
+      your own draft into a chat box to tidy the language — this is what happens to them, and the one
+      setting that changes the answer. Why that is a different question from how the model was
+      trained, the two holes in the opt-out that almost nobody knows about (including the thumbs-down
+      button), why a personal subscription is not a processor arrangement, and what section 11(1)(b)
+      of the Digital Personal Data Protection Act, 2023 entitles a person to ask about the Data
+      Fiduciaries and Data Processors their data was shared with. Every term is explained on the
+      page.</p>
+      <p class="latest-cta">
+        <a class="btn btn-primary btn-lg"
+           href="{{ '/assets/The-Primer-Part-02-2026-09-13.pdf' | relative_url }}"
+           target="_blank" rel="noopener">Open The Primer, Part 2 (PDF, 12 pages)</a>
+      </p>
+      <p class="muted small">
+        Or <a class="link"
+           href="{{ '/assets/The-Primer-Part-02-2026-09-13.pdf' | relative_url }}"
+           download="The-Primer-Part-02-2026-09-13.pdf">save the file (PDF, 108&nbsp;KB)</a>.
+      </p>
+    </div>
+
+    <div class="latest-box" style="margin-top:2rem">
+      <span class="tag">PDF · 8 pages · current as at 7 September 2026</span>
       <h3 class="latest-title">The Primer, Part 1 — It predicts the next word. That is the whole machine.</h3>
       <p class="latest-summary">The first part of a weekly strand explaining how these systems
       actually work, from zero, for lawyers who will have to advise on them. What a language model
@@ -103,7 +126,7 @@ description: Free, downloadable practitioner documents from wolfgang_rush. No em
     </div>
 
     <p class="muted small" style="margin-top:1.6rem">
-      Both downloads are static files. Opening this page sets no cookie; clicking a link sends one
+      Every download here is a static file. Opening this page sets no cookie; clicking a link sends one
       request to GitHub Pages for the file and nothing else. See the
       <a class="link" href="{{ '/privacy/' | relative_url }}">Privacy Policy</a> for the full
       posture.
