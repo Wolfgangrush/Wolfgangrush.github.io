@@ -36,12 +36,37 @@ description: Free, downloadable practitioner documents from wolfgang_rush. No em
 <div class="mg">
   <p class="note"><span class="n">03</span>The documents</p>
   <div>
-    <h2>Four documents, all free, all current</h2>
+    <h2>Five documents, all free, all current</h2>
     <p class="lede">Newest first. Each one is a static PDF — open it in the browser, or save the file.
     No email required, and nothing on this page collects anything from you.</p>
 
     <div class="latest-box">
-      <span class="tag">New · PDF · 12 pages · current as at 13 September 2026</span>
+      <span class="tag">New · PDF · 14 pages · current as at 20 September 2026</span>
+      <h3 class="latest-title">The Primer, Part 3 — What &ldquo;delete&rdquo; actually deletes.</h3>
+      <p class="latest-summary">You deleted the conversation, and the product still knows what was in
+      it. The thing that remembers is neither the chat nor the model: it is a third record, a note the
+      product wrote about you while you were talking, and it has its own delete button that deleting
+      the chat does not press. This part sets out the four places a product keeps what you said, what
+      each control actually reaches at ChatGPT, Claude and Gemini — read first-hand on the day of
+      publication, including a page one vendor rewrote overnight and what that tells you about relying
+      on a link instead of a dated screenshot — and why Europe, California and India each chose a
+      different word for what an erasure request erases. It ends with the one-year floor that Rule 8(3)
+      of the Digital Personal Data Protection Rules, 2025 puts under deletion in India from May 2027,
+      even if the user closes the account. Every term is explained on the page.</p>
+      <p class="latest-cta">
+        <a class="btn btn-primary btn-lg"
+           href="{{ '/assets/The-Primer-Part-03-2026-09-20.pdf' | relative_url }}"
+           target="_blank" rel="noopener">Open The Primer, Part 3 (PDF, 14 pages)</a>
+      </p>
+      <p class="muted small">
+        Or <a class="link"
+           href="{{ '/assets/The-Primer-Part-03-2026-09-20.pdf' | relative_url }}"
+           download="The-Primer-Part-03-2026-09-20.pdf">save the file (PDF, 122&nbsp;KB)</a>.
+      </p>
+    </div>
+
+    <div class="latest-box" style="margin-top:2rem">
+      <span class="tag">PDF · 12 pages · current as at 13 September 2026</span>
       <h3 class="latest-title">The Primer, Part 2 — Where your draft actually goes.</h3>
       <p class="latest-summary">The second part of the weekly strand. You paste three paragraphs of
       your own draft into a chat box to tidy the language — this is what happens to them, and the one

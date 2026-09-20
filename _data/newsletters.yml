@@ -10,6 +10,22 @@
 #     url: "https://buttondown.com/the_desk/archive/…/"
 #     summary: "One or two sentences. Plain English. What a reader gets."
 
+- number: "08"
+  title: "What \"delete\" actually deletes."
+  date: 2026-09-20
+  url: "https://buttondown.com/the_desk/archive/what-delete-actually-deletes/"
+  platform: Buttondown
+  summary: >-
+    THE PRIMER Part 3 — you deleted the conversation, and the product still knows what was
+    in it. The thing that remembers is a third record: a note the product wrote about you
+    while you were talking, with its own delete button that deleting the chat does not
+    press. What each control actually reaches at ChatGPT, Claude and Gemini, read
+    first-hand on the day of publication — including the page one vendor rewrote overnight,
+    and why a screenshot with a date on it beats a link. Why "delete my chat" and "delete
+    my data" are different requests, how Europe, California and India each choose a
+    different word for what erasure erases, and the one-year floor Rule 8(3) puts under
+    deletion in India from May 2027.
+
 - number: "07"
   title: "Where your draft actually goes."
   date: 2026-09-13
