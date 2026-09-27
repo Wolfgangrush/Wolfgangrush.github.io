@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Tools
-description: Single-purpose tools for practitioners — the pratipaksha opposing-counsel simulator, pramaan electronic-evidence integrity, nyaya-check cheque-dishonour cause-of-action checker, asthir precedent-instability radar, the NAKASHA board reader, samanvaya privacy conformance, offline multi-script OCR, the pseudonymisation gateway, the DPDP Act as runnable code, the Supreme Court AI regulations mapping, a citation manager, a news digest bot, the CHOF human-oversight toolkit, and repofacts.
+description: Single-purpose tools for practitioners — the pratipaksha opposing-counsel simulator, pramaan electronic-evidence integrity, nyaya-check cheque-dishonour cause-of-action checker, asthir precedent-instability radar, the NAKASHA board reader, samanvaya privacy conformance, offline multi-script OCR, the pseudonymisation gateway, the DPDP Act as runnable code, the Supreme Court AI regulations mapping, a citation manager, a news digest bot, the CHOF human-oversight toolkit, repofacts, plus the Vidhi Likhit classroom for law students.
 ---
 
 <section class="section reveal">
@@ -13,6 +13,8 @@ description: Single-purpose tools for practitioners — the pratipaksha opposing
     <a class="link" href="{{ '/brains/' | relative_url }}">practice brains</a>, which are a different
     thing entirely. Every tool here is free, the source is published, and it runs on your own
     machine.</p>
+    <p>At the end of the page there is one more thing, which is not a tool at all:
+    <a class="link" href="#vidhi-likhit">a classroom for law students</a>.</p>
     <p>Each is described the same way: <strong>what it actually is</strong>, then <strong>the problem
     it exists for</strong>, then what it does about it, then the honest limits. If a description here
     does not make sense to a working practitioner, that is a defect in the description, and I would
@@ -33,6 +35,7 @@ description: Single-purpose tools for practitioners — the pratipaksha opposing
   <li><a href="#pramaan">pramaan</a></li>
   <li><a href="#nyaya-check">nyaya-check</a></li>
   <li><a href="#asthir">asthir</a></li>
+  <li><a href="#vidhi-likhit">Vidhi Likhit (classroom)</a></li>
 </ul>
   </div>
 </div>
@@ -556,6 +559,53 @@ asthir</code></pre>
       <p class="juris-links">
         <a class="btn btn-primary" href="https://github.com/Wolfgangrush/asthir#readme">Installation guide</a>
         <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/asthir">Read the source</a>
+      </p>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section class="section reveal">
+<div class="mg">
+  <p class="note"><span class="n">10</span>For students</p>
+  <div>
+
+    <div class="tool" id="vidhi-likhit">
+      <div class="tool-head"><h2>Vidhi Likhit <span class="muted" style="font-weight:400">· विधि लिखित</span></h2><span class="badge badge-live">Classroom · free</span></div>
+
+      <p class="what-is"><strong>What it is.</strong> Not a tool. A classroom for Indian law that runs in your
+      terminal, for law students and anyone learning the law. You learn the bare acts section by section, from a
+      teacher who has to show you the section before it is allowed to explain it.</p>
+
+      <p class="tool-problem"><strong>The problem.</strong> Most of us learned law from notes, guides and summaries:
+      someone else's reading of a section, often a few amendments out of date. The bare act is where the answer
+      actually lives, and it is the one thing nobody sits you down with. A general chatbot is worse than a guide: it
+      answers fluently, and it will cite a case that does not exist.</p>
+
+      <p><strong>What it does.</strong> It turns the Central and State bare acts from India Code (11,715 files,
+      about 10,180 distinct documents) into a guided classroom. A dean sends your question to one of fifteen subject
+      teachers: constitutional, criminal (BNS), criminal procedure (BNSS), civil procedure, evidence (BSA), family,
+      property, company, labour, tax, IP and data, and the rest. The section is retrieved first and every answer is
+      grounded in it. An examiner quizzes you with spaced revision, a scrutineer checks every case citation against
+      Indian Kanoon before it reaches you, and your notes and revision deck stay on your own machine. Ask the way you
+      would ask a senior: <code>learn CPC</code>, <code>section 65B</code>, in English or in Hindi.</p>
+
+      <p class="tool-meta"><strong>The honest limits.</strong> It is a study aid. It is not a lawyer and not legal
+      advice, and the text should be checked at <a class="link" href="https://www.indiacode.nic.in/">India Code</a>
+      before you rely on it. The acts, the search index and everything you save stay on your machine, but the
+      teacher itself runs on an AI engine you connect with your own key (Gemini, Claude, Codex or opencode), so your
+      question and the public statute text it retrieved go to that engine. The first run builds the search index
+      locally, once, and it is slow. It grants nothing and certifies nothing: it is a classroom, not a school.</p>
+
+<pre class="code-block"><code>git clone https://github.com/Wolfgangrush/Vidhi_likhit-Solo_edition
+cd Vidhi_likhit-Solo_edition && pip install .
+python -m vidhi_likhit.chat.reindex_sections
+vidhi-likhit</code></pre>
+
+      <p class="juris-links">
+        <a class="btn btn-primary" href="https://github.com/Wolfgangrush/Vidhi_likhit-Solo_edition#readme">Installation guide</a>
+        <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/Vidhi_likhit-Solo_edition">Read the source</a>
       </p>
     </div>
 
