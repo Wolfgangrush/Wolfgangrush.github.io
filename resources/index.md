@@ -36,12 +36,37 @@ description: Free, downloadable practitioner documents from wolfgang_rush. No em
 <div class="mg">
   <p class="note"><span class="n">03</span>The documents</p>
   <div>
-    <h2>Five documents, all free, all current</h2>
+    <h2>Six documents, all free, all current</h2>
     <p class="lede">Newest first. Each one is a static PDF — open it in the browser, or save the file.
     No email required, and nothing on this page collects anything from you.</p>
 
     <div class="latest-box">
-      <span class="tag">New · PDF · 14 pages · current as at 20 September 2026</span>
+      <span class="tag">New · PDF · 15 pages · current as at 27 September 2026</span>
+      <h3 class="latest-title">The Primer, Part 4 — Your document, as a list of numbers.</h3>
+      <p class="latest-summary">When a product &ldquo;reads&rdquo; your documents, it cuts them into
+      pieces, turns each piece into a list of numbers called an embedding, and keeps the pieces and the
+      numbers together in a search index. This part explains that index in the order the machine uses
+      it, why search by meaning is good at paraphrase and weak at a clause number, and why deleting the
+      file is one control and deleting what was built from it is another, on the vendors&rsquo; own
+      developer documentation. Then the question lawyers will be asked: is a list of numbers made from a
+      client&rsquo;s documents still personal data? It covers the research that rebuilt short text from
+      its numbers, how Europe, California and India each phrase the test, why EDPB Opinion 28/2024 is
+      about trained models and not search indexes, and the one German regulator text that addresses the
+      index directly. Every term is explained on the page.</p>
+      <p class="latest-cta">
+        <a class="btn btn-primary btn-lg"
+           href="{{ '/assets/The-Primer-Part-04-2026-09-27.pdf' | relative_url }}"
+           target="_blank" rel="noopener">Open The Primer, Part 4 (PDF, 15 pages)</a>
+      </p>
+      <p class="muted small">
+        Or <a class="link"
+           href="{{ '/assets/The-Primer-Part-04-2026-09-27.pdf' | relative_url }}"
+           download="The-Primer-Part-04-2026-09-27.pdf">save the file (PDF, 125&nbsp;KB)</a>.
+      </p>
+    </div>
+
+    <div class="latest-box" style="margin-top:2rem">
+      <span class="tag">PDF · 14 pages · current as at 20 September 2026</span>
       <h3 class="latest-title">The Primer, Part 3 — What &ldquo;delete&rdquo; actually deletes.</h3>
       <p class="latest-summary">You deleted the conversation, and the product still knows what was in
       it. The thing that remembers is neither the chat nor the model: it is a third record, a note the

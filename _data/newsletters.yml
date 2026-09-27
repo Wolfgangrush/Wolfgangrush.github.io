@@ -10,6 +10,21 @@
 #     url: "https://buttondown.com/the_desk/archive/…/"
 #     summary: "One or two sentences. Plain English. What a reader gets."
 
+- number: "09"
+  title: "Your document, as a list of numbers."
+  date: 2026-09-27
+  url: "https://buttondown.com/the_desk/archive/your-document-as-a-list-of-numbers/"
+  platform: Buttondown
+  summary: >-
+    THE PRIMER Part 4 — when a product "reads" your documents, it cuts them into pieces, turns
+    each piece into a list of numbers called an embedding, and keeps the pieces and the numbers
+    together. What that index is, why search by meaning finds paraphrase but can miss a clause
+    number, and why deleting the file is not the same as deleting what was built from it, on
+    the vendors' own developer documentation. Then the lawyer's question: is a list of numbers
+    still personal data? Research that rebuilt short text from its numbers, how Europe,
+    California and India each phrase the test, why EDPB Opinion 28/2024 is about trained models
+    and not search indexes, and the one German regulator text that addresses the index directly.
+
 - number: "08"
   title: "What \"delete\" actually deletes."
   date: 2026-09-20
