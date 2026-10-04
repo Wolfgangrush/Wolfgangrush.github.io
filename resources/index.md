@@ -36,12 +36,37 @@ description: Free, downloadable practitioner documents from wolfgang_rush. No em
 <div class="mg">
   <p class="note"><span class="n">03</span>The documents</p>
   <div>
-    <h2>Six documents, all free, all current</h2>
+    <h2>Seven documents, all free, all current</h2>
     <p class="lede">Newest first. Each one is a static PDF — open it in the browser, or save the file.
     No email required, and nothing on this page collects anything from you.</p>
 
     <div class="latest-box">
-      <span class="tag">New · PDF · 15 pages · current as at 27 September 2026</span>
+      <span class="tag">New · PDF · 14 pages · current as at 4 October 2026</span>
+      <h3 class="latest-title">The Primer, Part 5 — Every question is a new search.</h3>
+      <p class="latest-summary">A product that answers from your documents searches them again for
+      every question. This part follows one question around that loop in six stops: the question is
+      rewritten, turned into numbers, filtered by permissions, matched to a shortlist of passages,
+      pasted into the prompt, and answered with citations, on the vendors&rsquo; own documentation. It
+      explains why access control has to sit at the search, why a citation shows where the product
+      looked and not that it read the passage correctly, and what changes when the index is a graph.
+      Then the question lawyers will be asked: is each search processing in its own right? It covers
+      the Court of Justice&rsquo;s <em>Digi</em> judgment on &ldquo;further processing&rdquo;, how
+      Europe, California and India each tie a use to its purpose, and the German regulators&rsquo;
+      practical answer: settle the purpose before the query. Every term is explained on the page.</p>
+      <p class="latest-cta">
+        <a class="btn btn-primary btn-lg"
+           href="{{ '/assets/The-Primer-Part-05-2026-10-04.pdf' | relative_url }}"
+           target="_blank" rel="noopener">Open The Primer, Part 5 (PDF, 14 pages)</a>
+      </p>
+      <p class="muted small">
+        Or <a class="link"
+           href="{{ '/assets/The-Primer-Part-05-2026-10-04.pdf' | relative_url }}"
+           download="The-Primer-Part-05-2026-10-04.pdf">save the file (PDF, 119&nbsp;KB)</a>.
+      </p>
+    </div>
+
+    <div class="latest-box" style="margin-top:2rem">
+      <span class="tag">PDF · 15 pages · current as at 27 September 2026</span>
       <h3 class="latest-title">The Primer, Part 4 — Your document, as a list of numbers.</h3>
       <p class="latest-summary">When a product &ldquo;reads&rdquo; your documents, it cuts them into
       pieces, turns each piece into a list of numbers called an embedding, and keeps the pieces and the

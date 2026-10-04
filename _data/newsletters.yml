@@ -10,6 +10,23 @@
 #     url: "https://buttondown.com/the_desk/archive/…/"
 #     summary: "One or two sentences. Plain English. What a reader gets."
 
+- number: "10"
+  title: "Every question is a new search."
+  date: 2026-10-04
+  url: "https://buttondown.com/the_desk/archive/every-question-is-a-new-search/"
+  platform: Buttondown
+  summary: >-
+    THE PRIMER Part 5 — a product that answers from your documents searches them again for
+    every question. This part follows one question around that loop in six stops: the question
+    is rewritten, turned into numbers, filtered by permissions, matched to a shortlist of
+    passages, pasted into the prompt, and answered with citations, on the vendors' own
+    documentation. Why access control has to sit at the search, why a citation shows where the
+    product looked and not that it read the passage correctly, and what changes when the index
+    is a graph. Then the lawyer's question: is each search processing in its own right? The
+    Court of Justice's Digi judgment on "further processing", how Europe, California and India
+    each tie a use to its purpose, and the German regulators' practical answer: settle the
+    purpose before the query.
+
 - number: "09"
   title: "Your document, as a list of numbers."
   date: 2026-09-27
