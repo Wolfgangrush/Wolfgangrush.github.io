@@ -50,7 +50,7 @@ description: Everything built so far, named — the practice brains and tools an
 <div class="mg">
   <p class="note"><span class="n">02</span>Public — single-purpose tools</p>
   <div>
-    <h2>Fourteen tools, fifteen repositories</h2>
+    <h2>Fifteen tools, sixteen repositories</h2>
     <p>Each does exactly one job and runs on your own machine. Described in full on the
     <a class="link" href="{{ '/tools/' | relative_url }}">tools</a> page.</p>
     <div class="table-scroll">
@@ -58,6 +58,7 @@ description: Everything built so far, named — the practice brains and tools an
       <thead><tr><th>Tool</th><th>Repository</th><th>What it does</th></tr></thead>
       <tbody>
         <tr><td>NAKASHA</td><td><a class="link ext" href="https://github.com/Wolfgangrush/nakasha"><code>nakasha</code></a></td><td>Pulls your own matters out of the daily court board</td></tr>
+        <tr><td>Circulation Builder</td><td><a class="link ext" href="https://github.com/Wolfgangrush/circulation-builder"><code>circulation-builder</code></a></td><td>Prepares a one-page Bombay High Court circulation slip</td></tr>
         <tr><td>samanvaya</td><td><a class="link ext" href="https://github.com/Wolfgangrush/samanvaya"><code>samanvaya</code></a></td><td>Offline privacy conformance across six regimes</td></tr>
         <tr><td>Multi-script OCR</td><td><a class="link ext" href="https://github.com/Wolfgangrush/multi-script-pdf-ocr"><code>multi-script-pdf-ocr</code></a></td><td>Offline OCR for Devanagari and mixed-script PDFs — saved file is searchable</td></tr>
         <tr><td>Pseudonymisation gateway</td><td><a class="link ext" href="https://github.com/Wolfgangrush/pseudonymisation-gateway"><code>pseudonymisation-gateway</code></a></td><td>Jurisdiction-aware PII middleware for cloud LLMs</td></tr>

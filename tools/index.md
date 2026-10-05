@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Tools
-description: Single-purpose tools for practitioners — the pratipaksha opposing-counsel simulator, pramaan electronic-evidence integrity, nyaya-check cheque-dishonour cause-of-action checker, asthir precedent-instability radar, the NAKASHA board reader, samanvaya privacy conformance, offline multi-script OCR, the pseudonymisation gateway, the DPDP Act as runnable code, the Supreme Court AI regulations mapping, a citation manager, a news digest bot, the CHOF human-oversight toolkit, repofacts, plus the Vidhi Likhit classroom for law students.
+description: Single-purpose tools for practitioners — the pratipaksha opposing-counsel simulator, pramaan electronic-evidence integrity, nyaya-check cheque-dishonour cause-of-action checker, asthir precedent-instability radar, the NAKASHA board reader, the Circulation Builder for circulation slips, samanvaya privacy conformance, offline multi-script OCR, the pseudonymisation gateway, the DPDP Act as runnable code, the Supreme Court AI regulations mapping, a citation manager, a news digest bot, the CHOF human-oversight toolkit, repofacts, plus the Vidhi Likhit classroom for law students.
 ---
 
 <section class="section reveal">
 <div class="mg">
   <p class="note"><span class="n">00</span>How to read this page</p>
   <div>
-    <h2>Fourteen tools. Each one does exactly one job.</h2>
+    <h2>Fifteen tools. Each one does exactly one job.</h2>
     <p class="lede">These are separate from the
     <a class="link" href="{{ '/brains/' | relative_url }}">practice brains</a>, which are a different
     thing entirely. Every tool here is free, the source is published, and it runs on your own
@@ -22,6 +22,7 @@ description: Single-purpose tools for practitioners — the pratipaksha opposing
 
 <ul class="jump">
   <li><a href="#nakasha">NAKASHA</a></li>
+  <li><a href="#circulation-builder">Circulation Builder</a></li>
   <li><a href="#samanvaya">samanvaya</a></li>
   <li><a href="#multi-script-ocr">Multi-script OCR</a></li>
   <li><a href="#pseudonymisation-gateway">Pseudonymisation gateway</a></li>
@@ -73,6 +74,46 @@ description: Single-purpose tools for practitioners — the pratipaksha opposing
       <p class="juris-links">
         <a class="btn btn-primary" href="https://github.com/Wolfgangrush/nakasha/releases/latest">Download for macOS</a>
         <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/nakasha">Read the source</a>
+      </p>
+    </div>
+
+    <div class="tool" id="circulation-builder">
+      <div class="tool-head"><h2>Circulation Builder</h2><span class="badge badge-live">macOS app · free</span></div>
+
+      <p class="what-is"><strong>What it is.</strong> A small Mac application that prepares a
+      circulation slip for the Bombay High Court and prints it on one A4 page.</p>
+
+      <p class="tool-problem"><strong>The problem.</strong> The slip is a fixed one-page form with
+      small spaces. It is filled by hand or in an editor, usually late in the day. A case number
+      typed from memory, a synopsis that runs off the page, or a category left blank, and the slip
+      has to be done again.</p>
+
+      <p><strong>What it does.</strong> You fill in a form on the left and watch the slip take shape
+      on the right. It builds the case reference from the case type, number and year, and asks you to
+      confirm it against your own record before it will print. The case type comes from a searchable
+      list of 353 types. The circulation category is a separate choice, so one is never mistaken for
+      the other. It takes a registered number, a stamp or lodging number, or an e-Filing number. It
+      prints your words exactly as you wrote them, and it refuses to print a slip that does not fit
+      on one page.</p>
+
+      <p>It keeps nothing. What you type lives in the window until you close it, and the application
+      refuses every network request made from its own window. The privacy policy is short, and it is
+      inside the application.</p>
+
+      <p class="tool-meta"><strong>The honest limits.</strong> It is an independent tool. It is not an
+      official application of the Bombay High Court, and it is not affiliated with or endorsed by the
+      Court or its Registry. It prepares a request: it does not file anything, check court status, or
+      promise a listing. This version follows the proforma of one Bench, named in the README, and the
+      list of case types is a snapshot taken on 5 October 2026. Forms and cut-off times change, so
+      check the current practice of the Registry before you rely on a slip.</p>
+
+      <p class="tool-meta"><strong>What you need:</strong> an Apple silicon Mac running macOS 13 or
+      later. The application is signed and notarised, so it opens without a security warning. The
+      README is in English, Marathi and Hindi.</p>
+
+      <p class="juris-links">
+        <a class="btn btn-primary" href="https://github.com/Wolfgangrush/circulation-builder/releases/latest">Download for macOS</a>
+        <a class="btn btn-ghost" href="https://github.com/Wolfgangrush/circulation-builder">Read the source</a>
       </p>
     </div>
   </div>
