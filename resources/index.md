@@ -36,12 +36,59 @@ description: Free, downloadable practitioner documents from wolfgang_rush. No em
 <div class="mg">
   <p class="note"><span class="n">03</span>The documents</p>
   <div>
-    <h2>Seven documents, all free, all current</h2>
+    <h2>Nine documents, all free, all current</h2>
     <p class="lede">Newest first. Each one is a static PDF — open it in the browser, or save the file.
     No email required, and nothing on this page collects anything from you.</p>
 
     <div class="latest-box">
-      <span class="tag">New · PDF · 14 pages · current as at 4 October 2026</span>
+      <span class="tag">New · PDF · 2 pages · current as at 14 October 2026</span>
+      <h3 class="latest-title">Training AI models under the DPDP Act</h3>
+      <p class="latest-summary">A two-page note, set out like a bare act. The Digital Personal Data
+      Protection Act, 2023 and its Rules never use the words &ldquo;artificial intelligence&rdquo;, and
+      the first page shows the search. The Act regulates processing, and training a model on digital
+      personal data is processing. The same page quotes, from the Gazette, the definition of processing
+      in section 2, the duty in section 6(6) when consent is withdrawn and the opening words of
+      section 7. The second page notes what each means for a build: the purpose named in the notice, a
+      withdrawal that has to reach every processor and every copy held for training, and section 7 as a
+      list of nine uses with nothing to weigh. It ends with an illustration and with what the note does
+      not deal with.</p>
+      <p class="latest-cta">
+        <a class="btn btn-primary btn-lg"
+           href="{{ '/assets/Training-AI-Models-under-the-DPDP-Act-2026-10-15.pdf' | relative_url }}"
+           target="_blank" rel="noopener">Open the AI training note (PDF, 2 pages)</a>
+      </p>
+      <p class="muted small">
+        Or <a class="link"
+           href="{{ '/assets/Training-AI-Models-under-the-DPDP-Act-2026-10-15.pdf' | relative_url }}"
+           download="Training-AI-Models-under-the-DPDP-Act-2026-10-15.pdf">save the file (PDF, 257&nbsp;KB)</a>.
+      </p>
+    </div>
+
+    <div class="latest-box" style="margin-top:2rem">
+      <span class="tag">PDF · 2 pages · current as at 11 October 2026</span>
+      <h3 class="latest-title">Section 44A and the United Arab Emirates</h3>
+      <p class="latest-summary">A two-page note, set out like a bare act, on the courts of the United
+      Arab Emirates that India has notified for section 44A of the Code of Civil Procedure, 1908. Where
+      the section applies, a certified copy of a money decree of a notified court, filed in a District
+      Court in India, may be executed as if that District Court had passed it. The first page sets out
+      the section in full and the notification of 17 January 2020, G.S.R. 38(E), with the courts as the
+      Gazette prints them, the Courts of Dubai International Financial Center among them. The second
+      page has short notes with an illustration, and section 13, to which sub-section (3) refers.
+      Indian law only: nothing on the page states the law of the UAE or of the DIFC.</p>
+      <p class="latest-cta">
+        <a class="btn btn-primary btn-lg"
+           href="{{ '/assets/Section-44A-and-the-UAE-2026-10-13.pdf' | relative_url }}"
+           target="_blank" rel="noopener">Open the section 44A note (PDF, 2 pages)</a>
+      </p>
+      <p class="muted small">
+        Or <a class="link"
+           href="{{ '/assets/Section-44A-and-the-UAE-2026-10-13.pdf' | relative_url }}"
+           download="Section-44A-and-the-UAE-2026-10-13.pdf">save the file (PDF, 262&nbsp;KB)</a>.
+      </p>
+    </div>
+
+    <div class="latest-box" style="margin-top:2rem">
+      <span class="tag">PDF · 14 pages · current as at 4 October 2026</span>
       <h3 class="latest-title">The Primer, Part 5 — Every question is a new search.</h3>
       <p class="latest-summary">A product that answers from your documents searches them again for
       every question. This part follows one question around that loop in six stops: the question is
